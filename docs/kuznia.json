@@ -1,0 +1,146 @@
+{
+ "arkusz": {
+  "kolumny": 19,
+  "wierszy": 3,
+  "szerokosc": 640,
+  "wysokosc": 98,
+  "kafli": 57
+ },
+ "kafle": {
+  "piec_zimny_lg": {
+   "kolumna": 0,
+   "wiersz": 0,
+   "id": 0
+  },
+  "piec_zimny_pg": {
+   "kolumna": 1,
+   "wiersz": 0,
+   "id": 1
+  },
+  "piec_zimny_ld": {
+   "kolumna": 0,
+   "wiersz": 1,
+   "id": 19
+  },
+  "piec_zimny_pd": {
+   "kolumna": 1,
+   "wiersz": 1,
+   "id": 20
+  },
+  "piec_rozpalony_lg": {
+   "kolumna": 2,
+   "wiersz": 0,
+   "id": 2
+  },
+  "piec_rozpalony_pg": {
+   "kolumna": 3,
+   "wiersz": 0,
+   "id": 3
+  },
+  "piec_rozpalony_ld": {
+   "kolumna": 2,
+   "wiersz": 1,
+   "id": 21
+  },
+  "piec_rozpalony_pd": {
+   "kolumna": 3,
+   "wiersz": 1,
+   "id": 22
+  },
+  "piec_wygaszony_lg": {
+   "kolumna": 4,
+   "wiersz": 0,
+   "id": 4
+  },
+  "piec_wygaszony_pg": {
+   "kolumna": 5,
+   "wiersz": 0,
+   "id": 5
+  },
+  "piec_wygaszony_ld": {
+   "kolumna": 4,
+   "wiersz": 1,
+   "id": 23
+  },
+  "piec_wygaszony_pd": {
+   "kolumna": 5,
+   "wiersz": 1,
+   "id": 24
+  },
+  "kowadlo_duze_0": {
+   "kolumna": 6,
+   "wiersz": 1,
+   "id": 25
+  },
+  "kowadlo_male_0": {
+   "kolumna": 7,
+   "wiersz": 1,
+   "id": 26
+  },
+  "tocznia_0": {
+   "kolumna": 8,
+   "wiersz": 1,
+   "id": 27
+  },
+  "osełka_0": {
+   "kolumna": 9,
+   "wiersz": 1,
+   "id": 28
+  },
+  "miech_0": {
+   "kolumna": 10,
+   "wiersz": 1,
+   "id": 29
+  },
+  "stojak_narzedzi_0": {
+   "kolumna": 11,
+   "wiersz": 1,
+   "id": 30
+  },
+  "stojak_broni_0": {
+   "kolumna": 12,
+   "wiersz": 1,
+   "id": 31
+  },
+  "worek_wegla_0": {
+   "kolumna": 13,
+   "wiersz": 1,
+   "id": 32
+  },
+  "skrzynia_rudy_0": {
+   "kolumna": 14,
+   "wiersz": 1,
+   "id": 33
+  },
+  "stojak_zbroi_0": {
+   "kolumna": 0,
+   "wiersz": 2,
+   "id": 38
+  },
+  "stol_imadlo_0": {
+   "kolumna": 1,
+   "wiersz": 2,
+   "id": 39
+  },
+  "stol_imadlo_1": {
+   "kolumna": 2,
+   "wiersz": 2,
+   "id": 40
+  },
+  "stol_haki_0": {
+   "kolumna": 3,
+   "wiersz": 2,
+   "id": 41
+  },
+  "stol_haki_1": {
+   "kolumna": 4,
+   "wiersz": 2,
+   "id": 42
+  },
+  "szafka_narzedzi_0": {
+   "kolumna": 5,
+   "wiersz": 2,
+   "id": 43
+  }
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "tile": 32,
+ "sheet": "dzik_test.png",
+ "cols": 6,
+ "rows": 3,
+ "animations": {
+  "idle_down": {
+   "row": 0,
+   "count": 4,
+   "frames": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "direction": "down",
+   "note": ""
+  },
+  "walk_left": {
+   "row": 1,
+   "count": 5,
+   "frames": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "direction": "left",
+   "note": "5 klatek (zrodlo GPT ma tylko 5). Cykl chodu doprawiony recznie: przyciecie 1-2 dolnych rzedow jednej polowy lap (lapa uniesiona) na przemian przod/tyl + drift 1 px w poziomie. Zaden nowy piksel, korpus/sylwetka/proporcje bez zmian.",
+   "leg_cycle": {
+    "front_trim": [
+     0,
+     0,
+     0,
+     1,
+     2
+    ],
+    "back_trim": [
+     2,
+     1,
+     0,
+     0,
+     0
+    ],
+    "front_dx": [
+     1,
+     0,
+     0,
+     -1,
+     -1
+    ],
+    "back_dx": [
+     -1,
+     -1,
+     0,
+     1,
+     1
+    ],
+    "opis": "trim = ile dolnych rzedow lapy uciac (wykrok); dx = drift poziomy px"
+   }
+  },
+  "attack_left": {
+   "row": 2,
+   "count": 4,
+   "frames": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "direction": "left",
+   "note": ""
+  }
+ }
+}

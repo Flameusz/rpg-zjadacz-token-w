@@ -1,0 +1,43 @@
+{
+ "source": "docs/art-review/dzik/dzik-idle.png",
+ "uwaga": "TEST: dzik-idle.png to juz pixel art. Wytniete + kluczowane plaskie tlo, ZERO zmiany kolorow, ZERO downscale.",
+ "layout": "4x4 grid, cell 66x64",
+ "animations": {
+  "idle_down": {
+   "row": 0,
+   "count": 4,
+   "canvas": [
+    37,
+    47
+   ],
+   "direction": "down"
+  },
+  "idle_left": {
+   "row": 1,
+   "count": 4,
+   "canvas": [
+    59,
+    40
+   ],
+   "direction": "left"
+  },
+  "idle_right": {
+   "row": 2,
+   "count": 4,
+   "canvas": [
+    57,
+    42
+   ],
+   "direction": "right"
+  },
+  "idle_up": {
+   "row": 3,
+   "count": 4,
+   "canvas": [
+    35,
+    39
+   ],
+   "direction": "up"
+  }
+ }
+}

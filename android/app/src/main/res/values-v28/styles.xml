@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Rysowanie POD wcięciem ekranu (notch / dziurka po aparacie).
+
+  Osobny katalog `values-v28`, a nie wpis w `values/styles.xml`, bo atrybut
+  `windowLayoutInDisplayCutoutMode` istnieje dopiero od API 28 — w jednym pliku
+  lint zgłaszałby NewApi na każdej kompilacji.
+
+  Bez tego ukrycie pasków systemowych daje mniej, niż się wydaje: system i tak
+  odsuwa okno od krawędzi z wcięciem, więc na telefonie w poziomie zostaje
+  czarny pas po tej stronie, na której siedzi aparat. Obie motywy dostają to
+  samo, bo splash i właściwa aplikacja to dwa różne motywy (Capacitor przełącza
+  je w `BridgeActivity.onCreate`) i różnica między nimi byłaby widoczna jako
+  przeskok szerokości obrazu tuż po starcie.
+-->
+<resources>
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
+        <item name="android:background">@drawable/splash</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+</resources>

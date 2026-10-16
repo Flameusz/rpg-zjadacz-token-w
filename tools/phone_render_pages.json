@@ -1,0 +1,85 @@
+{
+ "_opis": "Etap F (2026-10-13): strony panelu gracza poza plecakiem — Postać (Cechy, Umiejętności, Broń), Zadania (dziennik), Mapa, Opcje. Pomocnicze: __pp() panel gracza. Własny port: dopisz \"url\".",
+ "steps": [
+  {
+   "wait": 15000
+  },
+  {
+   "waitFor": "window.game && game.scene && game.scene.getScene('Title') && game.scene.isActive('Title')",
+   "timeout": 200000
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "eval": "game.scene.getScene('Title').startFresh(); return 'start'"
+  },
+  {
+   "waitFor": "game.scene.isActive('Game') && game.scene.isActive('UI')",
+   "timeout": 60000
+  },
+  {
+   "wait": 3000
+  },
+  {
+   "eval": "dev.Inventory.addGold(500); dev.Progression.addXp(2500); dev.Inventory.addItem('sword',1); dev.Equipment.equip('sword'); dev.Quests.accept('stick_in_hand'); dev.Quests.accept('szukaj_kirki'); dev.Quests.accept('ziola_dla_babki'); dev.Skills.learn('wide_cut'); dev.Skills.learn('footwork'); window.__pp = () => game.scene.getScene('UI').playerPanel; return 'ok'"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "eval": "__pp().openTo('character'); __pp().setCharSubTab('traits'); return 'ok'"
+  },
+  {
+   "wait": 700
+  },
+  {
+   "shot": "p01_postac_cechy.png"
+  },
+  {
+   "eval": "__pp().setCharSubTab('skills'); return 'ok'"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "shot": "p02_postac_umiejetnosci.png"
+  },
+  {
+   "eval": "__pp().setCharSubTab('weapons'); return 'ok'"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "shot": "p03_postac_bron.png"
+  },
+  {
+   "eval": "__pp().setTab('quests'); return 'ok'"
+  },
+  {
+   "wait": 700
+  },
+  {
+   "shot": "p04_zadania.png"
+  },
+  {
+   "eval": "__pp().setTab('map'); return 'ok'"
+  },
+  {
+   "wait": 900
+  },
+  {
+   "shot": "p05_mapa.png"
+  },
+  {
+   "eval": "__pp().setTab('save'); return 'ok'"
+  },
+  {
+   "wait": 700
+  },
+  {
+   "shot": "p06_opcje.png"
+  }
+ ]
+}

@@ -1,0 +1,746 @@
+{
+  "naglowek": {
+    "ziarno": 20260822,
+    "implementacja": "legacy (transkrypcja GameScene.ts)",
+    "przypadkow": 121
+  },
+  "wyniki": [
+    {
+      "grupa": "cel",
+      "nazwa": "wilk — wschód, tuż w zasięgu",
+      "trafienie": true,
+      "dystans": 84.64,
+      "allowance": 11.7
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "wilk — wschód, tuż poza",
+      "trafienie": true,
+      "dystans": 86.64,
+      "allowance": 11.7
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "wilk — północ, tuż w zasięgu",
+      "trafienie": true,
+      "dystans": 84.64,
+      "allowance": 11.7
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "wilk — południe, tuż poza",
+      "trafienie": true,
+      "dystans": 86.64,
+      "allowance": 11.7
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "wilk — ukośnie 45°",
+      "trafienie": true,
+      "dystans": 84.64,
+      "allowance": 11.7
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "niedzwiedz — wschód, tuż w zasięgu",
+      "trafienie": true,
+      "dystans": 102.84,
+      "allowance": 15.52
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "niedzwiedz — wschód, tuż poza",
+      "trafienie": false,
+      "dystans": 104.84,
+      "allowance": 15.52
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "niedzwiedz — północ, tuż w zasięgu",
+      "trafienie": true,
+      "dystans": 102.84,
+      "allowance": 15.52
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "niedzwiedz — południe, tuż poza",
+      "trafienie": false,
+      "dystans": 104.84,
+      "allowance": 15.52
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "niedzwiedz — ukośnie 45°",
+      "trafienie": true,
+      "dystans": 102.84,
+      "allowance": 15.52
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "dzik — wschód, tuż w zasięgu",
+      "trafienie": true,
+      "dystans": 87.58,
+      "allowance": 19.95
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "dzik — wschód, tuż poza",
+      "trafienie": true,
+      "dystans": 89.58,
+      "allowance": 19.95
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "dzik — północ, tuż w zasięgu",
+      "trafienie": true,
+      "dystans": 87.58,
+      "allowance": 19.95
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "dzik — południe, tuż poza",
+      "trafienie": true,
+      "dystans": 89.58,
+      "allowance": 19.95
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "dzik — ukośnie 45°",
+      "trafienie": true,
+      "dystans": 87.58,
+      "allowance": 19.95
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "skoczek — wschód, tuż w zasięgu",
+      "trafienie": true,
+      "dystans": 79.6,
+      "allowance": 13.5
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "skoczek — wschód, tuż poza",
+      "trafienie": true,
+      "dystans": 81.6,
+      "allowance": 13.5
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "skoczek — północ, tuż w zasięgu",
+      "trafienie": true,
+      "dystans": 79.6,
+      "allowance": 13.5
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "skoczek — południe, tuż poza",
+      "trafienie": true,
+      "dystans": 81.6,
+      "allowance": 13.5
+    },
+    {
+      "grupa": "cel",
+      "nazwa": "skoczek — ukośnie 45°",
+      "trafienie": true,
+      "dystans": 79.6,
+      "allowance": 13.5
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "szeroka → wilk przed",
+      "trafienie": true,
+      "reach": 70,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "szeroka → wilk skos-prawo",
+      "trafienie": true,
+      "reach": 70,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "szeroka → wilk skos-lewo",
+      "trafienie": true,
+      "reach": 70,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "szeroka → wilk bok",
+      "trafienie": true,
+      "reach": 70,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "szeroka → wilk za plecami",
+      "trafienie": true,
+      "reach": 70,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "szeroka → wilk daleko przed",
+      "trafienie": false,
+      "reach": 70,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "szeroka → wilk na graczu",
+      "trafienie": true,
+      "reach": 70,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "wąska → wilk przed",
+      "trafienie": true,
+      "reach": 56,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "wąska → wilk skos-prawo",
+      "trafienie": true,
+      "reach": 56,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "wąska → wilk skos-lewo",
+      "trafienie": true,
+      "reach": 56,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "wąska → wilk bok",
+      "trafienie": true,
+      "reach": 56,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "wąska → wilk za plecami",
+      "trafienie": true,
+      "reach": 56,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "wąska → wilk daleko przed",
+      "trafienie": false,
+      "reach": 56,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk",
+      "nazwa": "wąska → wilk na graczu",
+      "trafienie": true,
+      "reach": 56,
+      "arcDeg": 90
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=22° dokładnie na granicy",
+      "trafienie": false
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=22° tuż wewnątrz",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=22° tuż na zewnątrz",
+      "trafienie": false
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=38° dokładnie na granicy",
+      "trafienie": false
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=38° tuż wewnątrz",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=38° tuż na zewnątrz",
+      "trafienie": false
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=45° dokładnie na granicy",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=45° tuż wewnątrz",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=45° tuż na zewnątrz",
+      "trafienie": false
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=50° dokładnie na granicy",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=50° tuż wewnątrz",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=50° tuż na zewnątrz",
+      "trafienie": false
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=60° dokładnie na granicy",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=60° tuż wewnątrz",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=60° tuż na zewnątrz",
+      "trafienie": false
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=90° dokładnie na granicy",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=90° tuż wewnątrz",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=90° tuż na zewnątrz",
+      "trafienie": false
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=100° dokładnie na granicy",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=100° tuż wewnątrz",
+      "trafienie": true
+    },
+    {
+      "grupa": "łuk-granica",
+      "nazwa": "arc=100° tuż na zewnątrz",
+      "trafienie": false
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=40 → królik przed",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=40 → królik skos-prawo",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=40 → królik skos-lewo",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=40 → królik bok",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=40 → królik za plecami",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=40 → królik daleko przed",
+      "trafienie": false
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=40 → królik na graczu",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=80 → królik przed",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=80 → królik skos-prawo",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=80 → królik skos-lewo",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=80 → królik bok",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=80 → królik za plecami",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=80 → królik daleko przed",
+      "trafienie": false
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=80 → królik na graczu",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=120 → królik przed",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=120 → królik skos-prawo",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=120 → królik skos-lewo",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=120 → królik bok",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=120 → królik za plecami",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=120 → królik daleko przed",
+      "trafienie": true
+    },
+    {
+      "grupa": "koło",
+      "nazwa": "r=120 → królik na graczu",
+      "trafienie": true
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik slash 1",
+      "po": 1,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik slash 7",
+      "po": 5,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik slash 18",
+      "po": 13,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik slash 45",
+      "po": 31,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "wilk (bez pancerza) slash 18",
+      "po": 18
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik pierce 1",
+      "po": 1,
+      "skutecznosc": "przechodzi"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik pierce 7",
+      "po": 6,
+      "skutecznosc": "przechodzi"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik pierce 18",
+      "po": 15,
+      "skutecznosc": "przechodzi"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik pierce 45",
+      "po": 38,
+      "skutecznosc": "przechodzi"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "wilk (bez pancerza) pierce 18",
+      "po": 18
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik blunt 1",
+      "po": 1,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik blunt 7",
+      "po": 5,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik blunt 18",
+      "po": 13,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik blunt 45",
+      "po": 33,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "wilk (bez pancerza) blunt 18",
+      "po": 18
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik bez typu 1",
+      "po": 1,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik bez typu 7",
+      "po": 5,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik bez typu 18",
+      "po": 13,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "dzik bez typu 45",
+      "po": 31,
+      "skutecznosc": "neutralnie"
+    },
+    {
+      "grupa": "pancerz",
+      "nazwa": "wilk (bez pancerza) bez typu 18",
+      "po": 18
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "czysty cios, bez niczego",
+      "outcome": "hit",
+      "mitigated": 20,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "sam pancerz 30%",
+      "outcome": "hit",
+      "mitigated": 14,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "pancerz + blok frontalny",
+      "outcome": "block",
+      "mitigated": 9,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "blok DOKŁADNIE Z BOKU (90° → strefa side, połowa)",
+      "outcome": "block",
+      "mitigated": 12,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "blok 45° (środek frontu → pełny)",
+      "outcome": "block",
+      "mitigated": 9,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "blok 59° (tuż przed granicą pełnego → pełny)",
+      "outcome": "block",
+      "mitigated": 9,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "blok 61° (tuż za granicą pełnego → side)",
+      "outcome": "block",
+      "mitigated": 12,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "blok 99° (tuż przed granicą tarczy → side)",
+      "outcome": "block",
+      "mitigated": 12,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "blok 101° (tuż za granicą tarczy → BRAK)",
+      "outcome": "hit",
+      "mitigated": 14,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "blok Z TYŁU 180° (BRAK)",
+      "outcome": "hit",
+      "mitigated": 14,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "blok przy wektorze ZEROWYM (NaN → BRAK)",
+      "outcome": "hit",
+      "mitigated": 14,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "blok boczny, małe liczby (9 × 0,55 × 0,75)",
+      "outcome": "block",
+      "mitigated": 4,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "parry pewny, 89° (nadal w półkuli → PARUJE)",
+      "outcome": "parry",
+      "mitigated": 0,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "parry pewny, 95° (strefa side, ale POZA półkulą → NIE paruje)",
+      "outcome": "hit",
+      "mitigated": 20,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "cios bez kierunku (from=null)",
+      "outcome": "hit",
+      "mitigated": 14,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "dodge pewny",
+      "outcome": "dodge",
+      "mitigated": 0,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "parry pewny, frontalny",
+      "outcome": "parry",
+      "mitigated": 0,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "parry pewny, ale Z BOKU",
+      "outcome": "hit",
+      "mitigated": 20,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "nietykalność",
+      "outcome": "immune",
+      "mitigated": 0,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "małe obrażenia, dwie redukcje",
+      "outcome": "block",
+      "mitigated": 3,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "rozjazd zaokrągleń: 9 × 0,55 × 0,5",
+      "outcome": "block",
+      "mitigated": 2,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "podłoga na 1 pkt",
+      "outcome": "block",
+      "mitigated": 1,
+      "killed": false
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "cios zabójczy",
+      "outcome": "hit",
+      "mitigated": 40,
+      "killed": true
+    },
+    {
+      "grupa": "obrona",
+      "nazwa": "nie zabija o 1 pkt",
+      "outcome": "hit",
+      "mitigated": 11,
+      "killed": false
+    },
+    {
+      "grupa": "prd",
+      "nazwa": "40 rzutów dodge p=0,05 (ziarno stałe)",
+      "seria": "0000000000010000000000000000000000000000"
+    }
+  ]
+}

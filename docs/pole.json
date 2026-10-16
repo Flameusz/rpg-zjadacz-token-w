@@ -1,0 +1,3435 @@
+{
+ "arkusz": {
+  "plik": "pole_tileset.png",
+  "szerokosc": 461,
+  "wysokosc": 395,
+  "kolumny": 14,
+  "wiersze": 12,
+  "kafel": 32,
+  "pitch": 33,
+  "kafli": 163
+ },
+ "progi": {
+  "grunt": 0.95,
+  "trawa": 0.25
+ },
+ "opis_kategorii": {
+  "ugor": "gola albo zaorana ziemia bez uprawy, NIE stykajaca sie z trawa — srodek niwy",
+  "przejscie": "to samo co `ugor`, ale styka sie z trawa; `trawa` mowi przy ktorych krawedziach",
+  "kapusta": "kapusta glowiasta; fazy: sadzonka -> mloda -> dojrzala",
+  "zboze": "zboze; faza `zielone` (wiosna/lato) i `dojrzale` (przed zniwami)",
+  "sciernisko": "po zniwach — sloma i rzad w ziemi",
+  "len": "len w kwiecie, biale kwiaty na zielonej lodydze",
+  "nac": "gesta zielona nac bez widocznego owocu",
+  "korzeniowe": "rzepa/marchew/cebula z owocem widocznym nad ziemia",
+  "pedy": "wschody i siewki — pojedyncze zdzbla na golej ziemi"
+ },
+ "opis_roli": {
+  "grunt": "krycie >= 0.95 — zakrywa wlasna komorke, wolno uzywac jako lite pole",
+  "nakladka": "krycie < 0.95 — ma przezroczysty margines, WYMAGA ziemi pod spodem"
+ },
+ "kategorie": {
+  "ugor": [
+   "ugor_bruzdy_pion_1",
+   "ugor_bruzdy_pion_2",
+   "ugor_bruzdy_pion_3",
+   "ugor_bruzdy_pion_4",
+   "ugor_bruzdy_pion_5",
+   "ugor_bruzdy_pion_6",
+   "ugor_bruzdy_poz_1",
+   "ugor_bruzdy_poz_2",
+   "ugor_bruzdy_poz_3",
+   "ugor_bruzdy_poz_4",
+   "ugor_bruzdy_poz_5",
+   "ugor_bruzdy_poz_6",
+   "ugor_bruzdy_poz_7",
+   "ugor_bruzdy_poz_8",
+   "ugor_bruzdy_poz_9",
+   "ugor_ziemia_1",
+   "ugor_ziemia_2",
+   "ugor_ziemia_3",
+   "ugor_ziemia_4",
+   "ugor_ziemia_5"
+  ],
+  "przejscie": [
+   "przejscie_bruzdy_naroznik_1",
+   "przejscie_bruzdy_pion_1",
+   "przejscie_bruzdy_poz_1",
+   "przejscie_sloma_1",
+   "przejscie_zasiane_1",
+   "przejscie_ziemia_1",
+   "przejscie_ziemia_10",
+   "przejscie_ziemia_11",
+   "przejscie_ziemia_12",
+   "przejscie_ziemia_13",
+   "przejscie_ziemia_14",
+   "przejscie_ziemia_15",
+   "przejscie_ziemia_16",
+   "przejscie_ziemia_17",
+   "przejscie_ziemia_18",
+   "przejscie_ziemia_19",
+   "przejscie_ziemia_2",
+   "przejscie_ziemia_20",
+   "przejscie_ziemia_21",
+   "przejscie_ziemia_22",
+   "przejscie_ziemia_23",
+   "przejscie_ziemia_24",
+   "przejscie_ziemia_25",
+   "przejscie_ziemia_26",
+   "przejscie_ziemia_27",
+   "przejscie_ziemia_28",
+   "przejscie_ziemia_29",
+   "przejscie_ziemia_3",
+   "przejscie_ziemia_30",
+   "przejscie_ziemia_31",
+   "przejscie_ziemia_4",
+   "przejscie_ziemia_5",
+   "przejscie_ziemia_6",
+   "przejscie_ziemia_7",
+   "przejscie_ziemia_8",
+   "przejscie_ziemia_9"
+  ],
+  "pedy": [
+   "pedy_kielki_1",
+   "pedy_kielki_2",
+   "pedy_kielki_3",
+   "pedy_kielki_4",
+   "pedy_mlode_1",
+   "pedy_mlode_2",
+   "pedy_mlode_3",
+   "pedy_mlode_4",
+   "pedy_mlode_5",
+   "pedy_mlode_6",
+   "pedy_mlode_7",
+   "pedy_mlode_8",
+   "pedy_siewka_1",
+   "pedy_siewka_2",
+   "pedy_siewka_3",
+   "pedy_siewka_4",
+   "pedy_siewka_5"
+  ],
+  "kapusta": [
+   "kapusta_dojrzala_1",
+   "kapusta_dojrzala_2",
+   "kapusta_dojrzala_3",
+   "kapusta_dojrzala_4",
+   "kapusta_dojrzala_5",
+   "kapusta_dojrzala_6",
+   "kapusta_dojrzala_7",
+   "kapusta_mloda_1",
+   "kapusta_mloda_2",
+   "kapusta_sadzonka_1",
+   "kapusta_sadzonka_2",
+   "kapusta_sadzonka_3"
+  ],
+  "zboze": [
+   "zboze_dojrzale_1",
+   "zboze_dojrzale_2",
+   "zboze_dojrzale_3",
+   "zboze_dojrzale_4",
+   "zboze_dojrzale_5",
+   "zboze_dojrzale_6",
+   "zboze_dojrzale_7",
+   "zboze_dojrzale_8",
+   "zboze_zielone_1",
+   "zboze_zielone_2",
+   "zboze_zielone_3",
+   "zboze_zielone_4",
+   "zboze_zielone_5"
+  ],
+  "sciernisko": [
+   "sciernisko_sloma_1",
+   "sciernisko_sloma_2"
+  ],
+  "len": [
+   "len_kwitnacy_1",
+   "len_kwitnacy_2",
+   "len_kwitnacy_3",
+   "len_kwitnacy_4",
+   "len_kwitnacy_5"
+  ],
+  "nac": [
+   "nac_cebulowa_1",
+   "nac_cebulowa_2",
+   "nac_cebulowa_3",
+   "nac_cebulowa_4",
+   "nac_cebulowa_5",
+   "nac_gesta_1",
+   "nac_gesta_10",
+   "nac_gesta_11",
+   "nac_gesta_12",
+   "nac_gesta_13",
+   "nac_gesta_14",
+   "nac_gesta_15",
+   "nac_gesta_16",
+   "nac_gesta_17",
+   "nac_gesta_18",
+   "nac_gesta_19",
+   "nac_gesta_2",
+   "nac_gesta_20",
+   "nac_gesta_3",
+   "nac_gesta_4",
+   "nac_gesta_5",
+   "nac_gesta_6",
+   "nac_gesta_7",
+   "nac_gesta_8",
+   "nac_gesta_9",
+   "nac_niska_1",
+   "nac_niska_2",
+   "nac_niska_3",
+   "nac_niska_4"
+  ],
+  "korzeniowe": [
+   "korzeniowe_dojrzale_1",
+   "korzeniowe_dojrzale_10",
+   "korzeniowe_dojrzale_11",
+   "korzeniowe_dojrzale_2",
+   "korzeniowe_dojrzale_3",
+   "korzeniowe_dojrzale_4",
+   "korzeniowe_dojrzale_5",
+   "korzeniowe_dojrzale_6",
+   "korzeniowe_dojrzale_7",
+   "korzeniowe_dojrzale_8",
+   "korzeniowe_dojrzale_9",
+   "korzeniowe_rzepa_1",
+   "korzeniowe_rzepa_2",
+   "korzeniowe_rzepa_3",
+   "korzeniowe_rzepa_4",
+   "korzeniowe_rzepa_5",
+   "korzeniowe_rzepa_6",
+   "korzeniowe_wschodzace_1",
+   "korzeniowe_wschodzace_10",
+   "korzeniowe_wschodzace_11",
+   "korzeniowe_wschodzace_12",
+   "korzeniowe_wschodzace_2",
+   "korzeniowe_wschodzace_3",
+   "korzeniowe_wschodzace_4",
+   "korzeniowe_wschodzace_5",
+   "korzeniowe_wschodzace_6",
+   "korzeniowe_wschodzace_7",
+   "korzeniowe_wschodzace_8",
+   "korzeniowe_wschodzace_9"
+  ]
+ },
+ "kafle": {
+  "ugor_bruzdy_pion_1": {
+   "kolumna": 0,
+   "wiersz": 0,
+   "id": 0,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_pion",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.008,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "ugor_bruzdy_poz_1": {
+   "kolumna": 1,
+   "wiersz": 0,
+   "id": 1,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_poz",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.011,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "ugor_bruzdy_poz_2": {
+   "kolumna": 2,
+   "wiersz": 0,
+   "id": 2,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_poz",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.0,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": true
+  },
+  "przejscie_bruzdy_poz_1": {
+   "kolumna": 3,
+   "wiersz": 0,
+   "id": 3,
+   "kategoria": "przejscie",
+   "podtyp": "bruzdy_poz",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.158,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "S"
+   ],
+   "naroznik": [
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "ugor_bruzdy_poz_3": {
+   "kolumna": 4,
+   "wiersz": 0,
+   "id": 4,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_poz",
+   "rola": "nakladka",
+   "krycie": 0.875,
+   "obrys": [
+    32,
+    28
+   ],
+   "ziel": 0.015,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "przejscie_bruzdy_naroznik_1": {
+   "kolumna": 5,
+   "wiersz": 0,
+   "id": 5,
+   "kategoria": "przejscie",
+   "podtyp": "bruzdy_naroznik",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.028,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_1": {
+   "kolumna": 6,
+   "wiersz": 0,
+   "id": 6,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.019,
+   "sloma": 0.004,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [
+    "SE"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_2": {
+   "kolumna": 7,
+   "wiersz": 0,
+   "id": 7,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.787,
+   "obrys": [
+    32,
+    26
+   ],
+   "ziel": 0.125,
+   "sloma": 0.002,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "S"
+   ],
+   "naroznik": [
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "ugor_ziemia_1": {
+   "kolumna": 8,
+   "wiersz": 0,
+   "id": 8,
+   "kategoria": "ugor",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.749,
+   "obrys": [
+    32,
+    25
+   ],
+   "ziel": 0.055,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "przejscie_ziemia_3": {
+   "kolumna": 9,
+   "wiersz": 0,
+   "id": 9,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.789,
+   "obrys": [
+    32,
+    26
+   ],
+   "ziel": 0.113,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "S"
+   ],
+   "naroznik": [
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "ugor_ziemia_2": {
+   "kolumna": 10,
+   "wiersz": 0,
+   "id": 10,
+   "kategoria": "ugor",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.749,
+   "obrys": [
+    32,
+    25
+   ],
+   "ziel": 0.042,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "przejscie_ziemia_4": {
+   "kolumna": 11,
+   "wiersz": 0,
+   "id": 11,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.037,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_5": {
+   "kolumna": 12,
+   "wiersz": 0,
+   "id": 12,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.474,
+   "sloma": 0.343,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_6": {
+   "kolumna": 13,
+   "wiersz": 0,
+   "id": 13,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.311,
+   "sloma": 0.494,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_7": {
+   "kolumna": 0,
+   "wiersz": 1,
+   "id": 14,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.463,
+   "sloma": 0.339,
+   "pomarancz": 0.001,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_8": {
+   "kolumna": 1,
+   "wiersz": 1,
+   "id": 15,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.318,
+   "sloma": 0.487,
+   "pomarancz": 0.001,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_9": {
+   "kolumna": 2,
+   "wiersz": 1,
+   "id": 16,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.319,
+   "sloma": 0.475,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_10": {
+   "kolumna": 3,
+   "wiersz": 1,
+   "id": 17,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.484,
+   "sloma": 0.367,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "ugor_bruzdy_pion_2": {
+   "kolumna": 4,
+   "wiersz": 1,
+   "id": 18,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_pion",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.0,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": true
+  },
+  "ugor_bruzdy_pion_3": {
+   "kolumna": 5,
+   "wiersz": 1,
+   "id": 19,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_pion",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.005,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "ugor_bruzdy_pion_4": {
+   "kolumna": 6,
+   "wiersz": 1,
+   "id": 20,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_pion",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.0,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": true
+  },
+  "ugor_bruzdy_pion_5": {
+   "kolumna": 7,
+   "wiersz": 1,
+   "id": 21,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_pion",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.0,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": true
+  },
+  "ugor_bruzdy_pion_6": {
+   "kolumna": 8,
+   "wiersz": 1,
+   "id": 22,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_pion",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.006,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "przejscie_bruzdy_pion_1": {
+   "kolumna": 9,
+   "wiersz": 1,
+   "id": 23,
+   "kategoria": "przejscie",
+   "podtyp": "bruzdy_pion",
+   "rola": "grunt",
+   "krycie": 0.953,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.035,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_11": {
+   "kolumna": 10,
+   "wiersz": 1,
+   "id": 24,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 0.965,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.206,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "pedy_kielki_1": {
+   "kolumna": 11,
+   "wiersz": 1,
+   "id": 25,
+   "kategoria": "pedy",
+   "podtyp": "kielki",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.083,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_kielki_2": {
+   "kolumna": 12,
+   "wiersz": 1,
+   "id": 26,
+   "kategoria": "pedy",
+   "podtyp": "kielki",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.085,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_kielki_3": {
+   "kolumna": 13,
+   "wiersz": 1,
+   "id": 27,
+   "kategoria": "pedy",
+   "podtyp": "kielki",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.028,
+   "sloma": 0.002,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_kielki_4": {
+   "kolumna": 0,
+   "wiersz": 2,
+   "id": 28,
+   "kategoria": "pedy",
+   "podtyp": "kielki",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.075,
+   "sloma": 0.003,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "przejscie_ziemia_12": {
+   "kolumna": 1,
+   "wiersz": 2,
+   "id": 29,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 0.959,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.271,
+   "sloma": 0.006,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_13": {
+   "kolumna": 2,
+   "wiersz": 2,
+   "id": 30,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.46,
+   "sloma": 0.379,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_14": {
+   "kolumna": 3,
+   "wiersz": 2,
+   "id": 31,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.167,
+   "sloma": 0.658,
+   "pomarancz": 0.002,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_15": {
+   "kolumna": 4,
+   "wiersz": 2,
+   "id": 32,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.324,
+   "sloma": 0.482,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_16": {
+   "kolumna": 5,
+   "wiersz": 2,
+   "id": 33,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.175,
+   "sloma": 0.651,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_17": {
+   "kolumna": 6,
+   "wiersz": 2,
+   "id": 34,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.199,
+   "sloma": 0.619,
+   "pomarancz": 0.002,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_18": {
+   "kolumna": 7,
+   "wiersz": 2,
+   "id": 35,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.521,
+   "sloma": 0.354,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "ugor_bruzdy_poz_4": {
+   "kolumna": 8,
+   "wiersz": 2,
+   "id": 36,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_poz",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.008,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "ugor_bruzdy_poz_5": {
+   "kolumna": 9,
+   "wiersz": 2,
+   "id": 37,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_poz",
+   "rola": "nakladka",
+   "krycie": 0.938,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.009,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "ugor_ziemia_3": {
+   "kolumna": 10,
+   "wiersz": 2,
+   "id": 38,
+   "kategoria": "ugor",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.945,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.037,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "ugor_ziemia_4": {
+   "kolumna": 11,
+   "wiersz": 2,
+   "id": 39,
+   "kategoria": "ugor",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.934,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.013,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "przejscie_ziemia_19": {
+   "kolumna": 12,
+   "wiersz": 2,
+   "id": 40,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.214,
+   "sloma": 0.583,
+   "pomarancz": 0.004,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_20": {
+   "kolumna": 13,
+   "wiersz": 2,
+   "id": 41,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.32,
+   "sloma": 0.501,
+   "pomarancz": 0.002,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_21": {
+   "kolumna": 0,
+   "wiersz": 3,
+   "id": 42,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 0.996,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.341,
+   "sloma": 0.469,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_22": {
+   "kolumna": 1,
+   "wiersz": 3,
+   "id": 43,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 0.996,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.322,
+   "sloma": 0.491,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_23": {
+   "kolumna": 2,
+   "wiersz": 3,
+   "id": 44,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.334,
+   "sloma": 0.463,
+   "pomarancz": 0.004,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_24": {
+   "kolumna": 3,
+   "wiersz": 3,
+   "id": 45,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.245,
+   "sloma": 0.562,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "ugor_bruzdy_poz_6": {
+   "kolumna": 4,
+   "wiersz": 3,
+   "id": 46,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_poz",
+   "rola": "nakladka",
+   "krycie": 0.708,
+   "obrys": [
+    32,
+    24
+   ],
+   "ziel": 0.037,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "ugor_bruzdy_poz_7": {
+   "kolumna": 5,
+   "wiersz": 3,
+   "id": 47,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_poz",
+   "rola": "nakladka",
+   "krycie": 0.711,
+   "obrys": [
+    32,
+    24
+   ],
+   "ziel": 0.011,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "ugor_bruzdy_poz_8": {
+   "kolumna": 6,
+   "wiersz": 3,
+   "id": 48,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_poz",
+   "rola": "nakladka",
+   "krycie": 0.64,
+   "obrys": [
+    29,
+    24
+   ],
+   "ziel": 0.012,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "ugor_bruzdy_poz_9": {
+   "kolumna": 7,
+   "wiersz": 3,
+   "id": 49,
+   "kategoria": "ugor",
+   "podtyp": "bruzdy_poz",
+   "rola": "nakladka",
+   "krycie": 0.646,
+   "obrys": [
+    29,
+    24
+   ],
+   "ziel": 0.027,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "przejscie_ziemia_25": {
+   "kolumna": 8,
+   "wiersz": 3,
+   "id": 50,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.696,
+   "obrys": [
+    31,
+    24
+   ],
+   "ziel": 0.119,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "N",
+    "S"
+   ],
+   "naroznik": [
+    "NW",
+    "SE"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_26": {
+   "kolumna": 9,
+   "wiersz": 3,
+   "id": 51,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.721,
+   "obrys": [
+    32,
+    24
+   ],
+   "ziel": 0.125,
+   "sloma": 0.003,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "N",
+    "S"
+   ],
+   "naroznik": [
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_27": {
+   "kolumna": 10,
+   "wiersz": 3,
+   "id": 52,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.724,
+   "obrys": [
+    32,
+    24
+   ],
+   "ziel": 0.126,
+   "sloma": 0.003,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "N",
+    "S"
+   ],
+   "naroznik": [
+    "NW",
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_28": {
+   "kolumna": 11,
+   "wiersz": 3,
+   "id": 53,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.719,
+   "obrys": [
+    32,
+    24
+   ],
+   "ziel": 0.111,
+   "sloma": 0.01,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "S"
+   ],
+   "naroznik": [
+    "SE",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "kapusta_sadzonka_1": {
+   "kolumna": 12,
+   "wiersz": 3,
+   "id": 54,
+   "kategoria": "kapusta",
+   "podtyp": "sadzonka",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.251,
+   "sloma": 0.003,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_sadzonka_2": {
+   "kolumna": 13,
+   "wiersz": 3,
+   "id": 55,
+   "kategoria": "kapusta",
+   "podtyp": "sadzonka",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.299,
+   "sloma": 0.003,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_dojrzala_1": {
+   "kolumna": 0,
+   "wiersz": 4,
+   "id": 56,
+   "kategoria": "kapusta",
+   "podtyp": "dojrzala",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.531,
+   "sloma": 0.009,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_dojrzala_2": {
+   "kolumna": 1,
+   "wiersz": 4,
+   "id": 57,
+   "kategoria": "kapusta",
+   "podtyp": "dojrzala",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.564,
+   "sloma": 0.001,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_dojrzala_3": {
+   "kolumna": 2,
+   "wiersz": 4,
+   "id": 58,
+   "kategoria": "kapusta",
+   "podtyp": "dojrzala",
+   "rola": "nakladka",
+   "krycie": 0.949,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.748,
+   "sloma": 0.022,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_dojrzala_4": {
+   "kolumna": 3,
+   "wiersz": 4,
+   "id": 59,
+   "kategoria": "kapusta",
+   "podtyp": "dojrzala",
+   "rola": "grunt",
+   "krycie": 0.961,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.816,
+   "sloma": 0.018,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "zboze_dojrzale_1": {
+   "kolumna": 4,
+   "wiersz": 4,
+   "id": 60,
+   "kategoria": "zboze",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.836,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.021,
+   "sloma": 0.202,
+   "pomarancz": 0.164,
+   "polowka": false
+  },
+  "zboze_dojrzale_2": {
+   "kolumna": 5,
+   "wiersz": 4,
+   "id": 61,
+   "kategoria": "zboze",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.947,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.041,
+   "sloma": 0.232,
+   "pomarancz": 0.216,
+   "polowka": false
+  },
+  "zboze_dojrzale_3": {
+   "kolumna": 6,
+   "wiersz": 4,
+   "id": 62,
+   "kategoria": "zboze",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.927,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.03,
+   "sloma": 0.244,
+   "pomarancz": 0.188,
+   "polowka": false
+  },
+  "zboze_dojrzale_4": {
+   "kolumna": 7,
+   "wiersz": 4,
+   "id": 63,
+   "kategoria": "zboze",
+   "podtyp": "dojrzale",
+   "rola": "grunt",
+   "krycie": 0.958,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.013,
+   "sloma": 0.238,
+   "pomarancz": 0.182,
+   "polowka": false
+  },
+  "zboze_dojrzale_5": {
+   "kolumna": 8,
+   "wiersz": 4,
+   "id": 64,
+   "kategoria": "zboze",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.887,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.019,
+   "sloma": 0.247,
+   "pomarancz": 0.205,
+   "polowka": false
+  },
+  "ugor_ziemia_5": {
+   "kolumna": 9,
+   "wiersz": 4,
+   "id": 65,
+   "kategoria": "ugor",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.892,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.002,
+   "sloma": 0.528,
+   "pomarancz": 0.041,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "przejscie_zasiane_1": {
+   "kolumna": 10,
+   "wiersz": 4,
+   "id": 66,
+   "kategoria": "przejscie",
+   "podtyp": "zasiane",
+   "rola": "nakladka",
+   "krycie": 0.937,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.106,
+   "sloma": 0.044,
+   "pomarancz": 0.004,
+   "polowka": false,
+   "trawa": [
+    "N"
+   ],
+   "naroznik": [
+    "NE",
+    "NW"
+   ],
+   "czysty": false
+  },
+  "zboze_zielone_1": {
+   "kolumna": 11,
+   "wiersz": 4,
+   "id": 67,
+   "kategoria": "zboze",
+   "podtyp": "zielone",
+   "rola": "nakladka",
+   "krycie": 0.867,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.476,
+   "sloma": 0.019,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "zboze_zielone_2": {
+   "kolumna": 12,
+   "wiersz": 4,
+   "id": 68,
+   "kategoria": "zboze",
+   "podtyp": "zielone",
+   "rola": "nakladka",
+   "krycie": 0.906,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.767,
+   "sloma": 0.014,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "zboze_zielone_3": {
+   "kolumna": 13,
+   "wiersz": 4,
+   "id": 69,
+   "kategoria": "zboze",
+   "podtyp": "zielone",
+   "rola": "nakladka",
+   "krycie": 0.91,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.802,
+   "sloma": 0.018,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "przejscie_sloma_1": {
+   "kolumna": 0,
+   "wiersz": 5,
+   "id": 70,
+   "kategoria": "przejscie",
+   "podtyp": "sloma",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.035,
+   "sloma": 0.203,
+   "pomarancz": 0.032,
+   "polowka": false,
+   "trawa": [
+    "N"
+   ],
+   "naroznik": [],
+   "czysty": false
+  },
+  "sciernisko_sloma_1": {
+   "kolumna": 1,
+   "wiersz": 5,
+   "id": 71,
+   "kategoria": "sciernisko",
+   "podtyp": "sloma",
+   "rola": "nakladka",
+   "krycie": 0.902,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.016,
+   "sloma": 0.073,
+   "pomarancz": 0.041,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "kapusta_sadzonka_3": {
+   "kolumna": 2,
+   "wiersz": 5,
+   "id": 72,
+   "kategoria": "kapusta",
+   "podtyp": "sadzonka",
+   "rola": "grunt",
+   "krycie": 0.961,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.275,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_mloda_1": {
+   "kolumna": 3,
+   "wiersz": 5,
+   "id": 73,
+   "kategoria": "kapusta",
+   "podtyp": "mloda",
+   "rola": "nakladka",
+   "krycie": 0.732,
+   "obrys": [
+    32,
+    24
+   ],
+   "ziel": 0.424,
+   "sloma": 0.005,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_mloda_2": {
+   "kolumna": 4,
+   "wiersz": 5,
+   "id": 74,
+   "kategoria": "kapusta",
+   "podtyp": "mloda",
+   "rola": "nakladka",
+   "krycie": 0.737,
+   "obrys": [
+    32,
+    24
+   ],
+   "ziel": 0.469,
+   "sloma": 0.007,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_dojrzala_5": {
+   "kolumna": 5,
+   "wiersz": 5,
+   "id": 75,
+   "kategoria": "kapusta",
+   "podtyp": "dojrzala",
+   "rola": "nakladka",
+   "krycie": 0.759,
+   "obrys": [
+    32,
+    25
+   ],
+   "ziel": 0.551,
+   "sloma": 0.044,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_dojrzala_6": {
+   "kolumna": 6,
+   "wiersz": 5,
+   "id": 76,
+   "kategoria": "kapusta",
+   "podtyp": "dojrzala",
+   "rola": "nakladka",
+   "krycie": 0.739,
+   "obrys": [
+    32,
+    25
+   ],
+   "ziel": 0.602,
+   "sloma": 0.011,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "kapusta_dojrzala_7": {
+   "kolumna": 7,
+   "wiersz": 5,
+   "id": 77,
+   "kategoria": "kapusta",
+   "podtyp": "dojrzala",
+   "rola": "nakladka",
+   "krycie": 0.928,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.504,
+   "sloma": 0.022,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "zboze_dojrzale_6": {
+   "kolumna": 8,
+   "wiersz": 5,
+   "id": 78,
+   "kategoria": "zboze",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.937,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.006,
+   "sloma": 0.157,
+   "pomarancz": 0.148,
+   "polowka": false
+  },
+  "zboze_dojrzale_7": {
+   "kolumna": 9,
+   "wiersz": 5,
+   "id": 79,
+   "kategoria": "zboze",
+   "podtyp": "dojrzale",
+   "rola": "grunt",
+   "krycie": 0.988,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.024,
+   "sloma": 0.244,
+   "pomarancz": 0.221,
+   "polowka": false
+  },
+  "zboze_dojrzale_8": {
+   "kolumna": 10,
+   "wiersz": 5,
+   "id": 80,
+   "kategoria": "zboze",
+   "podtyp": "dojrzale",
+   "rola": "grunt",
+   "krycie": 0.967,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.013,
+   "sloma": 0.264,
+   "pomarancz": 0.303,
+   "polowka": false
+  },
+  "zboze_zielone_4": {
+   "kolumna": 11,
+   "wiersz": 5,
+   "id": 81,
+   "kategoria": "zboze",
+   "podtyp": "zielone",
+   "rola": "nakladka",
+   "krycie": 0.938,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.333,
+   "sloma": 0.048,
+   "pomarancz": 0.182,
+   "polowka": false
+  },
+  "zboze_zielone_5": {
+   "kolumna": 12,
+   "wiersz": 5,
+   "id": 82,
+   "kategoria": "zboze",
+   "podtyp": "zielone",
+   "rola": "nakladka",
+   "krycie": 0.914,
+   "obrys": [
+    31,
+    32
+   ],
+   "ziel": 0.46,
+   "sloma": 0.012,
+   "pomarancz": 0.16,
+   "polowka": false
+  },
+  "przejscie_ziemia_29": {
+   "kolumna": 13,
+   "wiersz": 5,
+   "id": 83,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 0.977,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.109,
+   "sloma": 0.515,
+   "pomarancz": 0.002,
+   "polowka": false,
+   "trawa": [
+    "N"
+   ],
+   "naroznik": [
+    "NE",
+    "NW"
+   ],
+   "czysty": false
+  },
+  "przejscie_ziemia_30": {
+   "kolumna": 0,
+   "wiersz": 6,
+   "id": 84,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "grunt",
+   "krycie": 0.957,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.467,
+   "sloma": 0.376,
+   "pomarancz": 0.0,
+   "polowka": false,
+   "trawa": [
+    "E",
+    "N",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SE"
+   ],
+   "czysty": false
+  },
+  "pedy_mlode_1": {
+   "kolumna": 1,
+   "wiersz": 6,
+   "id": 85,
+   "kategoria": "pedy",
+   "podtyp": "mlode",
+   "rola": "nakladka",
+   "krycie": 0.759,
+   "obrys": [
+    32,
+    28
+   ],
+   "ziel": 0.201,
+   "sloma": 0.017,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_mlode_2": {
+   "kolumna": 2,
+   "wiersz": 6,
+   "id": 86,
+   "kategoria": "pedy",
+   "podtyp": "mlode",
+   "rola": "nakladka",
+   "krycie": 0.771,
+   "obrys": [
+    32,
+    29
+   ],
+   "ziel": 0.343,
+   "sloma": 0.013,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_mlode_3": {
+   "kolumna": 3,
+   "wiersz": 6,
+   "id": 87,
+   "kategoria": "pedy",
+   "podtyp": "mlode",
+   "rola": "nakladka",
+   "krycie": 0.766,
+   "obrys": [
+    32,
+    29
+   ],
+   "ziel": 0.379,
+   "sloma": 0.008,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "sciernisko_sloma_2": {
+   "kolumna": 4,
+   "wiersz": 6,
+   "id": 88,
+   "kategoria": "sciernisko",
+   "podtyp": "sloma",
+   "rola": "nakladka",
+   "krycie": 0.75,
+   "obrys": [
+    32,
+    24
+   ],
+   "ziel": 0.016,
+   "sloma": 0.091,
+   "pomarancz": 0.021,
+   "polowka": false,
+   "trawa": [],
+   "naroznik": [],
+   "czysty": false
+  },
+  "przejscie_ziemia_31": {
+   "kolumna": 5,
+   "wiersz": 6,
+   "id": 89,
+   "kategoria": "przejscie",
+   "podtyp": "ziemia",
+   "rola": "nakladka",
+   "krycie": 0.937,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.475,
+   "sloma": 0.346,
+   "pomarancz": 0.004,
+   "polowka": false,
+   "trawa": [
+    "N",
+    "S",
+    "W"
+   ],
+   "naroznik": [
+    "NE",
+    "NW",
+    "SW"
+   ],
+   "czysty": false
+  },
+  "len_kwitnacy_1": {
+   "kolumna": 6,
+   "wiersz": 6,
+   "id": 90,
+   "kategoria": "len",
+   "podtyp": "kwitnacy",
+   "rola": "nakladka",
+   "krycie": 0.269,
+   "obrys": [
+    26,
+    26
+   ],
+   "ziel": 0.873,
+   "sloma": 0.127,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "len_kwitnacy_2": {
+   "kolumna": 7,
+   "wiersz": 6,
+   "id": 91,
+   "kategoria": "len",
+   "podtyp": "kwitnacy",
+   "rola": "nakladka",
+   "krycie": 0.514,
+   "obrys": [
+    31,
+    28
+   ],
+   "ziel": 0.776,
+   "sloma": 0.059,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "len_kwitnacy_3": {
+   "kolumna": 8,
+   "wiersz": 6,
+   "id": 92,
+   "kategoria": "len",
+   "podtyp": "kwitnacy",
+   "rola": "nakladka",
+   "krycie": 0.522,
+   "obrys": [
+    32,
+    28
+   ],
+   "ziel": 0.806,
+   "sloma": 0.045,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "len_kwitnacy_4": {
+   "kolumna": 9,
+   "wiersz": 6,
+   "id": 93,
+   "kategoria": "len",
+   "podtyp": "kwitnacy",
+   "rola": "nakladka",
+   "krycie": 0.5,
+   "obrys": [
+    32,
+    28
+   ],
+   "ziel": 0.74,
+   "sloma": 0.098,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "len_kwitnacy_5": {
+   "kolumna": 10,
+   "wiersz": 6,
+   "id": 94,
+   "kategoria": "len",
+   "podtyp": "kwitnacy",
+   "rola": "nakladka",
+   "krycie": 0.517,
+   "obrys": [
+    32,
+    28
+   ],
+   "ziel": 0.767,
+   "sloma": 0.053,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_1": {
+   "kolumna": 11,
+   "wiersz": 6,
+   "id": 95,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.325,
+   "obrys": [
+    26,
+    28
+   ],
+   "ziel": 1.0,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_2": {
+   "kolumna": 12,
+   "wiersz": 6,
+   "id": 96,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.706,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.781,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_3": {
+   "kolumna": 13,
+   "wiersz": 6,
+   "id": 97,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.711,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.826,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_mlode_4": {
+   "kolumna": 0,
+   "wiersz": 7,
+   "id": 98,
+   "kategoria": "pedy",
+   "podtyp": "mlode",
+   "rola": "nakladka",
+   "krycie": 0.449,
+   "obrys": [
+    32,
+    26
+   ],
+   "ziel": 0.846,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_siewka_1": {
+   "kolumna": 1,
+   "wiersz": 7,
+   "id": 99,
+   "kategoria": "pedy",
+   "podtyp": "siewka",
+   "rola": "nakladka",
+   "krycie": 0.532,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.251,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_mlode_5": {
+   "kolumna": 2,
+   "wiersz": 7,
+   "id": 100,
+   "kategoria": "pedy",
+   "podtyp": "mlode",
+   "rola": "nakladka",
+   "krycie": 0.75,
+   "obrys": [
+    32,
+    24
+   ],
+   "ziel": 0.204,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": true
+  },
+  "nac_gesta_4": {
+   "kolumna": 3,
+   "wiersz": 7,
+   "id": 101,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.271,
+   "obrys": [
+    22,
+    25
+   ],
+   "ziel": 0.96,
+   "sloma": 0.04,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_5": {
+   "kolumna": 4,
+   "wiersz": 7,
+   "id": 102,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.259,
+   "obrys": [
+    23,
+    25
+   ],
+   "ziel": 0.989,
+   "sloma": 0.011,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_siewka_2": {
+   "kolumna": 5,
+   "wiersz": 7,
+   "id": 103,
+   "kategoria": "pedy",
+   "podtyp": "siewka",
+   "rola": "nakladka",
+   "krycie": 0.117,
+   "obrys": [
+    11,
+    25
+   ],
+   "ziel": 1.0,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_6": {
+   "kolumna": 6,
+   "wiersz": 7,
+   "id": 104,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.619,
+   "obrys": [
+    25,
+    32
+   ],
+   "ziel": 0.699,
+   "sloma": 0.002,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_7": {
+   "kolumna": 7,
+   "wiersz": 7,
+   "id": 105,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.451,
+   "obrys": [
+    32,
+    25
+   ],
+   "ziel": 0.859,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_8": {
+   "kolumna": 8,
+   "wiersz": 7,
+   "id": 106,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.594,
+   "obrys": [
+    25,
+    32
+   ],
+   "ziel": 0.627,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_siewka_3": {
+   "kolumna": 9,
+   "wiersz": 7,
+   "id": 107,
+   "kategoria": "pedy",
+   "podtyp": "siewka",
+   "rola": "nakladka",
+   "krycie": 0.607,
+   "obrys": [
+    26,
+    29
+   ],
+   "ziel": 0.193,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_mlode_6": {
+   "kolumna": 10,
+   "wiersz": 7,
+   "id": 108,
+   "kategoria": "pedy",
+   "podtyp": "mlode",
+   "rola": "nakladka",
+   "krycie": 0.69,
+   "obrys": [
+    29,
+    26
+   ],
+   "ziel": 0.307,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_mlode_7": {
+   "kolumna": 11,
+   "wiersz": 7,
+   "id": 109,
+   "kategoria": "pedy",
+   "podtyp": "mlode",
+   "rola": "nakladka",
+   "krycie": 0.683,
+   "obrys": [
+    29,
+    26
+   ],
+   "ziel": 0.282,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_siewka_4": {
+   "kolumna": 12,
+   "wiersz": 7,
+   "id": 110,
+   "kategoria": "pedy",
+   "podtyp": "siewka",
+   "rola": "nakladka",
+   "krycie": 0.643,
+   "obrys": [
+    28,
+    25
+   ],
+   "ziel": 0.117,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "pedy_mlode_8": {
+   "kolumna": 13,
+   "wiersz": 7,
+   "id": 111,
+   "kategoria": "pedy",
+   "podtyp": "mlode",
+   "rola": "nakladka",
+   "krycie": 0.65,
+   "obrys": [
+    28,
+    26
+   ],
+   "ziel": 0.344,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_cebulowa_1": {
+   "kolumna": 0,
+   "wiersz": 8,
+   "id": 112,
+   "kategoria": "nac",
+   "podtyp": "cebulowa",
+   "rola": "nakladka",
+   "krycie": 0.812,
+   "obrys": [
+    32,
+    26
+   ],
+   "ziel": 0.373,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_cebulowa_2": {
+   "kolumna": 1,
+   "wiersz": 8,
+   "id": 113,
+   "kategoria": "nac",
+   "podtyp": "cebulowa",
+   "rola": "nakladka",
+   "krycie": 0.875,
+   "obrys": [
+    32,
+    28
+   ],
+   "ziel": 0.358,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_cebulowa_3": {
+   "kolumna": 2,
+   "wiersz": 8,
+   "id": 114,
+   "kategoria": "nac",
+   "podtyp": "cebulowa",
+   "rola": "nakladka",
+   "krycie": 0.875,
+   "obrys": [
+    32,
+    28
+   ],
+   "ziel": 0.369,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_cebulowa_4": {
+   "kolumna": 3,
+   "wiersz": 8,
+   "id": 115,
+   "kategoria": "nac",
+   "podtyp": "cebulowa",
+   "rola": "nakladka",
+   "krycie": 0.812,
+   "obrys": [
+    32,
+    26
+   ],
+   "ziel": 0.345,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_niska_1": {
+   "kolumna": 4,
+   "wiersz": 8,
+   "id": 116,
+   "kategoria": "nac",
+   "podtyp": "niska",
+   "rola": "nakladka",
+   "krycie": 0.632,
+   "obrys": [
+    28,
+    26
+   ],
+   "ziel": 0.303,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_niska_2": {
+   "kolumna": 5,
+   "wiersz": 8,
+   "id": 117,
+   "kategoria": "nac",
+   "podtyp": "niska",
+   "rola": "nakladka",
+   "krycie": 0.812,
+   "obrys": [
+    32,
+    26
+   ],
+   "ziel": 0.427,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_niska_3": {
+   "kolumna": 6,
+   "wiersz": 8,
+   "id": 118,
+   "kategoria": "nac",
+   "podtyp": "niska",
+   "rola": "nakladka",
+   "krycie": 0.764,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.487,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_niska_4": {
+   "kolumna": 7,
+   "wiersz": 8,
+   "id": 119,
+   "kategoria": "nac",
+   "podtyp": "niska",
+   "rola": "nakladka",
+   "krycie": 0.861,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.566,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_cebulowa_5": {
+   "kolumna": 8,
+   "wiersz": 8,
+   "id": 120,
+   "kategoria": "nac",
+   "podtyp": "cebulowa",
+   "rola": "nakladka",
+   "krycie": 0.812,
+   "obrys": [
+    32,
+    26
+   ],
+   "ziel": 0.383,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "korzeniowe_wschodzace_1": {
+   "kolumna": 9,
+   "wiersz": 8,
+   "id": 121,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.0,
+   "sloma": 0.018,
+   "pomarancz": 0.033,
+   "polowka": true
+  },
+  "korzeniowe_wschodzace_2": {
+   "kolumna": 10,
+   "wiersz": 8,
+   "id": 122,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.062,
+   "sloma": 0.018,
+   "pomarancz": 0.085,
+   "polowka": true
+  },
+  "korzeniowe_wschodzace_3": {
+   "kolumna": 11,
+   "wiersz": 8,
+   "id": 123,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.093,
+   "sloma": 0.018,
+   "pomarancz": 0.081,
+   "polowka": true
+  },
+  "korzeniowe_wschodzace_4": {
+   "kolumna": 12,
+   "wiersz": 8,
+   "id": 124,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.081,
+   "sloma": 0.024,
+   "pomarancz": 0.087,
+   "polowka": true
+  },
+  "korzeniowe_wschodzace_5": {
+   "kolumna": 13,
+   "wiersz": 8,
+   "id": 125,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.111,
+   "sloma": 0.039,
+   "pomarancz": 0.089,
+   "polowka": true
+  },
+  "korzeniowe_wschodzace_6": {
+   "kolumna": 0,
+   "wiersz": 9,
+   "id": 126,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.004,
+   "sloma": 0.009,
+   "pomarancz": 0.036,
+   "polowka": true
+  },
+  "korzeniowe_rzepa_1": {
+   "kolumna": 1,
+   "wiersz": 9,
+   "id": 127,
+   "kategoria": "korzeniowe",
+   "podtyp": "rzepa",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.171,
+   "sloma": 0.085,
+   "pomarancz": 0.0,
+   "polowka": true
+  },
+  "korzeniowe_rzepa_2": {
+   "kolumna": 2,
+   "wiersz": 9,
+   "id": 128,
+   "kategoria": "korzeniowe",
+   "podtyp": "rzepa",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.14,
+   "sloma": 0.09,
+   "pomarancz": 0.0,
+   "polowka": true
+  },
+  "korzeniowe_rzepa_3": {
+   "kolumna": 3,
+   "wiersz": 9,
+   "id": 129,
+   "kategoria": "korzeniowe",
+   "podtyp": "rzepa",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.181,
+   "sloma": 0.164,
+   "pomarancz": 0.0,
+   "polowka": true
+  },
+  "korzeniowe_dojrzale_1": {
+   "kolumna": 4,
+   "wiersz": 9,
+   "id": 130,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.152,
+   "sloma": 0.106,
+   "pomarancz": 0.021,
+   "polowka": true
+  },
+  "korzeniowe_dojrzale_2": {
+   "kolumna": 5,
+   "wiersz": 9,
+   "id": 131,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.162,
+   "sloma": 0.106,
+   "pomarancz": 0.011,
+   "polowka": true
+  },
+  "korzeniowe_wschodzace_7": {
+   "kolumna": 6,
+   "wiersz": 9,
+   "id": 132,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.062,
+   "sloma": 0.025,
+   "pomarancz": 0.003,
+   "polowka": true
+  },
+  "korzeniowe_wschodzace_8": {
+   "kolumna": 7,
+   "wiersz": 9,
+   "id": 133,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.0,
+   "sloma": 0.028,
+   "pomarancz": 0.012,
+   "polowka": true
+  },
+  "korzeniowe_dojrzale_3": {
+   "kolumna": 8,
+   "wiersz": 9,
+   "id": 134,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.131,
+   "sloma": 0.06,
+   "pomarancz": 0.014,
+   "polowka": true
+  },
+  "korzeniowe_wschodzace_9": {
+   "kolumna": 9,
+   "wiersz": 9,
+   "id": 135,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.003,
+   "sloma": 0.019,
+   "pomarancz": 0.002,
+   "polowka": true
+  },
+  "korzeniowe_wschodzace_10": {
+   "kolumna": 10,
+   "wiersz": 9,
+   "id": 136,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.032,
+   "sloma": 0.011,
+   "pomarancz": 0.004,
+   "polowka": true
+  },
+  "korzeniowe_dojrzale_4": {
+   "kolumna": 11,
+   "wiersz": 9,
+   "id": 137,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.12,
+   "sloma": 0.03,
+   "pomarancz": 0.011,
+   "polowka": false
+  },
+  "korzeniowe_dojrzale_5": {
+   "kolumna": 12,
+   "wiersz": 9,
+   "id": 138,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "grunt",
+   "krycie": 1.0,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.027,
+   "sloma": 0.034,
+   "pomarancz": 0.015,
+   "polowka": false
+  },
+  "nac_gesta_9": {
+   "kolumna": 13,
+   "wiersz": 9,
+   "id": 139,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.755,
+   "obrys": [
+    31,
+    31
+   ],
+   "ziel": 0.674,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_10": {
+   "kolumna": 0,
+   "wiersz": 10,
+   "id": 140,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.796,
+   "obrys": [
+    32,
+    31
+   ],
+   "ziel": 0.688,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_11": {
+   "kolumna": 1,
+   "wiersz": 10,
+   "id": 141,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.781,
+   "obrys": [
+    32,
+    31
+   ],
+   "ziel": 0.667,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_12": {
+   "kolumna": 2,
+   "wiersz": 10,
+   "id": 142,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.639,
+   "obrys": [
+    31,
+    25
+   ],
+   "ziel": 0.517,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_13": {
+   "kolumna": 3,
+   "wiersz": 10,
+   "id": 143,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.648,
+   "obrys": [
+    31,
+    26
+   ],
+   "ziel": 0.554,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_14": {
+   "kolumna": 4,
+   "wiersz": 10,
+   "id": 144,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.703,
+   "obrys": [
+    32,
+    26
+   ],
+   "ziel": 0.564,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_15": {
+   "kolumna": 5,
+   "wiersz": 10,
+   "id": 145,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.611,
+   "obrys": [
+    29,
+    26
+   ],
+   "ziel": 0.537,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_16": {
+   "kolumna": 6,
+   "wiersz": 10,
+   "id": 146,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.59,
+   "obrys": [
+    28,
+    26
+   ],
+   "ziel": 0.551,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_17": {
+   "kolumna": 7,
+   "wiersz": 10,
+   "id": 147,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.479,
+   "obrys": [
+    25,
+    22
+   ],
+   "ziel": 0.495,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_18": {
+   "kolumna": 8,
+   "wiersz": 10,
+   "id": 148,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.75,
+   "obrys": [
+    32,
+    28
+   ],
+   "ziel": 0.617,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_19": {
+   "kolumna": 9,
+   "wiersz": 10,
+   "id": 149,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.757,
+   "obrys": [
+    32,
+    29
+   ],
+   "ziel": 0.665,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "nac_gesta_20": {
+   "kolumna": 10,
+   "wiersz": 10,
+   "id": 150,
+   "kategoria": "nac",
+   "podtyp": "gesta",
+   "rola": "nakladka",
+   "krycie": 0.652,
+   "obrys": [
+    29,
+    28
+   ],
+   "ziel": 0.74,
+   "sloma": 0.0,
+   "pomarancz": 0.0,
+   "polowka": false
+  },
+  "korzeniowe_dojrzale_6": {
+   "kolumna": 11,
+   "wiersz": 10,
+   "id": 151,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.575,
+   "obrys": [
+    31,
+    25
+   ],
+   "ziel": 0.119,
+   "sloma": 0.017,
+   "pomarancz": 0.031,
+   "polowka": false
+  },
+  "korzeniowe_dojrzale_7": {
+   "kolumna": 12,
+   "wiersz": 10,
+   "id": 152,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.626,
+   "obrys": [
+    32,
+    28
+   ],
+   "ziel": 0.142,
+   "sloma": 0.019,
+   "pomarancz": 0.058,
+   "polowka": false
+  },
+  "korzeniowe_dojrzale_8": {
+   "kolumna": 13,
+   "wiersz": 10,
+   "id": 153,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.574,
+   "obrys": [
+    29,
+    32
+   ],
+   "ziel": 0.131,
+   "sloma": 0.066,
+   "pomarancz": 0.049,
+   "polowka": false
+  },
+  "korzeniowe_dojrzale_9": {
+   "kolumna": 0,
+   "wiersz": 11,
+   "id": 154,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.571,
+   "obrys": [
+    28,
+    32
+   ],
+   "ziel": 0.166,
+   "sloma": 0.06,
+   "pomarancz": 0.074,
+   "polowka": false
+  },
+  "korzeniowe_rzepa_4": {
+   "kolumna": 1,
+   "wiersz": 11,
+   "id": 155,
+   "kategoria": "korzeniowe",
+   "podtyp": "rzepa",
+   "rola": "nakladka",
+   "krycie": 0.53,
+   "obrys": [
+    28,
+    25
+   ],
+   "ziel": 0.11,
+   "sloma": 0.039,
+   "pomarancz": 0.002,
+   "polowka": false
+  },
+  "korzeniowe_dojrzale_10": {
+   "kolumna": 2,
+   "wiersz": 11,
+   "id": 156,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.636,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.127,
+   "sloma": 0.051,
+   "pomarancz": 0.058,
+   "polowka": false
+  },
+  "korzeniowe_rzepa_5": {
+   "kolumna": 3,
+   "wiersz": 11,
+   "id": 157,
+   "kategoria": "korzeniowe",
+   "podtyp": "rzepa",
+   "rola": "nakladka",
+   "krycie": 0.623,
+   "obrys": [
+    31,
+    32
+   ],
+   "ziel": 0.171,
+   "sloma": 0.108,
+   "pomarancz": 0.019,
+   "polowka": false
+  },
+  "korzeniowe_dojrzale_11": {
+   "kolumna": 4,
+   "wiersz": 11,
+   "id": 158,
+   "kategoria": "korzeniowe",
+   "podtyp": "dojrzale",
+   "rola": "nakladka",
+   "krycie": 0.652,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.175,
+   "sloma": 0.061,
+   "pomarancz": 0.075,
+   "polowka": false
+  },
+  "korzeniowe_rzepa_6": {
+   "kolumna": 5,
+   "wiersz": 11,
+   "id": 159,
+   "kategoria": "korzeniowe",
+   "podtyp": "rzepa",
+   "rola": "nakladka",
+   "krycie": 0.631,
+   "obrys": [
+    32,
+    32
+   ],
+   "ziel": 0.125,
+   "sloma": 0.107,
+   "pomarancz": 0.017,
+   "polowka": false
+  },
+  "korzeniowe_wschodzace_11": {
+   "kolumna": 6,
+   "wiersz": 11,
+   "id": 160,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "nakladka",
+   "krycie": 0.61,
+   "obrys": [
+    32,
+    26
+   ],
+   "ziel": 0.12,
+   "sloma": 0.034,
+   "pomarancz": 0.05,
+   "polowka": false
+  },
+  "korzeniowe_wschodzace_12": {
+   "kolumna": 7,
+   "wiersz": 11,
+   "id": 161,
+   "kategoria": "korzeniowe",
+   "podtyp": "wschodzace",
+   "rola": "nakladka",
+   "krycie": 0.535,
+   "obrys": [
+    29,
+    26
+   ],
+   "ziel": 0.104,
+   "sloma": 0.035,
+   "pomarancz": 0.04,
+   "polowka": false
+  },
+  "pedy_siewka_5": {
+   "kolumna": 8,
+   "wiersz": 11,
+   "id": 162,
+   "kategoria": "pedy",
+   "podtyp": "siewka",
+   "rola": "nakladka",
+   "krycie": 0.547,
+   "obrys": [
+    31,
+    21
+   ],
+   "ziel": 0.062,
+   "sloma": 0.005,
+   "pomarancz": 0.016,
+   "polowka": false
+  }
+ }
+}

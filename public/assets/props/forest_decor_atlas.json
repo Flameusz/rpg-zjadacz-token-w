@@ -1,0 +1,1129 @@
+{
+ "frames": {
+  "willow_stump_old": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 59,
+    "h": 52
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 59,
+    "h": 52
+   },
+   "sourceSize": {
+    "w": 59,
+    "h": 52
+   }
+  },
+  "stone_glaz_02": {
+   "frame": {
+    "x": 63,
+    "y": 2,
+    "w": 59,
+    "h": 48
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 59,
+    "h": 48
+   },
+   "sourceSize": {
+    "w": 59,
+    "h": 48
+   }
+  },
+  "stone_glaz_01": {
+   "frame": {
+    "x": 124,
+    "y": 2,
+    "w": 54,
+    "h": 46
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 54,
+    "h": 46
+   },
+   "sourceSize": {
+    "w": 54,
+    "h": 46
+   }
+  },
+  "stone_glaz_03": {
+   "frame": {
+    "x": 180,
+    "y": 2,
+    "w": 60,
+    "h": 46
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 60,
+    "h": 46
+   },
+   "sourceSize": {
+    "w": 60,
+    "h": 46
+   }
+  },
+  "willow_stump_fresh": {
+   "frame": {
+    "x": 242,
+    "y": 2,
+    "w": 61,
+    "h": 46
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 61,
+    "h": 46
+   },
+   "sourceSize": {
+    "w": 61,
+    "h": 46
+   }
+  },
+  "beech_stump_old": {
+   "frame": {
+    "x": 305,
+    "y": 2,
+    "w": 53,
+    "h": 45
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 53,
+    "h": 45
+   },
+   "sourceSize": {
+    "w": 53,
+    "h": 45
+   }
+  },
+  "bush_twiggy_berry": {
+   "frame": {
+    "x": 360,
+    "y": 2,
+    "w": 57,
+    "h": 45
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 57,
+    "h": 45
+   },
+   "sourceSize": {
+    "w": 57,
+    "h": 45
+   }
+  },
+  "willow_stump_weathered": {
+   "frame": {
+    "x": 419,
+    "y": 2,
+    "w": 58,
+    "h": 44
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 58,
+    "h": 44
+   },
+   "sourceSize": {
+    "w": 58,
+    "h": 44
+   }
+  },
+  "bush_dome_large": {
+   "frame": {
+    "x": 2,
+    "y": 56,
+    "w": 60,
+    "h": 43
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 60,
+    "h": 43
+   },
+   "sourceSize": {
+    "w": 60,
+    "h": 43
+   }
+  },
+  "bush_dome_olive": {
+   "frame": {
+    "x": 64,
+    "y": 56,
+    "w": 52,
+    "h": 43
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 52,
+    "h": 43
+   },
+   "sourceSize": {
+    "w": 52,
+    "h": 43
+   }
+  },
+  "bush_twiggy_bare_leaf": {
+   "frame": {
+    "x": 118,
+    "y": 56,
+    "w": 51,
+    "h": 43
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 51,
+    "h": 43
+   },
+   "sourceSize": {
+    "w": 51,
+    "h": 43
+   }
+  },
+  "bush_dome_berry": {
+   "frame": {
+    "x": 171,
+    "y": 56,
+    "w": 52,
+    "h": 42
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 52,
+    "h": 42
+   },
+   "sourceSize": {
+    "w": 52,
+    "h": 42
+   }
+  },
+  "stone_duzy_02": {
+   "frame": {
+    "x": 225,
+    "y": 56,
+    "w": 57,
+    "h": 42
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 57,
+    "h": 42
+   },
+   "sourceSize": {
+    "w": 57,
+    "h": 42
+   }
+  },
+  "bush_dome_flower": {
+   "frame": {
+    "x": 284,
+    "y": 56,
+    "w": 55,
+    "h": 41
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 55,
+    "h": 41
+   },
+   "sourceSize": {
+    "w": 55,
+    "h": 41
+   }
+  },
+  "bush_twiggy_bare": {
+   "frame": {
+    "x": 341,
+    "y": 56,
+    "w": 57,
+    "h": 40
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 57,
+    "h": 40
+   },
+   "sourceSize": {
+    "w": 57,
+    "h": 40
+   }
+  },
+  "stone_duzy_05": {
+   "frame": {
+    "x": 400,
+    "y": 56,
+    "w": 69,
+    "h": 39
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 69,
+    "h": 39
+   },
+   "sourceSize": {
+    "w": 69,
+    "h": 39
+   }
+  },
+  "stone_duzy_06": {
+   "frame": {
+    "x": 2,
+    "y": 101,
+    "w": 51,
+    "h": 39
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 51,
+    "h": 39
+   },
+   "sourceSize": {
+    "w": 51,
+    "h": 39
+   }
+  },
+  "beech_stump_weathered": {
+   "frame": {
+    "x": 55,
+    "y": 101,
+    "w": 52,
+    "h": 36
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 52,
+    "h": 36
+   },
+   "sourceSize": {
+    "w": 52,
+    "h": 36
+   }
+  },
+  "bush_dome_medium": {
+   "frame": {
+    "x": 109,
+    "y": 101,
+    "w": 49,
+    "h": 36
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 49,
+    "h": 36
+   },
+   "sourceSize": {
+    "w": 49,
+    "h": 36
+   }
+  },
+  "pniak_z_siekiera_paleta": {
+   "frame": {
+    "x": 160,
+    "y": 101,
+    "w": 48,
+    "h": 36
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 48,
+    "h": 36
+   },
+   "sourceSize": {
+    "w": 48,
+    "h": 36
+   }
+  },
+  "stone_duzy_01": {
+   "frame": {
+    "x": 210,
+    "y": 101,
+    "w": 50,
+    "h": 36
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 50,
+    "h": 36
+   },
+   "sourceSize": {
+    "w": 50,
+    "h": 36
+   }
+  },
+  "beech_stump_fresh": {
+   "frame": {
+    "x": 262,
+    "y": 101,
+    "w": 52,
+    "h": 35
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 52,
+    "h": 35
+   },
+   "sourceSize": {
+    "w": 52,
+    "h": 35
+   }
+  },
+  "oak_stump_old": {
+   "frame": {
+    "x": 316,
+    "y": 101,
+    "w": 41,
+    "h": 35
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 41,
+    "h": 35
+   },
+   "sourceSize": {
+    "w": 41,
+    "h": 35
+   }
+  },
+  "stone_sredni_07": {
+   "frame": {
+    "x": 359,
+    "y": 101,
+    "w": 46,
+    "h": 35
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 46,
+    "h": 35
+   },
+   "sourceSize": {
+    "w": 46,
+    "h": 35
+   }
+  },
+  "alder_stump_old": {
+   "frame": {
+    "x": 407,
+    "y": 101,
+    "w": 37,
+    "h": 34
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 37,
+    "h": 34
+   },
+   "sourceSize": {
+    "w": 37,
+    "h": 34
+   }
+  },
+  "oak_stump_fresh": {
+   "frame": {
+    "x": 446,
+    "y": 101,
+    "w": 41,
+    "h": 33
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 41,
+    "h": 33
+   },
+   "sourceSize": {
+    "w": 41,
+    "h": 33
+   }
+  },
+  "oak_stump_weathered": {
+   "frame": {
+    "x": 2,
+    "y": 142,
+    "w": 41,
+    "h": 33
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 41,
+    "h": 33
+   },
+   "sourceSize": {
+    "w": 41,
+    "h": 33
+   }
+  },
+  "stone_sredni_11": {
+   "frame": {
+    "x": 45,
+    "y": 142,
+    "w": 50,
+    "h": 33
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 50,
+    "h": 33
+   },
+   "sourceSize": {
+    "w": 50,
+    "h": 33
+   }
+  },
+  "bush_low_sticks": {
+   "frame": {
+    "x": 97,
+    "y": 142,
+    "w": 75,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 75,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 75,
+    "h": 32
+   }
+  },
+  "alder_stump_fresh": {
+   "frame": {
+    "x": 174,
+    "y": 142,
+    "w": 35,
+    "h": 30
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 35,
+    "h": 30
+   },
+   "sourceSize": {
+    "w": 35,
+    "h": 30
+   }
+  },
+  "alder_stump_weathered": {
+   "frame": {
+    "x": 211,
+    "y": 142,
+    "w": 35,
+    "h": 30
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 35,
+    "h": 30
+   },
+   "sourceSize": {
+    "w": 35,
+    "h": 30
+   }
+  },
+  "bush_dome_small": {
+   "frame": {
+    "x": 248,
+    "y": 142,
+    "w": 41,
+    "h": 29
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 41,
+    "h": 29
+   },
+   "sourceSize": {
+    "w": 41,
+    "h": 29
+   }
+  },
+  "grab_stump_old": {
+   "frame": {
+    "x": 291,
+    "y": 142,
+    "w": 31,
+    "h": 29
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 31,
+    "h": 29
+   },
+   "sourceSize": {
+    "w": 31,
+    "h": 29
+   }
+  },
+  "stone_sredni_06": {
+   "frame": {
+    "x": 324,
+    "y": 142,
+    "w": 48,
+    "h": 29
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 48,
+    "h": 29
+   },
+   "sourceSize": {
+    "w": 48,
+    "h": 29
+   }
+  },
+  "bush_low_wide": {
+   "frame": {
+    "x": 374,
+    "y": 142,
+    "w": 74,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 74,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 74,
+    "h": 28
+   }
+  },
+  "grab_stump_fresh": {
+   "frame": {
+    "x": 450,
+    "y": 142,
+    "w": 30,
+    "h": 25
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 30,
+    "h": 25
+   },
+   "sourceSize": {
+    "w": 30,
+    "h": 25
+   }
+  },
+  "grab_stump_weathered": {
+   "frame": {
+    "x": 2,
+    "y": 177,
+    "w": 33,
+    "h": 25
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 33,
+    "h": 25
+   },
+   "sourceSize": {
+    "w": 33,
+    "h": 25
+   }
+  },
+  "stone_sredni_01": {
+   "frame": {
+    "x": 37,
+    "y": 177,
+    "w": 33,
+    "h": 25
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 33,
+    "h": 25
+   },
+   "sourceSize": {
+    "w": 33,
+    "h": 25
+   }
+  },
+  "stone_sredni_02": {
+   "frame": {
+    "x": 72,
+    "y": 177,
+    "w": 33,
+    "h": 25
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 33,
+    "h": 25
+   },
+   "sourceSize": {
+    "w": 33,
+    "h": 25
+   }
+  },
+  "stone_sredni_09": {
+   "frame": {
+    "x": 107,
+    "y": 177,
+    "w": 33,
+    "h": 25
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 33,
+    "h": 25
+   },
+   "sourceSize": {
+    "w": 33,
+    "h": 25
+   }
+  },
+  "stone_maly_04": {
+   "frame": {
+    "x": 142,
+    "y": 177,
+    "w": 26,
+    "h": 22
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 26,
+    "h": 22
+   },
+   "sourceSize": {
+    "w": 26,
+    "h": 22
+   }
+  },
+  "stone_maly_12": {
+   "frame": {
+    "x": 170,
+    "y": 177,
+    "w": 31,
+    "h": 22
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 31,
+    "h": 22
+   },
+   "sourceSize": {
+    "w": 31,
+    "h": 22
+   }
+  },
+  "stone_maly_15": {
+   "frame": {
+    "x": 203,
+    "y": 177,
+    "w": 27,
+    "h": 22
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 27,
+    "h": 22
+   },
+   "sourceSize": {
+    "w": 27,
+    "h": 22
+   }
+  },
+  "birch_stump_fresh": {
+   "frame": {
+    "x": 232,
+    "y": 177,
+    "w": 26,
+    "h": 21
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 26,
+    "h": 21
+   },
+   "sourceSize": {
+    "w": 26,
+    "h": 21
+   }
+  },
+  "birch_stump_old": {
+   "frame": {
+    "x": 260,
+    "y": 177,
+    "w": 26,
+    "h": 21
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 26,
+    "h": 21
+   },
+   "sourceSize": {
+    "w": 26,
+    "h": 21
+   }
+  },
+  "birch_stump_weathered": {
+   "frame": {
+    "x": 288,
+    "y": 177,
+    "w": 27,
+    "h": 21
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 27,
+    "h": 21
+   },
+   "sourceSize": {
+    "w": 27,
+    "h": 21
+   }
+  },
+  "spruce_stump_old": {
+   "frame": {
+    "x": 317,
+    "y": 177,
+    "w": 22,
+    "h": 21
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 22,
+    "h": 21
+   },
+   "sourceSize": {
+    "w": 22,
+    "h": 21
+   }
+  },
+  "stone_maly_02": {
+   "frame": {
+    "x": 341,
+    "y": 177,
+    "w": 26,
+    "h": 21
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 26,
+    "h": 21
+   },
+   "sourceSize": {
+    "w": 26,
+    "h": 21
+   }
+  },
+  "spruce_stump_fresh": {
+   "frame": {
+    "x": 369,
+    "y": 177,
+    "w": 22,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 22,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 22,
+    "h": 18
+   }
+  },
+  "spruce_stump_weathered": {
+   "frame": {
+    "x": 393,
+    "y": 177,
+    "w": 23,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 23,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 23,
+    "h": 18
+   }
+  },
+  "stone_maly_05": {
+   "frame": {
+    "x": 418,
+    "y": 177,
+    "w": 26,
+    "h": 18
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 26,
+    "h": 18
+   },
+   "sourceSize": {
+    "w": 26,
+    "h": 18
+   }
+  },
+  "stone_maly_08": {
+   "frame": {
+    "x": 446,
+    "y": 177,
+    "w": 22,
+    "h": 17
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 22,
+    "h": 17
+   },
+   "sourceSize": {
+    "w": 22,
+    "h": 17
+   }
+  },
+  "stone_drobny_04": {
+   "frame": {
+    "x": 470,
+    "y": 177,
+    "w": 19,
+    "h": 16
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 19,
+    "h": 16
+   },
+   "sourceSize": {
+    "w": 19,
+    "h": 16
+   }
+  },
+  "stone_drobny_02": {
+   "frame": {
+    "x": 491,
+    "y": 177,
+    "w": 15,
+    "h": 14
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 15,
+    "h": 14
+   },
+   "sourceSize": {
+    "w": 15,
+    "h": 14
+   }
+  },
+  "stone_drobny_01": {
+   "frame": {
+    "x": 2,
+    "y": 204,
+    "w": 15,
+    "h": 13
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 15,
+    "h": 13
+   },
+   "sourceSize": {
+    "w": 15,
+    "h": 13
+   }
+  },
+  "stone_drobny_06": {
+   "frame": {
+    "x": 19,
+    "y": 204,
+    "w": 11,
+    "h": 13
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 11,
+    "h": 13
+   },
+   "sourceSize": {
+    "w": 11,
+    "h": 13
+   }
+  }
+ },
+ "meta": {
+  "app": "build_forest_atlases.py",
+  "format": "RGBA8888",
+  "scale": "1"
+ }
+}

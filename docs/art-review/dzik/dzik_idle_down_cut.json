@@ -1,0 +1,44 @@
+{
+ "source": "docs/art-review/dzik/dzik-idle.png (po recznym Pixel Snapperze)",
+ "test": "IDLE DOWN x4",
+ "operacje": [
+  "wyciecie sprite'a z tla (flood-fill tla od krawedzi, prog d<9 w pustej luce histogramu)",
+  "alfa 0/255",
+  "przyciecie do bbox"
+ ],
+ "czego_NIE_zrobiono": [
+  "redukcji palety",
+  "recoloru",
+  "posteryzacji",
+  "downscale",
+  "ponownego pixelowania",
+  "wygladzania",
+  "korekty pikseli",
+  "nowego konturu",
+  "fill_holes",
+  "usuwania wysepek",
+  "wycinania cienia"
+ ],
+ "RGB_nietkniete": true,
+ "kolory_sprite_zrodlo": 59,
+ "kolory_sprite_wynik": 62,
+ "wynik_jest_podzbiorem_zrodla": false,
+ "klatki_px": [
+  [
+   31,
+   43
+  ],
+  [
+   32,
+   42
+  ],
+  [
+   32,
+   43
+  ],
+  [
+   33,
+   43
+  ]
+ ]
+}

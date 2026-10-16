@@ -1,0 +1,58 @@
+{
+ "tile": 32,
+ "sheet": "dzik_alt_test.png",
+ "source": "docs/art-review/dzik/dzik-alt.png",
+ "cols": 5,
+ "rows": 3,
+ "animations": {
+  "idle_down": {
+   "row": 0,
+   "count": 4,
+   "frames": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "direction": "down",
+   "fps_sugerowane": 3
+  },
+  "walk_left": {
+   "row": 1,
+   "count": 5,
+   "frames": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "direction": "left",
+   "fps_sugerowane": 8,
+   "uwaga": "ruch nog prosto ze zrodla, bez recznego doprawiania cyklu"
+  },
+  "attack_left": {
+   "row": 2,
+   "count": 3,
+   "frames": [
+    0,
+    1,
+    2
+   ],
+   "direction": "left",
+   "fps_sugerowane": 10,
+   "uwaga": "dzik-alt ma w rzedzie ATTACK LEFT tylko 3 klatki (ATTACK DOWN ma 4). Nie dorabialem 4."
+  }
+ },
+ "opis": "Test konwersji dzik-alt.png -> 32x32. NIE wpiete do gry.",
+ "pipeline": [
+  "wytniecie okna klatki",
+  "maska: rezyduum po odjeciu rozmytego obrazu (gradient znika) + narysowany kontur, najwiekszy komponent",
+  "klasa tonu: futro / grzywa+nogi / kiel; nogi = klasa priorytetowa (przetrwaja downscale)",
+  "stopien rampy z luminancji (percentyle 20/80)",
+  "twardy downscale nearest (mode klasy, nogi w dolnym pasie 'any')",
+  "wygladzenie sylwetki + kontur 1px kora[0] + oko",
+  "kotwica: stopy w wierszu 30, srodek masy x=16"
+ ],
+ "paleta": "8 kolorow: ziemia[2..4] futro, kora[0..2] grzywa/nogi/kontur, piasek[4] kiel, neutralne[0] oko"
+}

@@ -1,0 +1,71 @@
+{
+ "source": "docs/art-review/dzik/dzik-alt.png",
+ "uwaga": "TEST WIERNOSCI ZRODLA: oryginalne kolory dzika, bez redukcji palety. Nie wpiete do gry.",
+ "cell": [
+  61,
+  39
+ ],
+ "scale_from_source": 0.73,
+ "animations": {
+  "idle_down": {
+   "row": 0,
+   "count": 4,
+   "direction": "down",
+   "canvas": [
+    29,
+    39
+   ],
+   "fps_sugerowane": 3
+  },
+  "walk_left": {
+   "row": 1,
+   "count": 5,
+   "direction": "left",
+   "canvas": [
+    54,
+    39
+   ],
+   "fps_sugerowane": 8
+  },
+  "attack_left": {
+   "row": 2,
+   "count": 3,
+   "direction": "left",
+   "canvas": [
+    61,
+    39
+   ],
+   "fps_sugerowane": 10,
+   "uwaga": "dzik-alt ma w rzedzie ATTACK LEFT tylko 3 klatki"
+  }
+ },
+ "pipeline": [
+  "wytniecie okna klatki z dzik-alt.png",
+  "usuniecie tla: prog na REZYDUUM po odjeciu rozmytego obrazu (gradient tla ~3, MIEKKI CIEN pod dzikiem ~7-13 -> wypadaja same; cialo/nogi/kontur ~20-70 -> zostaja). Zaden prog na luminancje.",
+  "domkniecie sylwetki (flood-fill tla od krawedzi), najwiekszy komponent, ciecie cienkich wypustek",
+  "de-AA: pierscien brzegowy 1px zastapiony kolorem najblizszego piksela WNETRZA -> twarda krawedz",
+  "HARD nearest-neighbor: 1 piksel zrodla na piksel docelowy, skala wspolna 0.73",
+  "alfa 0/255 (maska probkowana tak samo)",
+  "kotwica: stopy 3 px od dolu, srodek masy w x; canvas = naturalny bbox + margines (NIE 32x32)"
+ ],
+ "czego_NIE_zrobiono": [
+  "redukcji palety",
+  "posteryzacji/kwantyzacji",
+  "dopasowania kolorow do paleta.json",
+  "zmiany proporcji dzika",
+  "przeniesienia kurzu/krwi/cienia",
+  "doprawiania animacji"
+ ],
+ "kolory_zachowane": {
+  "idle_down": 2470,
+  "walk_left": 3695,
+  "attack_left": 2859,
+  "komentarz": "pelna tonalnosc zrodla"
+ },
+ "rozmiary_klatek": {
+  "idle_down": "29x39",
+  "walk_left": "54x39",
+  "attack_left": "61x39",
+  "komentarz": "naturalny bbox, proporcje zrodla"
+ }
+}

@@ -1,0 +1,189 @@
+{
+ "_opis": "Etap F (2026-10-13): widoki „lista + karta” w ramie rozmowy. Patryczek → Szkolenie (9 umiejętności, przewijanie listy, nauka) → Mistrzostwo → Zadania; Anna → Zadania (do wzięcia → Przyjmij). Pomocnicze: __d() rozmowa, __tab(id) zakładka szyny, __row(panel, i) środek i-tego wiersza listy, __act(panel) przycisk główny karty. Własny port: dopisz \"url\".",
+ "steps": [
+  {
+   "wait": 15000
+  },
+  {
+   "waitFor": "window.game && game.scene && game.scene.getScene('Title') && game.scene.isActive('Title')",
+   "timeout": 200000
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "eval": "game.scene.getScene('Title').startFresh(); return 'start'"
+  },
+  {
+   "waitFor": "game.scene.isActive('Game') && game.scene.isActive('UI')",
+   "timeout": 60000
+  },
+  {
+   "wait": 3000
+  },
+  {
+   "eval": "dev.Inventory.addGold(300); dev.Progression.addXp(2500); dev.Equipment.equip('sword'); window.__d = () => game.scene.getScene('UI').npcDialog; window.__k = () => { const ui = game.scene.getScene('UI'); return ui.cameras.main.zoom / window.devicePixelRatio; }; window.__c = (r) => [Math.round((r.x + r.w / 2) * __k()), Math.round((r.y + r.h / 2) * __k())]; window.__tab = (id) => { const s = __d().sheet; const i = s.tabs().findIndex(t => t.id === id); const L = s.rail.layout; return i < 0 || !L ? null : __c(L.tabs[i]); }; window.__p = (r, panel) => { const c = panel.container; return [Math.round((c.x + r.x * c.scale) * __k()), Math.round((c.y + r.y * c.scale) * __k())]; }; window.__row = (name, i) => { const p = __d()[name]; const v = p.view; const L = v.L; const y = L.list.y + i * 74 + 34 - v.listScroll; return __p({x: L.list.x + 100, y}, p); }; window.__act = (name) => { const p = __d()[name]; const L = p.view.L; return __p({x: L.action.x + L.action.w - 60, y: L.action.y + 32}, p); }; window.__xy = (txt) => { const ui = game.scene.getScene('UI'); const s = __d().sheet; const list = s.rows.list; const i = list.findIndex(o => o.type === 'Text' && o.text === txt); if (i < 0) return null; const box = list.slice(0, i).reverse().find(o => o.type === 'Rectangle'); return [Math.round((box.x + box.width / 2) * __k()), Math.round((box.y + box.height / 2) * __k())]; }; return 'ok'"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "eval": "const { GameEvents, EVENT } = await import('/src/core/EventBus.ts'); GameEvents.emit(EVENT.npcTalkRequested, {id:'patryczek'}); return 'ok'"
+  },
+  {
+   "wait": 900
+  },
+  {
+   "eval": "__d().openView('trainer'); return 'ok'"
+  },
+  {
+   "wait": 900
+  },
+  {
+   "label": "szkolenie",
+   "eval": "return {view: __d().activeView, sel: __d().trainer.selected}"
+  },
+  {
+   "shot": "f01_szkolenie.png"
+  },
+  {
+   "tapAt": "__row('trainer', 2)",
+   "after": 600
+  },
+  {
+   "label": "wybor 3",
+   "eval": "return {sel: __d().trainer.selected}"
+  },
+  {
+   "shot": "f02_szkolenie_wybor.png"
+  },
+  {
+   "drag": "[__row('trainer', 5), __row('trainer', 1)]",
+   "midShot": "f03_szkolenie_przewijanie_w_trakcie.png"
+  },
+  {
+   "wait": 500
+  },
+  {
+   "label": "po przewinieciu",
+   "eval": "return {scroll: __d().trainer.view.listScroll, sel: __d().trainer.selected}"
+  },
+  {
+   "shot": "f03_szkolenie_przewiniete.png"
+  },
+  {
+   "tapAt": "__row('trainer', 0)",
+   "after": 600
+  },
+  {
+   "tapAt": "__act('trainer')",
+   "after": 700
+  },
+  {
+   "label": "po nauce",
+   "eval": "return {sel: __d().trainer.selected, gold: dev.Inventory.gold}"
+  },
+  {
+   "shot": "f04_szkolenie_po_nauce.png"
+  },
+  {
+   "tapAt": "__tab('mastery')",
+   "after": 900
+  },
+  {
+   "shot": "f05_mistrzostwo.png"
+  },
+  {
+   "tapAt": "__tab('quests')",
+   "after": 900
+  },
+  {
+   "shot": "f06_zadania_patryczek.png"
+  },
+  {
+   "eval": "__d().close(); return 'ok'"
+  },
+  {
+   "wait": 300
+  },
+  {
+   "eval": "dev.Inventory.addItem('cooked_meat', 1); const { GameEvents, EVENT } = await import('/src/core/EventBus.ts'); GameEvents.emit(EVENT.npcTalkRequested, {id:'anna'}); return 'ok'"
+  },
+  {
+   "wait": 900
+  },
+  {
+   "eval": "__d().openView('quests'); return 'ok'"
+  },
+  {
+   "wait": 900
+  },
+  {
+   "shot": "f07_zadania_anna.png"
+  },
+  {
+   "tapAt": "__act('quests')",
+   "after": 700
+  },
+  {
+   "label": "po przyjeciu",
+   "eval": "return dev.Quests.snapshot()"
+  },
+  {
+   "shot": "f08_zadania_anna_przyjete.png"
+  },
+  {
+   "eval": "__d().close(); dev.Quests.restore({ ...dev.Quests.snapshot(), szukaj_kirki: 'available' }); return 'ok'"
+  },
+  {
+   "wait": 300
+  },
+  {
+   "eval": "const { GameEvents, EVENT } = await import('/src/core/EventBus.ts'); GameEvents.emit(EVENT.npcTalkRequested, {id:'anna'}); return 'ok'"
+  },
+  {
+   "wait": 900
+  },
+  {
+   "shot": "f10_d4_rozmowa_anna.png"
+  },
+  {
+   "tapAt": "__xy('Poszukaj Kirki')",
+   "after": 700
+  },
+  {
+   "shot": "f11_d4_oferta.png"
+  },
+  {
+   "tapAt": "__xy('Biorę to.')",
+   "after": 700
+  },
+  {
+   "label": "po Biore to",
+   "eval": "return dev.Quests.getStatus('szukaj_kirki')"
+  },
+  {
+   "shot": "f12_d4_przyjete.png"
+  },
+  {
+   "eval": "__d().close(); const Q = dev.Quests; const orig = Q.isObjectiveMet.bind(Q); Q.isObjectiveMet = (id) => id === 'szukaj_kirki' ? true : orig(id); Q.isObjectiveDone = ((o) => (id, i) => id === 'szukaj_kirki' ? true : o(id, i))(Q.isObjectiveDone.bind(Q)); const { GameEvents, EVENT } = await import('/src/core/EventBus.ts'); GameEvents.emit(EVENT.npcTalkRequested, {id:'anna'}); return Q.isObjectiveMet('szukaj_kirki')"
+  },
+  {
+   "wait": 900
+  },
+  {
+   "shot": "f13_d4_do_oddania.png"
+  },
+  {
+   "tapAt": "__xy('Poszukaj Kirki')",
+   "after": 700
+  },
+  {
+   "label": "po oddaniu",
+   "eval": "return dev.Quests.getStatus('szukaj_kirki')"
+  },
+  {
+   "shot": "f14_d4_oddane.png"
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+# Zależności i wynik budowania
+node_modules
+dist
+.vite
+
+# Bajtkod Pythona z tools/. Python zapisuje go sam przy imporcie — to artefakt
+# pochodny, ta sama kategoria co dist/ i node_modules wyżej.
+#
+# UWAGA, gdyby ktoś chciał to cofnąć: te pliki były śledzone do 2026-08-16 i
+# zmieniały się w 10 z 21 commitów, w większości BEZ zmiany swojego źródła
+# (np. b29e68c: 4 zmienione .pyc, a tylko 2 .py). Powód jest strukturalny —
+# .pyc trzyma w nagłówku czas modyfikacji pliku .py, a `git checkout` nadaje
+# źródłom nowy czas, więc druga maszyna zawsze przeliczy bajtkod na
+# bajtowo inny. Przy pracy na dwóch komputerach dawało to fałszywe zmiany
+# w kółko i binarne konflikty scalania w plikach, w których nie ma czego
+# scalać. Nic się przez to nie traci: każdy .pyc odtwarza się z tools/*.py.
+__pycache__/
+*.pyc
+
+# Ustawienia lokalne (Vite: .env.local itp.)
+*.local
+
+# Ustawienia Claude Code specyficzne dla maszyny.
+# UWAGA: wzorzec "*.local" powyżej tego NIE łapie — dopasowuje nazwy KOŃCZĄCE
+# się na ".local", a nie zawierające ".local.". Musi być wymieniony wprost.
+# .claude/launch.json zostaje śledzony: to konfiguracja serwera dev opisana
+# w CLAUDE.md, więc należy do repozytorium.
+.claude/settings.local.json
+
+# Kopie zapasowe map z Tiled. Zostają na dysku, ale w historii byłyby tylko
+# migawkami nieaktualnego eksportu.
+public/assets/maps/*.bak*
+
+# Tiled: układ okien i lista ostatnio otwartych plików — per maszyna.
+*.tiled-session
+
+# Lokalne archiwa `docs/` — paczki wysyłane na zewnątrz do analizy. Powstają
+# przy każdym pakowaniu i są odtwarzalne z samych plików, więc w historii
+# byłyby tylko wielomegabajtowymi migawkami tego, co leży obok.
+# ⚠ Dotyczy WYŁĄCZNIE archiwów: dokumentacja `.md` i pliki danych `.json`
+# w `docs/` zostają śledzone.
+docs/*.zip
+docs/**/*.zip
+
+# Śmieci systemu i edytorów
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Przymiary bazowej postaci 3D (tools/build_char3d_base.py) - generowane co przebieg
+docs/podglad/
+
+# Kopia zapasowa Blendera (poprzedni zapis) — szum, nie artefakt projektu.
+*.blend1
+
+# Referencje modeli 3D (pobrane paczki) — mierzymy z nich liczby i usuwamy;
+# NIE trafiają do repo. Śledzone PNG-i ikon w samym katalogu zostają.
+docs/art-review/gemini/*/

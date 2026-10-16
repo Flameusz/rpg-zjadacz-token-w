@@ -1,0 +1,491 @@
+{
+ "arkusz": {
+  "kolumny": 19,
+  "wierszy": 8,
+  "szerokosc": 640,
+  "wysokosc": 263,
+  "kafli": 152
+ },
+ "kafle": {
+  "sciana_gora_0": {
+   "kolumna": 0,
+   "wiersz": 0,
+   "id": 0
+  },
+  "sciana_0": {
+   "kolumna": 0,
+   "wiersz": 1,
+   "id": 19
+  },
+  "fundament_0": {
+   "kolumna": 0,
+   "wiersz": 2,
+   "id": 38
+  },
+  "sciana_gora_1": {
+   "kolumna": 1,
+   "wiersz": 0,
+   "id": 1
+  },
+  "sciana_1": {
+   "kolumna": 1,
+   "wiersz": 1,
+   "id": 20
+  },
+  "fundament_1": {
+   "kolumna": 1,
+   "wiersz": 2,
+   "id": 39
+  },
+  "sciana_gora_2": {
+   "kolumna": 2,
+   "wiersz": 0,
+   "id": 2
+  },
+  "sciana_2": {
+   "kolumna": 2,
+   "wiersz": 1,
+   "id": 21
+  },
+  "fundament_2": {
+   "kolumna": 2,
+   "wiersz": 2,
+   "id": 40
+  },
+  "sciana2_1": {
+   "kolumna": 12,
+   "wiersz": 1,
+   "id": 31
+  },
+  "sciana3_1": {
+   "kolumna": 14,
+   "wiersz": 1,
+   "id": 33
+  },
+  "sciana_3": {
+   "kolumna": 15,
+   "wiersz": 1,
+   "id": 34
+  },
+  "sciana_4": {
+   "kolumna": 16,
+   "wiersz": 1,
+   "id": 35
+  },
+  "kalenica_0": {
+   "kolumna": 3,
+   "wiersz": 0,
+   "id": 3
+  },
+  "polac_0": {
+   "kolumna": 3,
+   "wiersz": 1,
+   "id": 22
+  },
+  "okap_0": {
+   "kolumna": 3,
+   "wiersz": 2,
+   "id": 41
+  },
+  "kalenica_1": {
+   "kolumna": 4,
+   "wiersz": 0,
+   "id": 4
+  },
+  "polac_1": {
+   "kolumna": 4,
+   "wiersz": 1,
+   "id": 23
+  },
+  "okap_1": {
+   "kolumna": 4,
+   "wiersz": 2,
+   "id": 42
+  },
+  "kalenica_2": {
+   "kolumna": 5,
+   "wiersz": 0,
+   "id": 5
+  },
+  "polac_2": {
+   "kolumna": 5,
+   "wiersz": 1,
+   "id": 24
+  },
+  "okap_2": {
+   "kolumna": 5,
+   "wiersz": 2,
+   "id": 43
+  },
+  "polac2_1": {
+   "kolumna": 13,
+   "wiersz": 1,
+   "id": 32
+  },
+  "drzwi_0": {
+   "kolumna": 6,
+   "wiersz": 0,
+   "id": 6
+  },
+  "drzwi_1": {
+   "kolumna": 6,
+   "wiersz": 1,
+   "id": 25
+  },
+  "okno_0": {
+   "kolumna": 7,
+   "wiersz": 0,
+   "id": 7
+  },
+  "okno_bez_0": {
+   "kolumna": 8,
+   "wiersz": 0,
+   "id": 8
+  },
+  "komin_0": {
+   "kolumna": 9,
+   "wiersz": 0,
+   "id": 9
+  },
+  "komin_1": {
+   "kolumna": 9,
+   "wiersz": 1,
+   "id": 28
+  },
+  "wrota_0": {
+   "kolumna": 10,
+   "wiersz": 0,
+   "id": 10
+  },
+  "wrota_1": {
+   "kolumna": 10,
+   "wiersz": 1,
+   "id": 29
+  },
+  "wrota_2": {
+   "kolumna": 11,
+   "wiersz": 0,
+   "id": 11
+  },
+  "wrota_3": {
+   "kolumna": 11,
+   "wiersz": 1,
+   "id": 30
+  },
+  "szczyt_0": {
+   "kolumna": 0,
+   "wiersz": 3,
+   "id": 57
+  },
+  "szczyt_kal_0": {
+   "kolumna": 2,
+   "wiersz": 3,
+   "id": 59
+  },
+  "szczyt_dol_0": {
+   "kolumna": 4,
+   "wiersz": 3,
+   "id": 61
+  },
+  "skos_0": {
+   "kolumna": 6,
+   "wiersz": 3,
+   "id": 63
+  },
+  "polac_kal_0": {
+   "kolumna": 8,
+   "wiersz": 3,
+   "id": 65
+  },
+  "polac_okp_0": {
+   "kolumna": 10,
+   "wiersz": 3,
+   "id": 67
+  },
+  "okap_skos_0": {
+   "kolumna": 12,
+   "wiersz": 3,
+   "id": 69
+  },
+  "podokap_0": {
+   "kolumna": 14,
+   "wiersz": 3,
+   "id": 71
+  },
+  "kon_polac_kal_0": {
+   "kolumna": 0,
+   "wiersz": 6,
+   "id": 114
+  },
+  "kon_polac_okp_0": {
+   "kolumna": 2,
+   "wiersz": 6,
+   "id": 116
+  },
+  "kon_okap_0": {
+   "kolumna": 4,
+   "wiersz": 6,
+   "id": 118
+  },
+  "kon_polac_0": {
+   "kolumna": 7,
+   "wiersz": 6,
+   "id": 121
+  },
+  "szczyt_fill_0": {
+   "kolumna": 9,
+   "wiersz": 6,
+   "id": 123
+  },
+  "szczyt_2": {
+   "kolumna": 1,
+   "wiersz": 3,
+   "id": 58
+  },
+  "szczyt_kal_2": {
+   "kolumna": 3,
+   "wiersz": 3,
+   "id": 60
+  },
+  "szczyt_dol_2": {
+   "kolumna": 5,
+   "wiersz": 3,
+   "id": 62
+  },
+  "skos_2": {
+   "kolumna": 7,
+   "wiersz": 3,
+   "id": 64
+  },
+  "polac_kal_2": {
+   "kolumna": 9,
+   "wiersz": 3,
+   "id": 66
+  },
+  "polac_okp_2": {
+   "kolumna": 11,
+   "wiersz": 3,
+   "id": 68
+  },
+  "okap_skos_2": {
+   "kolumna": 13,
+   "wiersz": 3,
+   "id": 70
+  },
+  "podokap_2": {
+   "kolumna": 15,
+   "wiersz": 3,
+   "id": 72
+  },
+  "kon_polac_kal_2": {
+   "kolumna": 1,
+   "wiersz": 6,
+   "id": 115
+  },
+  "kon_polac_okp_2": {
+   "kolumna": 3,
+   "wiersz": 6,
+   "id": 117
+  },
+  "kon_okap_2": {
+   "kolumna": 5,
+   "wiersz": 6,
+   "id": 119
+  },
+  "kon_polac_2": {
+   "kolumna": 8,
+   "wiersz": 6,
+   "id": 122
+  },
+  "szczyt_fill_2": {
+   "kolumna": 10,
+   "wiersz": 6,
+   "id": 124
+  },
+  "polac_l_1": {
+   "kolumna": 16,
+   "wiersz": 3,
+   "id": 73
+  },
+  "polac_p_1": {
+   "kolumna": 17,
+   "wiersz": 3,
+   "id": 74
+  },
+  "komin_2": {
+   "kolumna": 18,
+   "wiersz": 3,
+   "id": 75
+  },
+  "komin_3": {
+   "kolumna": 6,
+   "wiersz": 6,
+   "id": 120
+  },
+  "deski_gora_0": {
+   "kolumna": 0,
+   "wiersz": 4,
+   "id": 76
+  },
+  "deski_0": {
+   "kolumna": 3,
+   "wiersz": 4,
+   "id": 79
+  },
+  "deski_dol_0": {
+   "kolumna": 6,
+   "wiersz": 4,
+   "id": 82
+  },
+  "deski_gora_1": {
+   "kolumna": 1,
+   "wiersz": 4,
+   "id": 77
+  },
+  "deski_1": {
+   "kolumna": 4,
+   "wiersz": 4,
+   "id": 80
+  },
+  "deski_dol_1": {
+   "kolumna": 7,
+   "wiersz": 4,
+   "id": 83
+  },
+  "deski_gora_2": {
+   "kolumna": 2,
+   "wiersz": 4,
+   "id": 78
+  },
+  "deski_2": {
+   "kolumna": 5,
+   "wiersz": 4,
+   "id": 81
+  },
+  "deski_dol_2": {
+   "kolumna": 8,
+   "wiersz": 4,
+   "id": 84
+  },
+  "deski2_1": {
+   "kolumna": 9,
+   "wiersz": 4,
+   "id": 85
+  },
+  "wiata_1": {
+   "kolumna": 10,
+   "wiersz": 4,
+   "id": 86
+  },
+  "wiata_slup_1": {
+   "kolumna": 11,
+   "wiersz": 4,
+   "id": 87
+  },
+  "zagroda_0": {
+   "kolumna": 12,
+   "wiersz": 4,
+   "id": 88
+  },
+  "zagroda_1": {
+   "kolumna": 13,
+   "wiersz": 4,
+   "id": 89
+  },
+  "zagroda_2": {
+   "kolumna": 14,
+   "wiersz": 4,
+   "id": 90
+  },
+  "okno_szczyt_0": {
+   "kolumna": 0,
+   "wiersz": 5,
+   "id": 95
+  },
+  "otwor_siana_0": {
+   "kolumna": 1,
+   "wiersz": 5,
+   "id": 96
+  },
+  "klapa_0": {
+   "kolumna": 2,
+   "wiersz": 5,
+   "id": 97
+  },
+  "drzwi_pol_0": {
+   "kolumna": 3,
+   "wiersz": 5,
+   "id": 98
+  },
+  "drzwi_pol_1": {
+   "kolumna": 4,
+   "wiersz": 5,
+   "id": 99
+  },
+  "stog_0": {
+   "kolumna": 5,
+   "wiersz": 5,
+   "id": 100
+  },
+  "stog_1": {
+   "kolumna": 6,
+   "wiersz": 5,
+   "id": 101
+  },
+  "stog_2": {
+   "kolumna": 7,
+   "wiersz": 5,
+   "id": 102
+  },
+  "stog_3": {
+   "kolumna": 8,
+   "wiersz": 5,
+   "id": 103
+  },
+  "koryto_0": {
+   "kolumna": 9,
+   "wiersz": 5,
+   "id": 104
+  },
+  "przybud_styk_0": {
+   "kolumna": 4,
+   "wiersz": 7,
+   "id": 137
+  },
+  "przybud_styk_1": {
+   "kolumna": 5,
+   "wiersz": 7,
+   "id": 138
+  },
+  "przybud_styk_2": {
+   "kolumna": 6,
+   "wiersz": 7,
+   "id": 139
+  },
+  "dolina_skos_0": {
+   "kolumna": 7,
+   "wiersz": 7,
+   "id": 140
+  },
+  "dolina_skos_2": {
+   "kolumna": 8,
+   "wiersz": 7,
+   "id": 141
+  },
+  "lawka_l": {
+   "kolumna": 0,
+   "wiersz": 7,
+   "id": 133
+  },
+  "lawka_p": {
+   "kolumna": 1,
+   "wiersz": 7,
+   "id": 134
+  },
+  "barrel_0": {
+   "kolumna": 3,
+   "wiersz": 7,
+   "id": 136
+  }
+ }
+}

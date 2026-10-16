@@ -1,0 +1,43 @@
+{
+  "purpose": "Production-ready handoff for Claude Code: individual PNG components are already separated from the source sheet.",
+  "do_not": [
+    "Do not ask Claude Code to crop the sheet.",
+    "Do not use the large assembled image as a single drawable for the character.",
+    "Do not downscale the source parts before rigging.",
+    "Do not redesign the character without explicit instruction."
+  ],
+  "use": {
+    "base_character": "Assemble the separated base parts into one Spine rigid cutout skeleton.",
+    "equipment": "Future armor/clothing/weapons should be added as separate attachments/skins.",
+    "runtime_scale": "The PNG source can be rendered substantially smaller in the game (approximately 50% is acceptable as a starting point)."
+  },
+  "folders": {
+    "base/head": "Head and hair source components.",
+    "base/torso": "Torso front/back/side references.",
+    "base/arms": "Isolated arm source components.",
+    "base/hands": "Isolated hand variants.",
+    "base/legs": "Isolated upper/lower leg components.",
+    "base/feet": "Foot components.",
+    "base/hip_wrap": "Base hip-wrap/loincloth.",
+    "reference": "Original sheet and assembled visual references only."
+  },
+  "bone_plan": [
+    "root",
+    "body",
+    "head",
+    "arm_L_upper",
+    "arm_L_forearm",
+    "hand_L",
+    "arm_R_upper",
+    "arm_R_forearm",
+    "hand_R",
+    "leg_L_thigh",
+    "leg_L_shin",
+    "foot_L",
+    "leg_R_thigh",
+    "leg_R_shin",
+    "foot_R"
+  ],
+  "filtering": "Use nearest-neighbor / point filtering for pixel-art assets.",
+  "animation": "Prefer rigid cutout transforms over mesh deformation."
+}

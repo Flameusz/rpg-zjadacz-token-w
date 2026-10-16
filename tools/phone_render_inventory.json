@@ -1,0 +1,151 @@
+{
+ "_opis": "Panel gracza po etapie D (2026-10-13) + minimapa w kartce pergaminu: HUD → plecak (pusta karta „Na sobie”) → karta z plecaka → kafel torsu (cyjan na pasujących) → warstwa Spód → zestaw II → Postać / Zadania / Mapa / Opcje → przeciągnięcie koszuli pod kolczugę (zrzut w locie) → tarcza do drugiej ręki. Pomocnicze: __pp (PlayerPanel), __o(obiekt) → [x,y] CSS, __bag(id) → indeks w plecaku, __cell(warunek) → ramka kafla lalki. Własny port: dopisz \"url\".",
+ "steps": [
+  {
+   "wait": 15000
+  },
+  {
+   "waitFor": "window.game && game.scene && game.scene.getScene('Title') && game.scene.isActive('Title')",
+   "timeout": 200000
+  },
+  {
+   "wait": 1500
+  },
+  {
+   "eval": "game.scene.getScene('Title').startFresh(); return 'start'"
+  },
+  {
+   "waitFor": "game.scene.isActive('Game') && game.scene.isActive('UI')",
+   "timeout": 60000
+  },
+  {
+   "wait": 3000
+  },
+  {
+   "shot": "i00_hud_minimapa_pergamin.png"
+  },
+  {
+   "label": "missing",
+   "eval": "return {missing: dev.missing ? dev.missing() : 'n/a', failed: game.scene.getScene('Boot').load.totalFailed}"
+  },
+  {
+   "eval": "dev.Inventory.addGold(3000); dev.Progression.addXp(20000); for (let i=0;i<12;i++) dev.Progression.spendPoint('strength'); for (const id of ['sword','axe','ironbound_shield','spear','mail_hauberk','gambeson','iron_helmet','hatchet','leather_backpack']) dev.Inventory.addItem(id,1); dev.Inventory.addItem('health_potion',3); const r=[dev.Equipment.equip('sword'), dev.Equipment.equip('gambeson'), dev.Equipment.equip('mail_hauberk')]; const i=dev.Inventory.slots.findIndex(s=>s&&s.itemId==='axe'); r.push(i>=0 && dev.Equipment.equipFromBag(i,'weapon2')); return r"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "eval": "window.__pp = game.scene.getScene('UI').playerPanel; __pp.openTo('inventory'); return !!__pp"
+  },
+  {
+   "wait": 1200
+  },
+  {
+   "shot": "i01_plecak_pusta_karta.png"
+  },
+  {
+   "eval": "__pp.toggleBagSelection(0); return 'ok'"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "shot": "i02_plecak_karta_z_plecaka.png"
+  },
+  {
+   "eval": "__pp.clearBagSelection(); __pp.toggleDollSelection(dev.Equipment.outermostSlotOf('chest')); return 'ok'"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "shot": "i03_slot_tors_podswietlenie.png"
+  },
+  {
+   "eval": "__pp.clearBagSelection(); __pp.layerView = 'L1'; __pp.refreshEquipIcons(dev.Equipment); return 'ok'"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "shot": "i04_warstwa_spod.png"
+  },
+  {
+   "eval": "__pp.layerView = null; __pp.setView = 2; __pp.refreshEquipIcons(dev.Equipment); return 'ok'"
+  },
+  {
+   "wait": 600
+  },
+  {
+   "shot": "i05_zestaw_II.png"
+  },
+  {
+   "eval": "__pp.openTo('character'); return 'ok'"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "shot": "i06_postac.png"
+  },
+  {
+   "eval": "__pp.openTo('quests'); return 'ok'"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "shot": "i07_zadania.png"
+  },
+  {
+   "eval": "__pp.openTo('map'); return 'ok'"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "shot": "i08_mapa.png"
+  },
+  {
+   "eval": "__pp.openTo('save'); return 'ok'"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "shot": "i09_opcje.png"
+  },
+  {
+   "eval": "__pp.setView = 1; __pp.layerView = null; __pp.openTo('inventory'); __pp.refreshEquipIcons(dev.Equipment); return 'ok'"
+  },
+  {
+   "wait": 800
+  },
+  {
+   "label": "bag",
+   "eval": "window.__k = () => game.scene.getScene('UI').cameras.main.zoom / window.devicePixelRatio;window.__o = (o) => { const b = o.getBounds(); return [Math.round(b.centerX*__k()), Math.round(b.centerY*__k())]; };window.__bag = (id) => dev.Inventory.slots.findIndex(s => s && s.itemId === id);window.__cell = (pred) => __pp.equipCells.find(w => pred(w.cell)).box;return dev.Inventory.slots.map(s => s && s.itemId)"
+  },
+  {
+   "drag": "[__o(__pp.slotIcons[__bag('linen_shirt')] ?? __pp.slotIcons[0]), __o(__cell(c => c.area === 'chest'))]",
+   "midShot": "i10_drag_koszula_nad_torsem.png"
+  },
+  {
+   "label": "po1",
+   "eval": "return {bag: dev.Inventory.slots.map(s => s && s.itemId), worn: dev.Equipment.wornElements.map(e => JSON.stringify(e.place) + ':' + e.itemId)}"
+  },
+  {
+   "shot": "i11_po_upuszczeniu_koszuli.png"
+  },
+  {
+   "drag": "[__o(__pp.slotIcons[__bag('ironbound_shield')]), __o(__cell(c => c.hand === 'off'))]",
+   "midShot": "i12_drag_tarcza_nad_reka.png"
+  },
+  {
+   "label": "po2",
+   "eval": "return {bag: dev.Inventory.slots.map(s => s && s.itemId), worn: dev.Equipment.wornElements.map(e => JSON.stringify(e.place) + ':' + e.itemId)}"
+  },
+  {
+   "shot": "i13_po_zalozeniu_tarczy.png"
+  }
+ ]
+}

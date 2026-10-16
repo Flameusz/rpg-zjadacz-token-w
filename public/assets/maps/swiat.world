@@ -1,0 +1,20 @@
+{
+    "maps": [
+        {
+            "fileName": "village-zagaje.tmj",
+            "height": 4096,
+            "width": 4096,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "forrest.tmj",
+            "height": 2880,
+            "width": 7680,
+            "x": 0,
+            "y": 4096
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}

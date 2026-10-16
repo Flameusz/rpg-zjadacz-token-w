@@ -1,0 +1,2344 @@
+{
+ "opis": "Atlas drzew lasu. id kafla = wiersz*19 + kolumna; GID w mapie = firstgid + id.",
+ "png": "public/assets/forrest.png",
+ "tile": 32,
+ "columns": 19,
+ "rows": 10,
+ "spacing": 0,
+ "margin": 0,
+ "firstgid_w_forrest_tmj": 530,
+ "sprites": {
+  "dab_duzy_new": {
+   "file": "docs/art-review/trees/dab_duzy_new-96x96.png",
+   "cols": 3,
+   "rows": 3,
+   "col0": 0,
+   "row0": 0,
+   "local0": 0,
+   "gid0": 530,
+   "subtiles": {
+    "0,0": {
+     "local": 0,
+     "gid": 530
+    },
+    "1,0": {
+     "local": 1,
+     "gid": 531
+    },
+    "2,0": {
+     "local": 2,
+     "gid": 532
+    },
+    "0,1": {
+     "local": 19,
+     "gid": 549
+    },
+    "1,1": {
+     "local": 20,
+     "gid": 550
+    },
+    "2,1": {
+     "local": 21,
+     "gid": 551
+    },
+    "0,2": {
+     "local": 38,
+     "gid": 568
+    },
+    "1,2": {
+     "local": 39,
+     "gid": 569
+    },
+    "2,2": {
+     "local": 40,
+     "gid": 570
+    }
+   }
+  },
+  "dab_duzy2_new": {
+   "file": "docs/art-review/trees/dab_duzy2_new-96x96.png",
+   "cols": 3,
+   "rows": 3,
+   "col0": 3,
+   "row0": 0,
+   "local0": 3,
+   "gid0": 533,
+   "subtiles": {
+    "0,0": {
+     "local": 3,
+     "gid": 533
+    },
+    "1,0": {
+     "local": 4,
+     "gid": 534
+    },
+    "2,0": {
+     "local": 5,
+     "gid": 535
+    },
+    "0,1": {
+     "local": 22,
+     "gid": 552
+    },
+    "1,1": {
+     "local": 23,
+     "gid": 553
+    },
+    "2,1": {
+     "local": 24,
+     "gid": 554
+    },
+    "0,2": {
+     "local": 41,
+     "gid": 571
+    },
+    "1,2": {
+     "local": 42,
+     "gid": 572
+    },
+    "2,2": {
+     "local": 43,
+     "gid": 573
+    }
+   }
+  },
+  "buk_duzy_new": {
+   "file": "docs/art-review/trees/buk_duzy_new-96x96.png",
+   "cols": 3,
+   "rows": 3,
+   "col0": 6,
+   "row0": 0,
+   "local0": 6,
+   "gid0": 536,
+   "subtiles": {
+    "0,0": {
+     "local": 6,
+     "gid": 536
+    },
+    "1,0": {
+     "local": 7,
+     "gid": 537
+    },
+    "2,0": {
+     "local": 8,
+     "gid": 538
+    },
+    "0,1": {
+     "local": 25,
+     "gid": 555
+    },
+    "1,1": {
+     "local": 26,
+     "gid": 556
+    },
+    "2,1": {
+     "local": 27,
+     "gid": 557
+    },
+    "0,2": {
+     "local": 44,
+     "gid": 574
+    },
+    "1,2": {
+     "local": 45,
+     "gid": 575
+    },
+    "2,2": {
+     "local": 46,
+     "gid": 576
+    }
+   }
+  },
+  "swierk_duzy_new": {
+   "file": "docs/art-review/trees/swierk_duzy_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 9,
+   "row0": 0,
+   "local0": 9,
+   "gid0": 539,
+   "subtiles": {
+    "0,0": {
+     "local": 9,
+     "gid": 539
+    },
+    "1,0": {
+     "local": 10,
+     "gid": 540
+    },
+    "0,1": {
+     "local": 28,
+     "gid": 558
+    },
+    "1,1": {
+     "local": 29,
+     "gid": 559
+    },
+    "0,2": {
+     "local": 47,
+     "gid": 577
+    },
+    "1,2": {
+     "local": 48,
+     "gid": 578
+    }
+   }
+  },
+  "swierk_duzy2_new": {
+   "file": "docs/art-review/trees/swierk_duzy2_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 11,
+   "row0": 0,
+   "local0": 11,
+   "gid0": 541,
+   "subtiles": {
+    "0,0": {
+     "local": 11,
+     "gid": 541
+    },
+    "1,0": {
+     "local": 12,
+     "gid": 542
+    },
+    "0,1": {
+     "local": 30,
+     "gid": 560
+    },
+    "1,1": {
+     "local": 31,
+     "gid": 561
+    },
+    "0,2": {
+     "local": 49,
+     "gid": 579
+    },
+    "1,2": {
+     "local": 50,
+     "gid": 580
+    }
+   }
+  },
+  "swierk_duzy3_new": {
+   "file": "docs/art-review/trees/swierk_duzy3_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 13,
+   "row0": 0,
+   "local0": 13,
+   "gid0": 543,
+   "subtiles": {
+    "0,0": {
+     "local": 13,
+     "gid": 543
+    },
+    "1,0": {
+     "local": 14,
+     "gid": 544
+    },
+    "0,1": {
+     "local": 32,
+     "gid": 562
+    },
+    "1,1": {
+     "local": 33,
+     "gid": 563
+    },
+    "0,2": {
+     "local": 51,
+     "gid": 581
+    },
+    "1,2": {
+     "local": 52,
+     "gid": 582
+    }
+   }
+  },
+  "brzoza_duza_new": {
+   "file": "docs/art-review/trees/brzoza_duza_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 15,
+   "row0": 0,
+   "local0": 15,
+   "gid0": 545,
+   "subtiles": {
+    "0,0": {
+     "local": 15,
+     "gid": 545
+    },
+    "1,0": {
+     "local": 16,
+     "gid": 546
+    },
+    "0,1": {
+     "local": 34,
+     "gid": 564
+    },
+    "1,1": {
+     "local": 35,
+     "gid": 565
+    },
+    "0,2": {
+     "local": 53,
+     "gid": 583
+    },
+    "1,2": {
+     "local": 54,
+     "gid": 584
+    }
+   }
+  },
+  "brzoza_duza2_new": {
+   "file": "docs/art-review/trees/brzoza_duza2_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 17,
+   "row0": 0,
+   "local0": 17,
+   "gid0": 547,
+   "subtiles": {
+    "0,0": {
+     "local": 17,
+     "gid": 547
+    },
+    "1,0": {
+     "local": 18,
+     "gid": 548
+    },
+    "0,1": {
+     "local": 36,
+     "gid": 566
+    },
+    "1,1": {
+     "local": 37,
+     "gid": 567
+    },
+    "0,2": {
+     "local": 55,
+     "gid": 585
+    },
+    "1,2": {
+     "local": 56,
+     "gid": 586
+    }
+   }
+  },
+  "brzoza_duza3_new": {
+   "file": "docs/art-review/trees/brzoza_duza3_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 0,
+   "row0": 3,
+   "local0": 57,
+   "gid0": 587,
+   "subtiles": {
+    "0,0": {
+     "local": 57,
+     "gid": 587
+    },
+    "1,0": {
+     "local": 58,
+     "gid": 588
+    },
+    "0,1": {
+     "local": 76,
+     "gid": 606
+    },
+    "1,1": {
+     "local": 77,
+     "gid": 607
+    },
+    "0,2": {
+     "local": 95,
+     "gid": 625
+    },
+    "1,2": {
+     "local": 96,
+     "gid": 626
+    }
+   }
+  },
+  "grab_duzy_new": {
+   "file": "docs/art-review/trees/grab_duzy_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 2,
+   "row0": 3,
+   "local0": 59,
+   "gid0": 589,
+   "subtiles": {
+    "0,0": {
+     "local": 59,
+     "gid": 589
+    },
+    "1,0": {
+     "local": 60,
+     "gid": 590
+    },
+    "0,1": {
+     "local": 78,
+     "gid": 608
+    },
+    "1,1": {
+     "local": 79,
+     "gid": 609
+    },
+    "0,2": {
+     "local": 97,
+     "gid": 627
+    },
+    "1,2": {
+     "local": 98,
+     "gid": 628
+    }
+   }
+  },
+  "grab_duzy2_new": {
+   "file": "docs/art-review/trees/grab_duzy2_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 4,
+   "row0": 3,
+   "local0": 61,
+   "gid0": 591,
+   "subtiles": {
+    "0,0": {
+     "local": 61,
+     "gid": 591
+    },
+    "1,0": {
+     "local": 62,
+     "gid": 592
+    },
+    "0,1": {
+     "local": 80,
+     "gid": 610
+    },
+    "1,1": {
+     "local": 81,
+     "gid": 611
+    },
+    "0,2": {
+     "local": 99,
+     "gid": 629
+    },
+    "1,2": {
+     "local": 100,
+     "gid": 630
+    }
+   }
+  },
+  "grab_duzy3_new": {
+   "file": "docs/art-review/trees/grab_duzy3_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 6,
+   "row0": 3,
+   "local0": 63,
+   "gid0": 593,
+   "subtiles": {
+    "0,0": {
+     "local": 63,
+     "gid": 593
+    },
+    "1,0": {
+     "local": 64,
+     "gid": 594
+    },
+    "0,1": {
+     "local": 82,
+     "gid": 612
+    },
+    "1,1": {
+     "local": 83,
+     "gid": 613
+    },
+    "0,2": {
+     "local": 101,
+     "gid": 631
+    },
+    "1,2": {
+     "local": 102,
+     "gid": 632
+    }
+   }
+  },
+  "olcha_duza_new": {
+   "file": "docs/art-review/trees/olcha_duza_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 8,
+   "row0": 3,
+   "local0": 65,
+   "gid0": 595,
+   "subtiles": {
+    "0,0": {
+     "local": 65,
+     "gid": 595
+    },
+    "1,0": {
+     "local": 66,
+     "gid": 596
+    },
+    "0,1": {
+     "local": 84,
+     "gid": 614
+    },
+    "1,1": {
+     "local": 85,
+     "gid": 615
+    },
+    "0,2": {
+     "local": 103,
+     "gid": 633
+    },
+    "1,2": {
+     "local": 104,
+     "gid": 634
+    }
+   }
+  },
+  "olcha_duza2_new": {
+   "file": "docs/art-review/trees/olcha_duza2_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 10,
+   "row0": 3,
+   "local0": 67,
+   "gid0": 597,
+   "subtiles": {
+    "0,0": {
+     "local": 67,
+     "gid": 597
+    },
+    "1,0": {
+     "local": 68,
+     "gid": 598
+    },
+    "0,1": {
+     "local": 86,
+     "gid": 616
+    },
+    "1,1": {
+     "local": 87,
+     "gid": 617
+    },
+    "0,2": {
+     "local": 105,
+     "gid": 635
+    },
+    "1,2": {
+     "local": 106,
+     "gid": 636
+    }
+   }
+  },
+  "olcha_duza3_new": {
+   "file": "docs/art-review/trees/olcha_duza3_new-64x96.png",
+   "cols": 2,
+   "rows": 3,
+   "col0": 12,
+   "row0": 3,
+   "local0": 69,
+   "gid0": 599,
+   "subtiles": {
+    "0,0": {
+     "local": 69,
+     "gid": 599
+    },
+    "1,0": {
+     "local": 70,
+     "gid": 600
+    },
+    "0,1": {
+     "local": 88,
+     "gid": 618
+    },
+    "1,1": {
+     "local": 89,
+     "gid": 619
+    },
+    "0,2": {
+     "local": 107,
+     "gid": 637
+    },
+    "1,2": {
+     "local": 108,
+     "gid": 638
+    }
+   }
+  },
+  "dab_sredni_new": {
+   "file": "docs/art-review/trees/dab_sredni_new-64x64.png",
+   "cols": 2,
+   "rows": 2,
+   "col0": 0,
+   "row0": 6,
+   "local0": 114,
+   "gid0": 644,
+   "subtiles": {
+    "0,0": {
+     "local": 114,
+     "gid": 644
+    },
+    "1,0": {
+     "local": 115,
+     "gid": 645
+    },
+    "0,1": {
+     "local": 133,
+     "gid": 663
+    },
+    "1,1": {
+     "local": 134,
+     "gid": 664
+    }
+   }
+  },
+  "buk_sredni_new": {
+   "file": "docs/art-review/trees/buk_sredni_new-64x64.png",
+   "cols": 2,
+   "rows": 2,
+   "col0": 2,
+   "row0": 6,
+   "local0": 116,
+   "gid0": 646,
+   "subtiles": {
+    "0,0": {
+     "local": 116,
+     "gid": 646
+    },
+    "1,0": {
+     "local": 117,
+     "gid": 647
+    },
+    "0,1": {
+     "local": 135,
+     "gid": 665
+    },
+    "1,1": {
+     "local": 136,
+     "gid": 666
+    }
+   }
+  },
+  "swierk_sredni_new": {
+   "file": "docs/art-review/trees/swierk_sredni_new-64x64.png",
+   "cols": 2,
+   "rows": 2,
+   "col0": 4,
+   "row0": 6,
+   "local0": 118,
+   "gid0": 648,
+   "subtiles": {
+    "0,0": {
+     "local": 118,
+     "gid": 648
+    },
+    "1,0": {
+     "local": 119,
+     "gid": 649
+    },
+    "0,1": {
+     "local": 137,
+     "gid": 667
+    },
+    "1,1": {
+     "local": 138,
+     "gid": 668
+    }
+   }
+  },
+  "brzoza_srednia_new": {
+   "file": "docs/art-review/trees/brzoza_srednia_new-64x64.png",
+   "cols": 2,
+   "rows": 2,
+   "col0": 6,
+   "row0": 6,
+   "local0": 120,
+   "gid0": 650,
+   "subtiles": {
+    "0,0": {
+     "local": 120,
+     "gid": 650
+    },
+    "1,0": {
+     "local": 121,
+     "gid": 651
+    },
+    "0,1": {
+     "local": 139,
+     "gid": 669
+    },
+    "1,1": {
+     "local": 140,
+     "gid": 670
+    }
+   }
+  },
+  "brzoza_srednia2_new": {
+   "file": "docs/art-review/trees/brzoza_srednia2_new-64x64.png",
+   "cols": 2,
+   "rows": 2,
+   "col0": 8,
+   "row0": 6,
+   "local0": 122,
+   "gid0": 652,
+   "subtiles": {
+    "0,0": {
+     "local": 122,
+     "gid": 652
+    },
+    "1,0": {
+     "local": 123,
+     "gid": 653
+    },
+    "0,1": {
+     "local": 141,
+     "gid": 671
+    },
+    "1,1": {
+     "local": 142,
+     "gid": 672
+    }
+   }
+  },
+  "grab_sredni_new": {
+   "file": "docs/art-review/trees/grab_sredni_new-64x64.png",
+   "cols": 2,
+   "rows": 2,
+   "col0": 10,
+   "row0": 6,
+   "local0": 124,
+   "gid0": 654,
+   "subtiles": {
+    "0,0": {
+     "local": 124,
+     "gid": 654
+    },
+    "1,0": {
+     "local": 125,
+     "gid": 655
+    },
+    "0,1": {
+     "local": 143,
+     "gid": 673
+    },
+    "1,1": {
+     "local": 144,
+     "gid": 674
+    }
+   }
+  },
+  "grab_sredni2_new": {
+   "file": "docs/art-review/trees/grab_sredni2_new-64x64.png",
+   "cols": 2,
+   "rows": 2,
+   "col0": 12,
+   "row0": 6,
+   "local0": 126,
+   "gid0": 656,
+   "subtiles": {
+    "0,0": {
+     "local": 126,
+     "gid": 656
+    },
+    "1,0": {
+     "local": 127,
+     "gid": 657
+    },
+    "0,1": {
+     "local": 145,
+     "gid": 675
+    },
+    "1,1": {
+     "local": 146,
+     "gid": 676
+    }
+   }
+  },
+  "olcha_srednia_new": {
+   "file": "docs/art-review/trees/olcha_srednia_new-64x64.png",
+   "cols": 2,
+   "rows": 2,
+   "col0": 14,
+   "row0": 6,
+   "local0": 128,
+   "gid0": 658,
+   "subtiles": {
+    "0,0": {
+     "local": 128,
+     "gid": 658
+    },
+    "1,0": {
+     "local": 129,
+     "gid": 659
+    },
+    "0,1": {
+     "local": 147,
+     "gid": 677
+    },
+    "1,1": {
+     "local": 148,
+     "gid": 678
+    }
+   }
+  },
+  "olcha_srednia2_new": {
+   "file": "docs/art-review/trees/olcha_srednia2_new-64x64.png",
+   "cols": 2,
+   "rows": 2,
+   "col0": 16,
+   "row0": 6,
+   "local0": 130,
+   "gid0": 660,
+   "subtiles": {
+    "0,0": {
+     "local": 130,
+     "gid": 660
+    },
+    "1,0": {
+     "local": 131,
+     "gid": 661
+    },
+    "0,1": {
+     "local": 149,
+     "gid": 679
+    },
+    "1,1": {
+     "local": 150,
+     "gid": 680
+    }
+   }
+  },
+  "dab_maly_new": {
+   "file": "docs/art-review/trees/dab_maly_new-32x64.png",
+   "cols": 1,
+   "rows": 2,
+   "col0": 0,
+   "row0": 8,
+   "local0": 152,
+   "gid0": 682,
+   "subtiles": {
+    "0,0": {
+     "local": 152,
+     "gid": 682
+    },
+    "0,1": {
+     "local": 171,
+     "gid": 701
+    }
+   }
+  },
+  "buk_maly_new": {
+   "file": "docs/art-review/trees/buk_maly_new-32x64.png",
+   "cols": 1,
+   "rows": 2,
+   "col0": 1,
+   "row0": 8,
+   "local0": 153,
+   "gid0": 683,
+   "subtiles": {
+    "0,0": {
+     "local": 153,
+     "gid": 683
+    },
+    "0,1": {
+     "local": 172,
+     "gid": 702
+    }
+   }
+  },
+  "swierk_maly_new": {
+   "file": "docs/art-review/trees/swierk_maly_new-32x64.png",
+   "cols": 1,
+   "rows": 2,
+   "col0": 2,
+   "row0": 8,
+   "local0": 154,
+   "gid0": 684,
+   "subtiles": {
+    "0,0": {
+     "local": 154,
+     "gid": 684
+    },
+    "0,1": {
+     "local": 173,
+     "gid": 703
+    }
+   }
+  },
+  "swierk_maly2_new": {
+   "file": "docs/art-review/trees/swierk_maly2_new-32x64.png",
+   "cols": 1,
+   "rows": 2,
+   "col0": 3,
+   "row0": 8,
+   "local0": 155,
+   "gid0": 685,
+   "subtiles": {
+    "0,0": {
+     "local": 155,
+     "gid": 685
+    },
+    "0,1": {
+     "local": 174,
+     "gid": 704
+    }
+   }
+  },
+  "brzoza_mala_new": {
+   "file": "docs/art-review/trees/brzoza_mala_new-32x64.png",
+   "cols": 1,
+   "rows": 2,
+   "col0": 4,
+   "row0": 8,
+   "local0": 156,
+   "gid0": 686,
+   "subtiles": {
+    "0,0": {
+     "local": 156,
+     "gid": 686
+    },
+    "0,1": {
+     "local": 175,
+     "gid": 705
+    }
+   }
+  },
+  "grab_maly_new": {
+   "file": "docs/art-review/trees/grab_maly_new-32x64.png",
+   "cols": 1,
+   "rows": 2,
+   "col0": 5,
+   "row0": 8,
+   "local0": 157,
+   "gid0": 687,
+   "subtiles": {
+    "0,0": {
+     "local": 157,
+     "gid": 687
+    },
+    "0,1": {
+     "local": 176,
+     "gid": 706
+    }
+   }
+  },
+  "olcha_mala_new": {
+   "file": "docs/art-review/trees/olcha_mala_new-32x64.png",
+   "cols": 1,
+   "rows": 2,
+   "col0": 6,
+   "row0": 8,
+   "local0": 158,
+   "gid0": 688,
+   "subtiles": {
+    "0,0": {
+     "local": 158,
+     "gid": 688
+    },
+    "0,1": {
+     "local": 177,
+     "gid": 707
+    }
+   }
+  }
+ },
+ "remap_z_nature": {
+  "dab_duzy": {
+   "na": "dab_duzy_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 267,
+     "new_gid": 530
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 268,
+     "new_gid": 531
+    },
+    {
+     "sub": [
+      2,
+      0
+     ],
+     "old_gid": 269,
+     "new_gid": 532
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 286,
+     "new_gid": 549
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 287,
+     "new_gid": 550
+    },
+    {
+     "sub": [
+      2,
+      1
+     ],
+     "old_gid": 288,
+     "new_gid": 551
+    },
+    {
+     "sub": [
+      0,
+      2
+     ],
+     "old_gid": 305,
+     "new_gid": 568
+    },
+    {
+     "sub": [
+      1,
+      2
+     ],
+     "old_gid": 306,
+     "new_gid": 569
+    },
+    {
+     "sub": [
+      2,
+      2
+     ],
+     "old_gid": 307,
+     "new_gid": 570
+    }
+   ]
+  },
+  "dab_duzy2": {
+   "na": "dab_duzy2_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 270,
+     "new_gid": 533
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 271,
+     "new_gid": 534
+    },
+    {
+     "sub": [
+      2,
+      0
+     ],
+     "old_gid": 272,
+     "new_gid": 535
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 289,
+     "new_gid": 552
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 290,
+     "new_gid": 553
+    },
+    {
+     "sub": [
+      2,
+      1
+     ],
+     "old_gid": 291,
+     "new_gid": 554
+    },
+    {
+     "sub": [
+      0,
+      2
+     ],
+     "old_gid": 308,
+     "new_gid": 571
+    },
+    {
+     "sub": [
+      1,
+      2
+     ],
+     "old_gid": 309,
+     "new_gid": 572
+    },
+    {
+     "sub": [
+      2,
+      2
+     ],
+     "old_gid": 310,
+     "new_gid": 573
+    }
+   ]
+  },
+  "buk_duzy": {
+   "na": "buk_duzy_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 273,
+     "new_gid": 536
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 274,
+     "new_gid": 537
+    },
+    {
+     "sub": [
+      2,
+      0
+     ],
+     "old_gid": 275,
+     "new_gid": 538
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 292,
+     "new_gid": 555
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 293,
+     "new_gid": 556
+    },
+    {
+     "sub": [
+      2,
+      1
+     ],
+     "old_gid": 294,
+     "new_gid": 557
+    },
+    {
+     "sub": [
+      0,
+      2
+     ],
+     "old_gid": 311,
+     "new_gid": 574
+    },
+    {
+     "sub": [
+      1,
+      2
+     ],
+     "old_gid": 312,
+     "new_gid": 575
+    },
+    {
+     "sub": [
+      2,
+      2
+     ],
+     "old_gid": 313,
+     "new_gid": 576
+    }
+   ]
+  },
+  "swierk_duzy": {
+   "na": "swierk_duzy_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 276,
+     "new_gid": 539
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 277,
+     "new_gid": 540
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 295,
+     "new_gid": 558
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 296,
+     "new_gid": 559
+    },
+    {
+     "sub": [
+      0,
+      2
+     ],
+     "old_gid": 314,
+     "new_gid": 577
+    },
+    {
+     "sub": [
+      1,
+      2
+     ],
+     "old_gid": 315,
+     "new_gid": 578
+    }
+   ]
+  },
+  "swierk_duzy2": {
+   "na": "swierk_duzy2_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 278,
+     "new_gid": 541
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 279,
+     "new_gid": 542
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 297,
+     "new_gid": 560
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 298,
+     "new_gid": 561
+    },
+    {
+     "sub": [
+      0,
+      2
+     ],
+     "old_gid": 316,
+     "new_gid": 579
+    },
+    {
+     "sub": [
+      1,
+      2
+     ],
+     "old_gid": 317,
+     "new_gid": 580
+    }
+   ]
+  },
+  "brzoza_duza": {
+   "na": "brzoza_duza_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 280,
+     "new_gid": 545
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 281,
+     "new_gid": 546
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 299,
+     "new_gid": 564
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 300,
+     "new_gid": 565
+    },
+    {
+     "sub": [
+      0,
+      2
+     ],
+     "old_gid": 318,
+     "new_gid": 583
+    },
+    {
+     "sub": [
+      1,
+      2
+     ],
+     "old_gid": 319,
+     "new_gid": 584
+    }
+   ]
+  },
+  "brzoza_duza2": {
+   "na": "brzoza_duza2_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 282,
+     "new_gid": 547
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 283,
+     "new_gid": 548
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 301,
+     "new_gid": 566
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 302,
+     "new_gid": 567
+    },
+    {
+     "sub": [
+      0,
+      2
+     ],
+     "old_gid": 320,
+     "new_gid": 585
+    },
+    {
+     "sub": [
+      1,
+      2
+     ],
+     "old_gid": 321,
+     "new_gid": 586
+    }
+   ]
+  },
+  "grab_duzy": {
+   "na": "grab_duzy_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 284,
+     "new_gid": 589
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 285,
+     "new_gid": 590
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 303,
+     "new_gid": 608
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 304,
+     "new_gid": 609
+    },
+    {
+     "sub": [
+      0,
+      2
+     ],
+     "old_gid": 322,
+     "new_gid": 627
+    },
+    {
+     "sub": [
+      1,
+      2
+     ],
+     "old_gid": 323,
+     "new_gid": 628
+    }
+   ]
+  },
+  "dab_sredni": {
+   "na": "dab_sredni_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 324,
+     "new_gid": 644
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 325,
+     "new_gid": 645
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 343,
+     "new_gid": 663
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 344,
+     "new_gid": 664
+    }
+   ]
+  },
+  "swierk_sredni": {
+   "na": "swierk_sredni_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 326,
+     "new_gid": 648
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 327,
+     "new_gid": 649
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 345,
+     "new_gid": 667
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 346,
+     "new_gid": 668
+    }
+   ]
+  },
+  "brzoza_srednia": {
+   "na": "brzoza_srednia_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 328,
+     "new_gid": 650
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 329,
+     "new_gid": 651
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 347,
+     "new_gid": 669
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 348,
+     "new_gid": 670
+    }
+   ]
+  },
+  "buk_sredni": {
+   "na": "buk_sredni_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 330,
+     "new_gid": 646
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 331,
+     "new_gid": 647
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 349,
+     "new_gid": 665
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 350,
+     "new_gid": 666
+    }
+   ]
+  },
+  "grab_sredni": {
+   "na": "grab_sredni_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 332,
+     "new_gid": 654
+    },
+    {
+     "sub": [
+      1,
+      0
+     ],
+     "old_gid": 333,
+     "new_gid": 655
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 351,
+     "new_gid": 673
+    },
+    {
+     "sub": [
+      1,
+      1
+     ],
+     "old_gid": 352,
+     "new_gid": 674
+    }
+   ]
+  },
+  "dab_maly": {
+   "na": "dab_maly_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 334,
+     "new_gid": 682
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 353,
+     "new_gid": 701
+    }
+   ]
+  },
+  "swierk_maly": {
+   "na": "swierk_maly_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 335,
+     "new_gid": 684
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 354,
+     "new_gid": 703
+    }
+   ]
+  },
+  "brzoza_mala": {
+   "na": "brzoza_mala_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 336,
+     "new_gid": 686
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 355,
+     "new_gid": 705
+    }
+   ]
+  },
+  "buk_maly": {
+   "na": "buk_maly_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 337,
+     "new_gid": 683
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 356,
+     "new_gid": 702
+    }
+   ]
+  },
+  "grab_maly": {
+   "na": "grab_maly_new",
+   "kafle": [
+    {
+     "sub": [
+      0,
+      0
+     ],
+     "old_gid": 338,
+     "new_gid": 687
+    },
+    {
+     "sub": [
+      0,
+      1
+     ],
+     "old_gid": 357,
+     "new_gid": 706
+    }
+   ]
+  }
+ },
+ "uwagi_zrodla": [
+  "buk_duzy_new: znormalizowano alfe do 0/255 (3675 px posrednich)",
+  "buk_duzy_new: wyzerowano RGB pod alfa 0 (40 px z kolorem)",
+  "buk_sredni_new: wyzerowano RGB pod alfa 0 (7 px z kolorem)",
+  "buk_maly_new: wyzerowano RGB pod alfa 0 (4 px z kolorem)",
+  "willows: 6 wariantow wierzby z osobnych PNG (docs/art-review/trees/wierzba_*_new-*.png), NIE z forrest.png; kolor skorygowany pod palete korona, proporcje natywne, bez skalowania. Duze -> arkusz tree_stamps_big.png (TreeStampsBig 160), reszta -> tree_stamps.png (TreeStamps 96)."
+ ],
+ "kolizja_tiles": [
+  {
+   "id": 39,
+   "gid": 569,
+   "z_nature_local": 77,
+   "drzewo": "dab_duzy_new",
+   "sub": [
+    1,
+    2
+   ],
+   "box": {
+    "x": 8,
+    "y": 17,
+    "width": 16,
+    "height": 15
+   }
+  },
+  {
+   "id": 42,
+   "gid": 572,
+   "z_nature_local": 80,
+   "drzewo": "dab_duzy2_new",
+   "sub": [
+    1,
+    2
+   ],
+   "box": {
+    "x": 8,
+    "y": 17,
+    "width": 16,
+    "height": 15
+   }
+  },
+  {
+   "id": 45,
+   "gid": 575,
+   "z_nature_local": 83,
+   "drzewo": "buk_duzy_new",
+   "sub": [
+    1,
+    2
+   ],
+   "box": {
+    "x": 8,
+    "y": 17,
+    "width": 16,
+    "height": 15
+   }
+  },
+  {
+   "id": 47,
+   "gid": 577,
+   "z_nature_local": 85,
+   "drzewo": "swierk_duzy_new",
+   "sub": [
+    0,
+    2
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 48,
+   "gid": 578,
+   "z_nature_local": 86,
+   "drzewo": "swierk_duzy_new",
+   "sub": [
+    1,
+    2
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 49,
+   "gid": 579,
+   "z_nature_local": 87,
+   "drzewo": "swierk_duzy2_new",
+   "sub": [
+    0,
+    2
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 50,
+   "gid": 580,
+   "z_nature_local": 88,
+   "drzewo": "swierk_duzy2_new",
+   "sub": [
+    1,
+    2
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 53,
+   "gid": 583,
+   "z_nature_local": 89,
+   "drzewo": "brzoza_duza_new",
+   "sub": [
+    0,
+    2
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 54,
+   "gid": 584,
+   "z_nature_local": 90,
+   "drzewo": "brzoza_duza_new",
+   "sub": [
+    1,
+    2
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 55,
+   "gid": 585,
+   "z_nature_local": 91,
+   "drzewo": "brzoza_duza2_new",
+   "sub": [
+    0,
+    2
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 56,
+   "gid": 586,
+   "z_nature_local": 92,
+   "drzewo": "brzoza_duza2_new",
+   "sub": [
+    1,
+    2
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 97,
+   "gid": 627,
+   "z_nature_local": 93,
+   "drzewo": "grab_duzy_new",
+   "sub": [
+    0,
+    2
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 98,
+   "gid": 628,
+   "z_nature_local": 94,
+   "drzewo": "grab_duzy_new",
+   "sub": [
+    1,
+    2
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 133,
+   "gid": 663,
+   "z_nature_local": 114,
+   "drzewo": "dab_sredni_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 134,
+   "gid": 664,
+   "z_nature_local": 115,
+   "drzewo": "dab_sredni_new",
+   "sub": [
+    1,
+    1
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 135,
+   "gid": 665,
+   "z_nature_local": 120,
+   "drzewo": "buk_sredni_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 136,
+   "gid": 666,
+   "z_nature_local": 121,
+   "drzewo": "buk_sredni_new",
+   "sub": [
+    1,
+    1
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 137,
+   "gid": 667,
+   "z_nature_local": 116,
+   "drzewo": "swierk_sredni_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 138,
+   "gid": 668,
+   "z_nature_local": 117,
+   "drzewo": "swierk_sredni_new",
+   "sub": [
+    1,
+    1
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 139,
+   "gid": 669,
+   "z_nature_local": 118,
+   "drzewo": "brzoza_srednia_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 140,
+   "gid": 670,
+   "z_nature_local": 119,
+   "drzewo": "brzoza_srednia_new",
+   "sub": [
+    1,
+    1
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 143,
+   "gid": 673,
+   "z_nature_local": 122,
+   "drzewo": "grab_sredni_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 24,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 144,
+   "gid": 674,
+   "z_nature_local": 123,
+   "drzewo": "grab_sredni_new",
+   "sub": [
+    1,
+    1
+   ],
+   "box": {
+    "x": 0,
+    "y": 19,
+    "width": 8,
+    "height": 13
+   }
+  },
+  {
+   "id": 171,
+   "gid": 701,
+   "z_nature_local": 124,
+   "drzewo": "dab_maly_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 9,
+    "y": 19,
+    "width": 14,
+    "height": 13
+   }
+  },
+  {
+   "id": 172,
+   "gid": 702,
+   "z_nature_local": 127,
+   "drzewo": "buk_maly_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 9,
+    "y": 19,
+    "width": 14,
+    "height": 13
+   }
+  },
+  {
+   "id": 173,
+   "gid": 703,
+   "z_nature_local": 125,
+   "drzewo": "swierk_maly_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 9,
+    "y": 19,
+    "width": 14,
+    "height": 13
+   }
+  },
+  {
+   "id": 175,
+   "gid": 705,
+   "z_nature_local": 126,
+   "drzewo": "brzoza_mala_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 9,
+    "y": 19,
+    "width": 14,
+    "height": 13
+   }
+  },
+  {
+   "id": 176,
+   "gid": 706,
+   "z_nature_local": 128,
+   "drzewo": "grab_maly_new",
+   "sub": [
+    0,
+    1
+   ],
+   "box": {
+    "x": 9,
+    "y": 19,
+    "width": 14,
+    "height": 13
+   }
+  }
+ ],
+ "willows": [
+  {
+   "name": "wierzba_duza_new",
+   "sheet": "big",
+   "cols": 5,
+   "rows": 5,
+   "standalone": "docs/art-review/trees/wierzba_duza_new-160x160.png",
+   "trunk_box": {
+    "x": 71,
+    "y": 146,
+    "width": 28,
+    "height": 14
+   }
+  },
+  {
+   "name": "wierzba_duza2_new",
+   "sheet": "big",
+   "cols": 5,
+   "rows": 5,
+   "standalone": "docs/art-review/trees/wierzba_duza2_new-160x160.png",
+   "trunk_box": {
+    "x": 62,
+    "y": 146,
+    "width": 24,
+    "height": 14
+   }
+  },
+  {
+   "name": "wierzba_srednia_new",
+   "sheet": "small",
+   "cols": 3,
+   "rows": 3,
+   "standalone": "docs/art-review/trees/wierzba_srednia_new-96x96.png",
+   "trunk_box": {
+    "x": 43,
+    "y": 82,
+    "width": 16,
+    "height": 14
+   }
+  },
+  {
+   "name": "wierzba_srednia2_new",
+   "sheet": "small",
+   "cols": 3,
+   "rows": 3,
+   "standalone": "docs/art-review/trees/wierzba_srednia2_new-96x96.png",
+   "trunk_box": {
+    "x": 40,
+    "y": 82,
+    "width": 16,
+    "height": 14
+   }
+  },
+  {
+   "name": "wierzba_mala_new",
+   "sheet": "small",
+   "cols": 2,
+   "rows": 2,
+   "standalone": "docs/art-review/trees/wierzba_mala_new-64x64.png",
+   "trunk_box": {
+    "x": 30,
+    "y": 50,
+    "width": 12,
+    "height": 14
+   }
+  },
+  {
+   "name": "wierzba_sadzonka_new",
+   "sheet": "small",
+   "cols": 2,
+   "rows": 2,
+   "standalone": "docs/art-review/trees/wierzba_sadzonka_new-64x64.png",
+   "trunk_box": {
+    "x": 28,
+    "y": 50,
+    "width": 12,
+    "height": 14
+   }
+  }
+ ],
+ "beeches": [
+  {
+   "name": "buk_duzy",
+   "sheet": "big",
+   "cols": 4,
+   "rows": 4,
+   "standalone": "docs/art-review/trees/buk_v1_large-128x128.png",
+   "trunk_box": {
+    "x": 57,
+    "y": 114,
+    "width": 18,
+    "height": 14
+   }
+  },
+  {
+   "name": "buk_duzy2",
+   "sheet": "big",
+   "cols": 4,
+   "rows": 4,
+   "standalone": "docs/art-review/trees/buk_v1_large2-128x128.png",
+   "trunk_box": {
+    "x": 56,
+    "y": 114,
+    "width": 18,
+    "height": 14
+   }
+  },
+  {
+   "name": "buk_sredni",
+   "sheet": "small",
+   "cols": 3,
+   "rows": 3,
+   "standalone": "docs/art-review/trees/buk_v1_medium-96x96.png",
+   "trunk_box": {
+    "x": 39,
+    "y": 83,
+    "width": 16,
+    "height": 13
+   }
+  },
+  {
+   "name": "buk_sredni2",
+   "sheet": "small",
+   "cols": 3,
+   "rows": 3,
+   "standalone": "docs/art-review/trees/buk_v1_medium2-96x96.png",
+   "trunk_box": {
+    "x": 38,
+    "y": 83,
+    "width": 16,
+    "height": 13
+   }
+  },
+  {
+   "name": "buk_maly",
+   "sheet": "small",
+   "cols": 2,
+   "rows": 3,
+   "standalone": "docs/art-review/trees/buk_v1_small-64x96.png",
+   "trunk_box": {
+    "x": 23,
+    "y": 83,
+    "width": 15,
+    "height": 13
+   }
+  }
+ ],
+ "uwagi_migracji": [
+  "2026-08-31 ETAP4: nowy buk (buki-v1) dodany jako standalone (klucz beeches, mechanika jak willows). STARY buk_*_new w sprites -> LEGACY, niereferowany przez mape, zostaje w tree_stamps tylko po to, zeby nie przenumerowac 1633 drzew. Kanoniczny buk = buk_duzy/duzy2/sredni/sredni2/maly. ⚠ build_forrest_atlas.py nie zna beeches/willows - nie re-generuj forrest_atlas.json bez recznego dolozenia tych kluczy."
+ ]
+}

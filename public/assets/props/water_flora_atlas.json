@@ -1,0 +1,389 @@
+{
+ "frames": {
+  "cattail_large": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 34,
+    "h": 54
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 34,
+    "h": 54
+   },
+   "sourceSize": {
+    "w": 34,
+    "h": 54
+   }
+  },
+  "reed_plume_large": {
+   "frame": {
+    "x": 38,
+    "y": 2,
+    "w": 37,
+    "h": 52
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 37,
+    "h": 52
+   },
+   "sourceSize": {
+    "w": 37,
+    "h": 52
+   }
+  },
+  "cattail_medium": {
+   "frame": {
+    "x": 77,
+    "y": 2,
+    "w": 30,
+    "h": 46
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 30,
+    "h": 46
+   },
+   "sourceSize": {
+    "w": 30,
+    "h": 46
+   }
+  },
+  "cattail_small": {
+   "frame": {
+    "x": 109,
+    "y": 2,
+    "w": 27,
+    "h": 36
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 27,
+    "h": 36
+   },
+   "sourceSize": {
+    "w": 27,
+    "h": 36
+   }
+  },
+  "reed_plume_small": {
+   "frame": {
+    "x": 138,
+    "y": 2,
+    "w": 30,
+    "h": 35
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 30,
+    "h": 35
+   },
+   "sourceSize": {
+    "w": 30,
+    "h": 35
+   }
+  },
+  "marsh_tuft_02": {
+   "frame": {
+    "x": 170,
+    "y": 2,
+    "w": 32,
+    "h": 33
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 33
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 33
+   }
+  },
+  "brzeg_stawu_paleta": {
+   "frame": {
+    "x": 204,
+    "y": 2,
+    "w": 36,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 36,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 36,
+    "h": 32
+   }
+  },
+  "marsh_tuft_03": {
+   "frame": {
+    "x": 2,
+    "y": 58,
+    "w": 34,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 34,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 34,
+    "h": 32
+   }
+  },
+  "marsh_tuft_01": {
+   "frame": {
+    "x": 38,
+    "y": 58,
+    "w": 35,
+    "h": 31
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 35,
+    "h": 31
+   },
+   "sourceSize": {
+    "w": 35,
+    "h": 31
+   }
+  },
+  "shore_plant_01": {
+   "frame": {
+    "x": 75,
+    "y": 58,
+    "w": 31,
+    "h": 28
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 31,
+    "h": 28
+   },
+   "sourceSize": {
+    "w": 31,
+    "h": 28
+   }
+  },
+  "marsh_tuft_04": {
+   "frame": {
+    "x": 108,
+    "y": 58,
+    "w": 37,
+    "h": 27
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 37,
+    "h": 27
+   },
+   "sourceSize": {
+    "w": 37,
+    "h": 27
+   }
+  },
+  "shore_plant_03": {
+   "frame": {
+    "x": 147,
+    "y": 58,
+    "w": 19,
+    "h": 27
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 19,
+    "h": 27
+   },
+   "sourceSize": {
+    "w": 19,
+    "h": 27
+   }
+  },
+  "shore_plant_04": {
+   "frame": {
+    "x": 168,
+    "y": 58,
+    "w": 25,
+    "h": 27
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 25,
+    "h": 27
+   },
+   "sourceSize": {
+    "w": 25,
+    "h": 27
+   }
+  },
+  "shore_plant_05": {
+   "frame": {
+    "x": 195,
+    "y": 58,
+    "w": 22,
+    "h": 24
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 22,
+    "h": 24
+   },
+   "sourceSize": {
+    "w": 22,
+    "h": 24
+   }
+  },
+  "marsh_tuft_05": {
+   "frame": {
+    "x": 219,
+    "y": 58,
+    "w": 27,
+    "h": 23
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 27,
+    "h": 23
+   },
+   "sourceSize": {
+    "w": 27,
+    "h": 23
+   }
+  },
+  "marsh_tuft_06": {
+   "frame": {
+    "x": 2,
+    "y": 92,
+    "w": 21,
+    "h": 21
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 21,
+    "h": 21
+   },
+   "sourceSize": {
+    "w": 21,
+    "h": 21
+   }
+  },
+  "shore_plant_02": {
+   "frame": {
+    "x": 25,
+    "y": 92,
+    "w": 28,
+    "h": 20
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 20
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 20
+   }
+  },
+  "shore_plant_06": {
+   "frame": {
+    "x": 55,
+    "y": 92,
+    "w": 40,
+    "h": 20
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 40,
+    "h": 20
+   },
+   "sourceSize": {
+    "w": 40,
+    "h": 20
+   }
+  },
+  "lilia_wodna_paleta": {
+   "frame": {
+    "x": 97,
+    "y": 92,
+    "w": 22,
+    "h": 14
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 22,
+    "h": 14
+   },
+   "sourceSize": {
+    "w": 22,
+    "h": 14
+   }
+  }
+ },
+ "meta": {
+  "app": "build_forest_atlases.py",
+  "format": "RGBA8888",
+  "scale": "1"
+ }
+}
