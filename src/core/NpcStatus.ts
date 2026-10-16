@@ -58,7 +58,10 @@ const CURRENT_STEP_GLYPH = "◆";
  * osobą. Semantykę oddania niesie routing, nie drugi glif.
  */
 export function npcQuestMarker(npcId: NpcId): NpcGlyph | null {
-  const questIds = Quests.questsAtNpc(npcId).filter((id) => Quests.isUnlocked(id));
+  // ⭐ Zadanie czekające tylko na rozmowę (`waitsOnTopic`) też daje „!” —
+  // gracz ma wiedzieć, że jest tu robota, zanim zapyta o temat, z którego
+  // ona wyrasta (2026-10-14).
+  const questIds = Quests.questsAtNpc(npcId).filter((id) => Quests.isUnlocked(id) || Quests.waitsOnTopic(id));
 
   if (questIds.some((id) => Quests.getStatus(id) === "active" && Quests.isObjectiveMet(id))) {
     return { kind: "turnIn", text: "?", color: UI.green };

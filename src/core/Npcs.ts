@@ -120,6 +120,14 @@ export interface Topic {
    * pilnuje `R6`/`R7` w `tools/rozmowy_przymiar.mjs`.
    */
   group?: string;
+  /**
+   * ⭐ **Zadanie wyrasta z TEGO tematu** (2026-10-14, autor: „zadania wynikają
+   * z rozmowy i powinny być gałęzią wypowiedzi”; pierwszy: Gniewko). Po
+   * odpowiedzi kolumna przechodzi od razu w ofertę („Biorę to.” / „‹ Jeszcze
+   * nie”) — bez osobnego „Masz dla mnie robotę?”. Para z `requiresTopic`
+   * w zadaniu (pilnuje `R8`/`Z9` w `tools/rozmowy_przymiar.mjs`).
+   */
+  offersQuest?: string;
 }
 
 export interface NpcDef {

@@ -39,7 +39,7 @@ import { NPC_IDS, NPCS, type NpcId } from "../core/Npcs";
 import type { Interactable } from "../core/Interactables";
 import { NodeSpawner, type GatherHost } from "../world/NodeSpawner";
 import { Gatherable, type HerbId } from "../entities/Gatherable";
-import { HERBS, GATHER, MODELE_3D, AKTYWNOSC_STWORZEN, SWIAT, NPC_3D, KIRKA } from "../config/GameConfig";
+import { HERBS, GATHER, MODELE_3D, AKTYWNOSC_STWORZEN, SWIAT, NPC_3D, KIRKA, COMBAT_TUTORIAL, CONTROLS_TUTORIAL } from "../config/GameConfig";
 import { composeWorld, przesuniecieWSwiecie, regionAt, regionsOf, voidsOf } from "../world/WorldComposer";
 import { przesuniecieOdPustki, type Prost } from "../world/VoidFraming";
 import { pixelRatio } from "../core/Viewport";
@@ -87,7 +87,7 @@ import { Sfx, type SfxKey } from "../core/Sfx";
 import { ABILITIES, ABILITY_AIM, PLAYER, STAMINA, WEAPON_SWAP } from "../config/GameConfig";
 import { Inventory } from "../core/Inventory";
 import { Skills, getSkill } from "../core/Skills";
-import { Quests } from "../core/Quests";
+import { Quests, type QuestId } from "../core/Quests";
 import { Gathering } from "../core/Gathering";
 import { getItem, type ItemId } from "../core/Items";
 import { Equipment, describeSwapRefusal, type DamageType, type WeaponFamily } from "../core/Equipment";
@@ -911,6 +911,10 @@ export class GameScene extends Phaser.Scene implements ProjectileHost, GatherHos
     this.targetMarker = undefined;
     // Razem z obrazkiem — patrz `targetMarkerState`.
     this.targetMarkerState = null;
+    // Samouczek: okrąg zniknął razem ze sceną; krok ogłosi się od nowa.
+    this.tutorialRing = null;
+    this.tutorialStep = null;
+    WorldState.tutorial = { step: null, text: "" };
 
     // ── Wejście ataku ─────────────────────────────────────────────────────
     // Przejście bramą w trakcie autoataku dawało nową mapę z uzbrojonym
@@ -2857,6 +2861,7 @@ export class GameScene extends Phaser.Scene implements ProjectileHost, GatherHos
     // musi jechać za postacią, a lista trafionych zmieniać się na żywo.
     // No-op, gdy nikt nie celuje (jeden odczyt pola).
     this.updateAimPreview();
+    this.updateCombatTutorial();
 
     // Uzbrojony: próbuj co klatkę, niezależnie od stanu przycisku. Własny
     // cooldown i bramka zasięgu w `resolveAttack` rozkładają zamachy w czasie
@@ -3873,6 +3878,125 @@ export class GameScene extends Phaser.Scene implements ProjectileHost, GatherHos
    * zwarciu, czyli dokładnie tam, gdzie ta bramka rozstrzyga, taka różnica
    * przewraca wynik.
    */
+  /* ── Samouczek walki u Patryczka (`COMBAT_TUTORIAL`, 2026-10-15) ───────── */
+
+  /** Ostatnio OGŁOSZONY krok — zdarzenie leci tylko przy zmianie. */
+  private tutorialStep: string | null = null;
+  /** Miejsce, z którego ruszyła postać — dla kroku `move` (`CONTROLS_TUTORIAL`). */
+  private onboardStart: { x: number; y: number } | null = null;
+  /** Pulsujący okrąg wokół Ojca w kroku `father`/`talk`. */
+  private onboardRing: Phaser.GameObjects.Graphics | null = null;
+  /** Pulsujący okrąg zasięgu wokół postaci (leży NA GRUNCIE, jak pierścień celu). */
+  private tutorialRing: Phaser.GameObjects.Graphics | null = null;
+  /** Kiedy (`time.now`) ogłoszono bieżący krok — dla `COMBAT_TUTORIAL.minReadMs`. */
+  private tutorialStepSince = 0;
+
+  /**
+   * ⭐ Krok samouczka z ŻYWEGO stanu: dystans do manekina, zwrot, liczba
+   * trafień celu `hit`. Nic tu nie czeka na przycisk „dalej” — krok mija,
+   * gdy gracz zrobi to, o czym mówi tekst. ⚠ Tania ścieżka: bez czynnego
+   * zadania wraca po jednym odczycie statusu.
+   */
+  private updateCombatTutorial(): void {
+    const q = COMBAT_TUTORIAL.questId as QuestId;
+    let step: keyof typeof COMBAT_TUTORIAL.steps | null = null;
+    let dummy: Enemy | null = null;
+    if (Quests.getStatus(q) === "active") {
+      if (Quests.isObjectiveMet(q)) step = "done";
+      else {
+        this.enemies.getChildren().forEach((o) => {
+          const e = o as Enemy;
+          if (!dummy && !e.isDead && e.active && e.kind === COMBAT_TUTORIAL.dummyKind) dummy = e;
+        });
+        const d = dummy as Enemy | null;
+        if (d) {
+          // Manekin wybrany od początku: okrąg pod nim pokazuje swoje stany
+          // (za daleko / za plecami / możesz bić) już w drodze — to też lekcja.
+          if (this.currentTarget !== d) this.selectTarget(d);
+          const hits = Quests.objectiveProgress(q, 0);
+          const inReach = this.targetInReach(d, Progression.attackReach, Progression.attackMinReach);
+          const tooClose = !inReach && this.targetInReach(d, Progression.attackReach, 0);
+          if (hits >= 2) step = "switch";
+          else if (hits >= 1) step = "keep";
+          else if (tooClose) step = "tooClose";
+          else if (!inReach) step = "approach";
+          else if (!this.canStrikeFacing(d)) step = "face";
+          else step = "attack";
+        }
+      }
+    }
+    // Kroki, które mijają same z trafieniami, trzymają się minimum czasu na
+    // przeczytanie — następny krok (dalej w kolejności) poczeka.
+    // Po minimum — o JEDEN krok naraz, żeby żaden nie przepadł.
+    const kolej = ["keep", "switch", "done"] as const;
+    const teraz = kolej.indexOf(this.tutorialStep as (typeof kolej)[number]);
+    const cel = kolej.indexOf(step as (typeof kolej)[number]);
+    if (teraz >= 0 && cel > teraz) {
+      step = this.time.now - this.tutorialStepSince < COMBAT_TUTORIAL.minReadMs ? kolej[teraz] : kolej[teraz + 1];
+    }
+    this.paintTutorialRing(step !== null && step !== "keep" && step !== "switch" && step !== "done");
+    const onboard = step ? null : this.controlsTutorialStep();
+    const shown: string | null = step ?? onboard;
+    if (shown === this.tutorialStep) return;
+    this.tutorialStepSince = this.time.now;
+    this.tutorialStep = shown;
+    const ev = { step: shown, text: step ? COMBAT_TUTORIAL.steps[step] : onboard ? CONTROLS_TUTORIAL.steps[onboard] : "" };
+    WorldState.tutorial = ev;
+    GameEvents.emit(EVENT.tutorialStep, ev);
+  }
+
+  /**
+   * Okrąg zasięgu — UCZCIWY: zasięg liczy się od środka ciała gracza
+   * (`combatOrigin`) do KRAWĘDZI celu (`withinReach`), więc cel dosięgasz,
+   * gdy jego krawędź wchodzi w ten okrąg. Koło w płaszczyźnie gruntu —
+   * kamera ściska je sama jak cały grunt (`WorldView3D`), ⛔ bez
+   * `groundRatio` (tamto spłaszczenie pierścienia celu to wygląd, nie miara).
+   */
+  /**
+   * ⭐ Krok wprowadzenia w sterowanie (`CONTROLS_TUTORIAL`) z żywego stanu:
+   * przebyty dystans, odległość do Ojca. Rysuje też okrąg wokół Ojca.
+   * Tania ścieżka: po przyjęciu „Kija w garści” jeden odczyt statusu.
+   */
+  private controlsTutorialStep(): keyof typeof CONTROLS_TUTORIAL.steps | null {
+    const C = CONTROLS_TUTORIAL;
+    const father = Quests.getStatus(C.questId as QuestId) === "available" && !this.player.isDead
+      ? this.npcs.find((n) => n.npcId === C.npcId)
+      : undefined;
+    if (!father) {
+      this.onboardRing?.setVisible(false);
+      return null;
+    }
+    if (!this.onboardStart) this.onboardStart = { x: this.player.x, y: this.player.y };
+    const moved = Phaser.Math.Distance.Between(this.player.x, this.player.y, this.onboardStart.x, this.onboardStart.y);
+    let step: keyof typeof C.steps;
+    if (this.nearby === (father as unknown as Interactable)) step = "talk";
+    else if (moved < C.moveDistPx) step = "move";
+    else step = "father";
+    const R = C.ring;
+    if (!this.onboardRing) this.onboardRing = this.add.graphics().setDepth(DEPTH.overlay + 5);
+    const t = (this.time.now % R.pulseMs) / R.pulseMs;
+    const a = R.alphaMin + (R.alphaMax - R.alphaMin) * (0.5 + 0.5 * Math.sin(t * Math.PI * 2));
+    this.onboardRing.clear().lineStyle(R.thickness, R.color, a).strokeCircle(father.x, father.y, R.radius).setVisible(true);
+    return step;
+  }
+
+  private paintTutorialRing(on: boolean): void {
+    if (!on) {
+      this.tutorialRing?.setVisible(false);
+      return;
+    }
+    const R = COMBAT_TUTORIAL.ring;
+    if (!this.tutorialRing) this.tutorialRing = this.add.graphics().setDepth(DEPTH.overlay + 5);
+    const t = (this.time.now % R.pulseMs) / R.pulseMs;
+    const a = R.alphaMin + (R.alphaMax - R.alphaMin) * (0.5 + 0.5 * Math.sin(t * Math.PI * 2));
+    const o = this.player.combatOrigin;
+    this.tutorialRing
+      .clear()
+      .lineStyle(R.thickness, R.color, a)
+      .strokeCircle(o.x, o.y, Progression.attackReach)
+      .setVisible(true);
+  }
+
   private canStrikeFacing(target: Enemy): boolean {
     const origin = this.player.combatOrigin;
     const body = target.combatBody;
@@ -4158,6 +4282,8 @@ export class GameScene extends Phaser.Scene implements ProjectileHost, GatherHos
       // licznik `k` ma rosnąć wyłącznie wtedy, gdy praktyka naprawdę zostanie
       // przyznana. Zwiększanie go tutaj karałoby malejącym przyrostem za ciosy,
       // które niczego nie uczyły (sufit `P`, milczący nauczyciel).
+      // Cel zadania „uderz” (samouczek walki) — trafienie GRACZA, tylko tutaj.
+      Quests.recordHit(e.kind);
       if (strike.family) {
         if (e.kind === "training_dummy") {
           WeaponProficiency.practiceOnDummy(strike.family, wykonanie);

@@ -22,6 +22,10 @@
  *       schowałaby temat w grupie, której wiersz nigdy się nie narysuje)
  *   R7  grupa ma u danego NPC co najmniej DWA tematy (grupa jednego tematu
  *       to jedno tapnięcie więcej za nic — D14)
+ *   R8  `offersQuest` tematu wskazuje istniejące zadanie TEGO rozmówcy,
+ *       a zadanie ma `requiresTopic` = ten temat (gałąź tematu, 2026-10-14)
+ *   Z9  `requiresTopic` zadania wskazuje temat u DAWCY, który to zadanie
+ *       proponuje (`offersQuest`) — inaczej oferta nie miałaby skąd wyrosnąć
  *   Z1  dawca zadania istnieje w `NPCS`
  *   Z2  cele: przedmiot / wróg / rozmówca istnieją
  *   Z3  nagrody i wręczenia wskazują istniejące przedmioty
@@ -91,6 +95,15 @@ for (const [id, { npc, t }] of tematy) {
   if (t.requiresHerb && !herbIds.has(t.requiresHerb)) blad(`R4 temat „${id}" (${npc}) czeka na nieistniejący gatunek „${t.requiresHerb}"`);
   if (t.group !== undefined && !(t.group in TOPIC_GROUPS)) blad(`R6 temat „${id}" (${npc}) należy do nieistniejącej grupy „${t.group}" — wiersz grupy nigdy się nie narysuje`);
 }
+// R8 — gałąź tematu: temat proponuje zadanie swojego rozmówcy, a zadanie
+// wskazuje ten temat z powrotem (para musi się zgadzać z obu stron).
+for (const [id, { npc, t }] of tematy) {
+  if (t.offersQuest === undefined) continue;
+  const q = QUESTS[t.offersQuest];
+  if (!q) blad(`R8 temat „${id}" (${npc}) proponuje nieistniejące zadanie „${t.offersQuest}"`);
+  else if (q.giver !== npc) blad(`R8 temat „${id}" (${npc}) proponuje zadanie „${t.offersQuest}", którego dawcą jest „${q.giver}"`);
+  else if (q.requiresTopic !== id) blad(`R8 temat „${id}" proponuje „${t.offersQuest}", ale to zadanie czeka na „${q.requiresTopic ?? "(nic)"}" — gałąź bez bramki pozwala wziąć je z pominięciem rozmowy`);
+}
 // R7 — grupa ma sens od dwóch tematów u tego samego rozmówcy.
 for (const npc of npcs) {
   const ile = new Map();
@@ -120,13 +133,19 @@ for (const [id, q] of Object.entries(QUESTS)) {
   if (!npcIds.has(q.giver)) blad(`Z1 zadanie „${id}": dawca „${q.giver}" nie istnieje w NPCS`);
   else if (!NPCS[q.giver].greetings) blad(`Z6 zadanie „${id}": dawca „${q.giver}" nie ma \`greetings\` — dymek byłby pusty`);
   if (q.requiresQuest && !questIds.has(q.requiresQuest)) blad(`Z5 zadanie „${id}" czeka na nieistniejące zadanie „${q.requiresQuest}"`);
+  if (q.requiresTopic !== undefined) {
+    const tt = tematy.get(q.requiresTopic);
+    if (!tt) blad(`Z9 zadanie „${id}" czeka na nieistniejący temat „${q.requiresTopic}" — nie da się go wziąć NIGDY`);
+    else if (tt.npc !== q.giver) blad(`Z9 zadanie „${id}" czeka na temat „${q.requiresTopic}" u „${tt.npc}", a dawcą jest „${q.giver}"`);
+    else if (tt.t.offersQuest !== id) blad(`Z9 zadanie „${id}" czeka na temat „${q.requiresTopic}", który go nie proponuje (\`offersQuest\`) — po rozmowie nie byłoby oferty`);
+  }
   const widziane = new Set();
   for (const e of etapy(q)) {
     if (widziane.has(e.id)) blad(`Z4 zadanie „${id}": etap „${e.id}" powtórzony`);
     widziane.add(e.id);
     for (const o of e.objectives ?? []) {
       if ((o.kind === "collect" || o.kind === "equip") && !itemIds.has(o.itemId)) blad(`Z2 zadanie „${id}"/${e.id}: przedmiot „${o.itemId}" nie istnieje`);
-      if (o.kind === "kill" && !WROGOWIE.has(o.enemy)) blad(`Z2 zadanie „${id}"/${e.id}: wróg „${o.enemy}" nie jest gatunkiem z EnemyType`);
+      if ((o.kind === "kill" || o.kind === "hit") && !WROGOWIE.has(o.enemy)) blad(`Z2 zadanie „${id}"/${e.id}: wróg „${o.enemy}" nie jest gatunkiem z EnemyType`);
       if (o.kind === "talk" && !npcIds.has(o.npc)) blad(`Z2 zadanie „${id}"/${e.id}: rozmówca „${o.npc}" nie istnieje`);
       if (o.kind === "talk" && o.topic && npcIds.has(o.npc) && !(NPCS[o.npc].topics ?? []).some((tt) => tt.id === o.topic))
         blad(`Z8 zadanie „${id}"/${e.id}: „${o.npc}" nie ma tematu „${o.topic}" — cel „porozmawiaj" byłby nie do zaliczenia`);
@@ -153,6 +172,7 @@ for (let zmiana = true; zmiana;) {
   for (const [id, q] of Object.entries(QUESTS)) {
     if (zadOk.has(id) || !npcIds.has(q.giver)) continue;
     if (q.requiresQuest && !zadOk.has(q.requiresQuest)) continue;
+    if (q.requiresTopic && !temOk.has(q.requiresTopic)) continue;
     zadOk.add(id); zmiana = true;
   }
   for (const [id, { t }] of tematy) {

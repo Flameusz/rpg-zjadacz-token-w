@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 import { Dialogue } from "../core/Dialogue";
-import { Quests, getQuest, questGreetingsOf, rewardText, type QuestId } from "../core/Quests";
+import { Quests, getQuest, goalOf, objectiveLabel, objectivesOf, questGreetingsOf, rewardText, type QuestId } from "../core/Quests";
 import { UI, TYPE, fontPx, textStyle, uiW, uiH } from "../core/theme";
 import { HUD_LAYOUT, TOPIC_GROUPS } from "../config/GameConfig";
 import type { NpcDef, Topic } from "../core/Npcs";
@@ -380,6 +380,15 @@ export class ConversationSheet {
       const t = (this.npc.topics ?? []).find((x) => x.id === id);
       for (const a of t?.after ?? []) if (avail.has(a)) out.add(a);
     }
+    // ⭐ Temat, z którego wyrasta zadanie (`offersQuest`) — „!” i pierwszy,
+    // dopóki nie padł, a zadanie czeka już tylko na niego (2026-10-14).
+    // Temat-brama jeszcze UKRYTY za innym pytaniem tego rozmówcy (`after`) —
+    // „!” dostaje pytanie, które go odsłania (ten sam wzór co cele wyżej).
+    for (const t of this.npc.topics ?? []) {
+      if (!t.offersQuest || Dialogue.isAsked(t.id) || !Quests.waitsOnTopic(t.offersQuest as QuestId)) continue;
+      if (avail.has(t.id)) { out.add(t.id); continue; }
+      for (const a of t.after ?? []) if (avail.has(a) && !Dialogue.isAsked(a)) out.add(a);
+    }
     return out;
   }
 
@@ -428,6 +437,15 @@ export class ConversationSheet {
     // Przed `ask`: jego przebudowa ma już widzieć zaliczony cel (bez „!").
     Quests.recordTopic(this.npc.id, topic.id);
     Dialogue.ask(topic.id);
+    // ⭐ Gałąź tematu: odpowiedź kończy się propozycją zadania — pas zostaje
+    // z odpowiedzią rozmówcy, kolumna przechodzi w „Biorę to.” / „‹ Jeszcze
+    // nie” (ten sam poziom `offer` co wiersz „!”).
+    const q = topic.offersQuest as QuestId | undefined;
+    if (q && Quests.getStatus(q) === "available" && Quests.isUnlocked(q)) {
+      this.level = { kind: "offer", id: q };
+      this.render();
+      return;
+    }
     if (wasAsked) this.render();
   }
 
@@ -615,7 +633,13 @@ export class ConversationSheet {
       const text = lvl.kind === "archive"
         ? "Porozmawiajmy o…"
         : lvl.kind === "offer"
-          ? `Zadanie · ${getQuest(lvl.id).name}`
+          // ⭐ Cel pod nazwą (2026-10-14): oferta z TEMATU zostawia w pasie
+          // odpowiedź rozmówcy, nie opis zadania — bez tej linii gracz brałby
+          // zlecenie, nie wiedząc, co ma zrobić.
+          ? [`Zadanie · ${getQuest(lvl.id).name}`, ...objectivesOf(lvl.id).map((o) => {
+              const n = goalOf(o);
+              return `${objectiveLabel(o)}${n > 1 ? ` ×${n}` : ""}`;
+            })].join("\n")
           : `${TOPIC_GROUPS[lvl.id]?.short ?? lvl.id} · ${newTopics(this.freshIn(lvl.id, doZadania).length)}`;
       this.caption.setText(text).setPosition(x + 4, M).setVisible(true);
       listTop = M + this.caption.height + 8;

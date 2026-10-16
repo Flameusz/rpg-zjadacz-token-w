@@ -89,3 +89,6 @@ class DialogueState {
 }
 
 export const Dialogue = new DialogueState();
+// Bramka zadania „po rozmowie” (`requiresTopic`) — `Quests` nie może
+// importować tego modułu (pętla), więc dostaje odczyt stąd.
+Quests.setTopicSource((id) => Dialogue.isAsked(id));

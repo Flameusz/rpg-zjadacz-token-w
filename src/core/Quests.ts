@@ -31,6 +31,13 @@ export type Objective =
   | { readonly kind: "collect"; readonly itemId: string; readonly count: number }
   | { readonly kind: "kill"; readonly enemy: EnemyType; readonly count: number }
   /**
+   * ⭐ **Uderz** (2026-10-15, samouczek walki u Patryczka): trafienia, nie
+   * zabicia — manekina nie da się położyć (`TRAINING_DUMMY.hp` 100 000).
+   * Zatrzaskiwany jak `kill`; liczy wyłącznie trafienia GRACZA w czasie,
+   * gdy zadanie jest aktywne.
+   */
+  | { readonly kind: "hit"; readonly enemy: EnemyType; readonly count: number }
+  /**
    * ⭐ Od 2026-10-12 (`OI-66`, decyzja autora): „porozmawiaj" znaczy rozmowę
    * W DANYM TEMACIE — `topic` to id tematu z `npc.topics`, a cel zalicza się,
    * gdy gracz ten temat otworzy (także z archiwum, `recordTopic`). Bez `topic`
@@ -57,12 +64,12 @@ export type Objective =
 
 /** True for objectives whose progress must be stored as it happens. */
 function isLatched(o: Objective): boolean {
-  return o.kind === "kill" || o.kind === "talk" || o.kind === "reach";
+  return o.kind === "kill" || o.kind === "hit" || o.kind === "talk" || o.kind === "reach";
 }
 
 /** How many "units" of an objective are needed. Talk/equip are binary. */
 export function goalOf(o: Objective): number {
-  return o.kind === "collect" || o.kind === "kill" ? o.count : 1;
+  return o.kind === "collect" || o.kind === "kill" || o.kind === "hit" ? o.count : 1;
 }
 
 export function getQuest(id: QuestId): (typeof QUESTS)[QuestId] {
@@ -234,6 +241,8 @@ export function objectiveParts(o: Objective): { verb: string; subject: string } 
       return { verb: "Zbierz", subject: getItem(o.itemId as ItemId).name };
     case "kill":
       return { verb: "Ubij", subject: ENEMY_NAMES[o.enemy] };
+    case "hit":
+      return { verb: "Uderz", subject: ENEMY_NAMES[o.enemy] };
     case "talk":
       return { verb: "Porozmawiaj", subject: NPCS[o.npc as NpcId]?.name ?? o.npc };
     case "equip": {
@@ -409,6 +418,15 @@ class QuestState {
     this.advanceAllActive();
     // Even with no matching objective the tally moved, and that is persisted
     // state — the save listener hangs off this event.
+    this.emitChanged();
+  }
+
+  /** Trafienie gracza w stworzenie (cel `hit` — samouczek). Bez licznika
+   *  „na całe życie”: trafień nikt poza zadaniem nie liczy. Emituje tylko,
+   *  gdy coś się zaliczyło — trafień jest wiele na sekundę walki. */
+  recordHit(kind: EnemyType): void {
+    if (!this.bumpActive((o) => o.kind === "hit" && o.enemy === kind)) return;
+    this.advanceAllActive();
     this.emitChanged();
   }
 
@@ -824,10 +842,40 @@ class QuestState {
     // Zielarki ta sama pułapka wróciła — więc zamiast omijać ją po raz drugi,
     // znika u źródła.
     if (this.getStatus(id) !== "available") return true;
+    if (!this.unlockedExceptTopic(id)) return false;
+    const t = (QUESTS[id] as { requiresTopic?: string }).requiresTopic;
+    return !t || this.topicAsked(t);
+  }
+
+  /**
+   * ⭐ **Zadanie czeka WYŁĄCZNIE na rozmowę** (`requiresTopic`, 2026-10-14 —
+   * zadania jako gałęzie tematów, pierwszy: Gniewko). Wszystkie inne bramki
+   * spełnione, brakuje tylko pytania, z którego zadanie wyrasta. Dla świata
+   * to „ma robotę” (`!` nad głową, powitanie `firstJob`), dla rozmowy — temat
+   * z `!` na górze kolumny; ofertę otwiera dopiero odpowiedź na niego.
+   */
+  waitsOnTopic(id: QuestId): boolean {
+    if (this.getStatus(id) !== "available") return false;
+    const t = (QUESTS[id] as { requiresTopic?: string }).requiresTopic;
+    return !!t && !this.topicAsked(t) && this.unlockedExceptTopic(id);
+  }
+
+  private unlockedExceptTopic(id: QuestId): boolean {
     const q = QUESTS[id] as { requires?: string; requiresQuest?: string };
     if (q.requires && !Skills.has(q.requires as SkillId)) return false;
     if (q.requiresQuest && this.getStatus(q.requiresQuest as QuestId) !== "completed") return false;
     return true;
+  }
+
+  /**
+   * Czy temat rozmowy padł (u kogokolwiek). ⚠ **Wstrzykiwane przez
+   * `Dialogue`** (`setTopicSource`) — `Dialogue` importuje `Quests`, więc
+   * import w drugą stronę zamknąłby pętlę modułów. Bez źródła: „nie padł”
+   * (bramka zostaje zamknięta, nie otwarta — bezpieczniej dla zadania).
+   */
+  private topicAsked: (topicId: string) => boolean = () => false;
+  setTopicSource(f: (topicId: string) => boolean): void {
+    this.topicAsked = f;
   }
 
   /**

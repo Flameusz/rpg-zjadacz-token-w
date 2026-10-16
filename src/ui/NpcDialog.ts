@@ -259,7 +259,9 @@ export class NpcDialog extends PanelBase {
    */
   private pickGreeting(): string {
     const g = this.npc.greetings ?? {};
-    const ids = Quests.questsAtNpc(this.npc.id).filter((id) => Quests.isUnlocked(id));
+    // `waitsOnTopic`: zadanie czeka tylko na pytanie — powitanie to już
+    // `firstJob` („jest robota”), nie `notYet` (2026-10-14).
+    const ids = Quests.questsAtNpc(this.npc.id).filter((id) => Quests.isUnlocked(id) || Quests.waitsOnTopic(id));
     const readyId = ids.find((id) => Quests.getStatus(id) === "active" && Quests.isObjectiveMet(id));
     const availableId = ids.find((id) => Quests.getStatus(id) === "available");
     const activeId = ids.find((id) => Quests.getStatus(id) === "active");

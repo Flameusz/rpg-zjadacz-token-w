@@ -34,4 +34,7 @@ export const WorldState = {
   /** Zwrot postaci w konwencji ekranu (radiany, 0 = w prawo, π/2 = w dół),
    *  pisany co klatkę razem z pozycją — strzałka gracza na minimapie. */
   playerHeading: Math.PI / 2,
+  /** Ostatnio ogłoszony krok samouczka walki (`EVENT.tutorialStep`) —
+   *  migawka dla widżetów, które powstają PO ogłoszeniu (restart `UIScene`). */
+  tutorial: { step: null as string | null, text: "" },
 };

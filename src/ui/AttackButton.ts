@@ -5,6 +5,7 @@ import { HUD_LAYOUT } from "../config/GameConfig";
 import { textStyle } from "../core/theme";
 import { GameEvents, EVENT } from "../core/EventBus";
 import { Progression } from "../core/Progression";
+import { WorldState } from "../core/WorldState";
 import { damageIconKey } from "../core/Assets";
 import { TYPE_COLOR } from "./AttackModeButton";
 
@@ -33,6 +34,9 @@ export class AttackButton {
   private readonly radius = HUD_LAYOUT.attackRadius;
   /** Which pointer is currently holding this button, if any (multi-touch safe). */
   private pointerId: number | null = null;
+  /** ⭐ Samouczek walki (`tutorialStep` = `attack`): pulsujący obrys „kliknij mnie”. */
+  private hintRing: Phaser.GameObjects.Arc;
+  private hintTween: Phaser.Tweens.Tween | null = null;
 
   constructor(private scene: Phaser.Scene) {
     const depth = 1000;
@@ -61,6 +65,13 @@ export class AttackButton {
       .setScrollFactor(0)
       .setDepth(depth + 2);
 
+    this.hintRing = scene.add
+      .circle(0, 0, this.radius + 6)
+      .setStrokeStyle(4, 0xffe08a, 1)
+      .setScrollFactor(0)
+      .setDepth(depth + 3)
+      .setVisible(false);
+
     this.circle.on(Phaser.Input.Events.GAMEOBJECT_POINTER_DOWN, (p: Phaser.Input.Pointer) => {
       p.event.stopPropagation(); // don't let the joystick claim this touch
       this.pointerId = p.id;
@@ -81,6 +92,8 @@ export class AttackButton {
     scene.scale.on(Phaser.Scale.Events.RESIZE, this.reposition, this);
     GameEvents.on(EVENT.equipmentChanged, this.refreshType, this);
     GameEvents.on(EVENT.attackVariantChanged, this.refreshType, this);
+    GameEvents.on(EVENT.tutorialStep, this.onTutorialStep, this);
+    this.onTutorialStep(WorldState.tutorial);
     /**
      * ⚠ **`scene.scale` to menedżer GLOBALNY gry, nie wtyczka sceny** — i to
      * jest cała treść tego bloku (dopisany 2026-09-08; ten widżet był jednym
@@ -98,6 +111,24 @@ export class AttackButton {
       scene.scale.off(Phaser.Scale.Events.RESIZE, this.reposition, this);
       GameEvents.off(EVENT.equipmentChanged, this.refreshType, this);
       GameEvents.off(EVENT.attackVariantChanged, this.refreshType, this);
+      GameEvents.off(EVENT.tutorialStep, this.onTutorialStep, this);
+    });
+  }
+
+  /** Krok „naciśnij atak” samouczka: obrys pulsuje, póki krok trwa. */
+  private onTutorialStep(p: { step: string | null }): void {
+    const on = p.step === "attack";
+    this.hintTween?.stop();
+    this.hintTween = null;
+    this.hintRing.setVisible(on).setScale(1).setAlpha(1);
+    if (!on) return;
+    this.hintTween = this.scene.tweens.add({
+      targets: this.hintRing,
+      scale: 1.22,
+      alpha: 0.15,
+      duration: 750,
+      repeat: -1,
+      ease: "Sine.easeOut",
     });
   }
 
@@ -141,6 +172,7 @@ export class AttackButton {
     const { x, y } = combatAnchor(this.scene);
     this.circle.setPosition(x, y);
     this.label.setPosition(x, y);
+    this.hintRing.setPosition(x, y);
     // Znak typu na obwodzie, w lewym dolnym skosie — poza glifem miecza
     // i poza miejscem, w które pada kciuk przy przytrzymaniu.
     const k = this.radius * 0.72;

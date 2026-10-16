@@ -548,7 +548,11 @@ W korzeniu kolumny, nad pytaniami: „?" do oddania (dotknięcie oddaje
 i pisze nagrodę), „!" do wzięcia (opis w głosie dawcy w pasie — poziom
 `offer`: „Biorę to." / „‹ Jeszcze nie"). Zakładka Zadania zostaje
 przeglądem z tymi samymi przyciskami — dwie drogi do JEDNEJ operacji
-`Quests`. ⛔ Wypowiedź po decyzji to linia z danych (`working`) albo suchy
+`Quests`. ⭐ **Od 2026-10-15 zadanie może wyrastać z TEMATU** (`offersQuest`
++ `requiresTopic`, pierwszy Gniewko): po odpowiedzi kolumna przechodzi
+w poziom `offer` bez „Masz dla mnie robotę?”, a pas zostaje z odpowiedzią
+rozmówcy — dlatego podpis oferty niesie CEL (`Ubij: Wilk ×3`) pod nazwą
+zadania. ⛔ Wypowiedź po decyzji to linia z danych (`working`) albo suchy
 komunikat w nawiasie — przy oddaniu: `greetings.done` dawcy + nagroda w nawiasie (autor 2026-10-15); nowe kwestie wg „Mowa mieszkańców” w `docs/swiat.md`.
 
 ⚠ **Wiersze arkusza mają WŁASNY dźwięk kliknięcia** (`buildRow`) — nie są
@@ -708,6 +712,15 @@ minimapy, przycisku menu i odznaki poziomu.
   punkty), „Wróć do gry" na dole (E5). Poziomy `TabBar.ts` (pas 56 j. nad
   KAŻDĄ stroną) został usunięty; `formatAmount` mieszka w `theme.ts`.
   ⛔ Nie wracaj do paska u góry — w poziomie brakuje wysokości (research R2).
+- ⭐ **Samouczek walki u Patryczka** (2026-10-15, `COMBAT_TUTORIAL`): krok
+  liczy `GameScene.updateCombatTutorial` z ŻYWEGO stanu (dystans, zwrot,
+  trafienia) i ogłasza `EVENT.tutorialStep` + migawką `WorldState.tutorial`
+  (widżety powstające później czytają ją przy starcie). `TutorialGuide` —
+  ramka z głosem Patryczka u góry, ⛔ bez wejścia (nie połyka dotyku),
+  chowa się pod rozmową/panelem (`KeyFocus`); `AttackButton` pulsuje
+  obrysem w kroku `attack`. Kroki mijające same z trafieniami (`keep`,
+  `switch`) trzymają `minReadMs` i idą po jednym — autoatak kija zadaje
+  trzy trafienia w ~1 s.
 - **`CoachMark.ts`** — dymek „pierwszego razu" przy kontrolce, która właśnie
   się POJAWIŁA. Raz na urządzenie (`localStorage`, ⚠ świadomie nie w zapisie),
   jeden naraz, nie na modalu, czeka na `CombatHint` (`holdFor`), gaśnie na

@@ -96,6 +96,12 @@ nie ruszaj jej przy dodawaniu nowych pól.
   pięciu kawałków mięsa pod aktywny quest już nie. Powstała pod kieł Szarego,
   który **nie odradza się nigdy**.
 
+⭐ **`requiresTopic` — czwarta bramka zadania** (2026-10-15): zadanie
+startuje dopiero po rozmowie (`offersQuest` w temacie). `Quests` nie importuje
+`Dialogue` (pętla) — odczyt „czy temat padł” wstrzykuje `Dialogue`
+(`setTopicSource`); bez źródła bramka jest ZAMKNIĘTA. `waitsOnTopic` =
+wszystko spełnione poza rozmową — tak pytają znacznik „!” i powitanie.
+
 ⚠ **`isUnlocked` odpowiada na „czy mogę to ZACZĄĆ", nigdy „czy mogę oddać".**
 Quest już w dzienniku jest odblokowany bez względu na warunki — bez tego
 dopisanie `requiresQuest` do zadania, które ktoś ma aktywne w zapisie, czyni

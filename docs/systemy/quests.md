@@ -5,7 +5,7 @@ tytul: Zadania, rozmowy, NPC — stan, etap, wskazówka
 stan: zywy
 implemented: tak
 documented: tak
-verified: [kod:2026-09-06, przymiar:doc_check, przymiar:quest_guidance_weryfikacja]
+verified: [kod:2026-09-06, przymiar:doc_check, przymiar:quest_guidance_weryfikacja, przymiar:rozmowy_przymiar, render:2026-10-15]
 kotwice:
   - src/core/Quests.ts
   - src/core/Dialogue.ts
@@ -103,13 +103,16 @@ Odpowiada wyłącznie na **„czy wolno o to zapytać"** i **„czy już pytałe
 | rodzina | co to znaczy | jak jest liczona |
 |---|---|---|
 | **wyprowadzana** *(zbierz, załóż)* | świat **sam wie**, ile masz | ⚠ **czytana na żywo przy każdym pytaniu, nigdy przechowywana** |
-| **zatrzaskiwana** *(ubij, porozmawiaj, stań w miejscu)* | nic w świecie nie pamięta, że to się stało | ⚠ zapisywana w chwili zdarzenia |
+| **zatrzaskiwana** *(ubij, uderz, porozmawiaj, stań w miejscu)* | nic w świecie nie pamięta, że to się stało | ⚠ zapisywana w chwili zdarzenia |
 
 ⭐ **Stań w miejscu (`reach`, 2026-10-12)** — punkt `miejsce` z mapy (`id`)
 i opcjonalny przedmiot w plecaku. Zalicza **scena** (`QuestSpots`), nie
 warstwa zadań: przed zaliczeniem może się coś wydarzyć w świecie (Kirka
 przybiega i zjada mięso). Czasownik i podmiot wpisu są danymi zadania.
 Literówkę w `spot` łapie `rozmowy_przymiar` §Z7.
+
+⭐ **Uderz (`hit`, 2026-10-15)** — trafienia gracza, nie zabicia
+(`recordHit`; samouczek u Patryczka, manekin).
 
 ⭐ **Porozmawiaj = rozmowa W TEMACIE (`OI-66`, autor 2026-10-12).** Cel
 `talk` z polem `topic` zalicza się, gdy gracz otworzy ten temat u tej osoby
@@ -222,6 +225,19 @@ u Zielarki — w jeden wiersz rozmowy z licznikiem nowych; łańcuch `after`
 grupą nie jest (prowadzi go rozmowa sama). ⚠ Grupa nie jest bramką: niczego
 nie odsłania ani nie ukrywa, tylko zmienia, GDZIE pytanie stoi. Literówkę
 i grupę jednego tematu łapią `R6`/`R7` przymiaru rozmów.
+
+⭐ **Zadanie jako GAŁĄŹ tematu** (2026-10-15, autor: „zadania wynikają
+z rozmowy”; pierwszy: Gniewko). Para pól: temat `offersQuest` + zadanie
+`requiresTopic` (czwarta bramka zadania, obok umiejętności i poprzedniego
+zadania). Po odpowiedzi na temat rozmowa przechodzi od razu w ofertę
+(„Biorę to.” z celem i nagrodą / „‹ Jeszcze nie”). Zanim temat padnie,
+zadanie „czeka na rozmowę” (`Quests.waitsOnTopic`): dla świata to „jest
+robota” (`!` nad głową, powitanie `firstJob`), w rozmowie temat stoi
+pierwszy z `!`. Po „Jeszcze nie” zadanie wisi jak każde inne (wiersz `!`
+z nazwą). ⚠ Temat-brama nie może zależeć od łańcucha u INNYCH osób
+(`ile_zabraly` stracił `after: owce`); u tej samej osoby wolno — „!”
+dostaje pytanie, które ją odsłania.
+Pilnują `R8`/`Z9` przymiaru rozmów (para z obu stron, osiągalność).
 
 ⚠⚠ **Pytanie niedostępne jest UKRYTE, nigdy wyszarzone.** Pytania, którego nie
 wolno zadać, gracz **nie ma powodu znać** — wypisanie go zdradza łańcuch, do

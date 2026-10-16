@@ -1,3 +1,4 @@
+import { TutorialGuide } from "../ui/TutorialGuide";
 import Phaser from "phaser";
 import { VirtualJoystick } from "../ui/VirtualJoystick";
 import { AttackButton } from "../ui/AttackButton";
@@ -92,6 +93,7 @@ export class UIScene extends Phaser.Scene {
     // it's ever shown in this browser. See CombatHint's own header for why
     // it lives last/standalone rather than folded into any other widget.
     new CombatHint(this);
+    new TutorialGuide(this);
   }
 
   /**

@@ -95,6 +95,110 @@ kierunku, nie plan.
 
 ---
 
+## Króliki przy polach — realny problem wsi (zaplanowane)
+
+**Status:** zaplanowane przez autora (2026-10-15), **jeszcze nie budować**.
+
+- Króliki/zające **spawnują się przy polach Zagajów, bliżej krawędzi mapy**
+  (od strony lasu i miedz). To świadome odejście od dzisiejszego układu, w
+  którym wieś nie ma stworzeń — autor: „łamiemy tę regułę, to finalny
+  rozwój”.
+- Przygoda z królikami ma się zaczynać jako **REALNY PROBLEM**, który gracz
+  widzi na polu, a nie jako zlecenie z powietrza: pola już są, więc fabuła
+  i rozgrywka mają z nich wyrastać (zboże wydeptane, kłosy położone).
+- Do spięcia przy budowie: „Pierwszy odstrzał” (Myśliwy, mięso) i
+  „Wydeptane zagony” (Dobek, stratowany łan) — oba już mówią o zającach
+  w zbożu; liczba i pora spawnów, żeby wieś nie zamieniła się w las.
+
+---
+
+## Samouczek walki u Patryczka — zadanie z manekinem
+
+**Status:** ✅ **zbudowane 2026-10-15** — zadanie „Pierwsza lekcja”
+(po „Nauczysz mnie walczyć?”), kroki `COMBAT_TUTORIAL` w `GameConfig.ts`,
+reguły w `src/ui/CLAUDE.md`. ⚠ Krok 6 uczy zmiany celu TAK, JAK DZIAŁA
+(przełączenie tylko, gdy cel wyszedł z zasięgu) — plan niżej mówił
+o przełączaniu przy celu w zasięgu; to zmiana reguły walki, do decyzji
+autora. Teksty Patryczka napisał agent — do odbioru.
+Interaktywny samouczek prowadzony rozmową Patryczka, krok po kroku, z
+podświetlonym celem. Przebieg (słowa autora, do dopracowania tekstów):
+
+1. Patryczek: podejdź do manekina i uderz go kijem — „niech wie, że
+   zbliżanie się do naszej wioski ma swoje konsekwencje”.
+2. Żeby zaatakować, cel musi być w ZASIĘGU postaci — wokół postaci
+   pulsuje okrąg pokazujący zasięg.
+3. Na odpowiedniej odległości zwróć się TWARZĄ do celu.
+4. Naciśnij przycisk ataku w prawym dolnym rogu — przycisk dostaje efekt
+   „kliknij mnie”.
+5. KOLOR okręgu wokół celu mówi, czy możesz go zaatakować.
+6. Pierwsze naciśnięcie „Atakuj” rozpoczyna AUTOMATYCZNY atak celu;
+   ponowne zmienia cel, jeśli drugi przeciwnik jest w zasięgu.
+
+Do rozstrzygnięcia przy budowie: miejsce w łańcuchu (dziś „Kij w garści”
+kończy się rozmową z Patryczkiem — naturalne wejście), jak krok czeka na
+wykonanie (warunek z gry, nie przycisk „dalej”), czy drugi manekin dla
+kroku 6, i zgodność z istniejącymi podpowiedziami (`CoachMark`,
+`CombatHint`).
+
+---
+
+## Na najbliższą sesję (autor 2026-10-15) — onboarding i łańcuch Patryczka
+
+**Status:** ✅ A i B w kodzie 2026-10-16 (`CONTROLS_TUTORIAL`, `QUESTS.ziola_dla_babki`
+= „Pokrzywy dla babci”, owijki jako nagroda, „Pierwsza lekcja” po pokrzywach);
+C do zrobienia. Teksty agenta do odbioru. Słowa autora, teksty do
+dopracowania wg „Mowa mieszkańców” w `docs/swiat.md`.
+
+### A. Pierwsze kroki w grze — sterowanie, zanim padnie pierwsze słowo
+
+- Gra na starcie wprowadza w sterowanie: „żeby poruszać postacią, dotknij
+  palcem lewej części ekranu”, a następnie… (kolejne kroki do ustalenia).
+- Postać ma wykonać przynajmniej jeden ruch — np. wyjść z podwórka.
+- Ojciec jest WYRAŹNIEJ podświetlony jako pierwsza postać onboardingu.
+- Wytłumaczenie: ikona nad głową postaci dotyczy zadania; po podejściu do
+  kogoś z ikoną — rozmawiaj.
+- Mechanizm do wzięcia z samouczka walki: kroki z żywego stanu
+  (`COMBAT_TUTORIAL`, `TutorialGuide`), nie przycisk „dalej”.
+
+### B. Pierwsze zadanie Patryczka — pokrzywy dla babci (zmiana „Zioła dla babki”)
+
+- Zadanie dla babci ma się KOŃCZYĆ u Patryczka. Patryczek: „Słuchaj, babcia
+  mnie prosiła, żebym jej trochę pokrzywy pozbierał. Weź, przynieś mi 5
+  sztuk, to dam ci swoje owijki — na pewno ci się przydadzą, a ja powiem ci
+  coś więcej o walce.” ⚠ Sprawdzić, czy pokrzywa rośnie wokół wioski.
+- Po oddaniu: „Dobry w tym jesteś. Zagadaj do babuni, czy nie potrzebuje
+  jakichś ziół — przytulisz trochę grosza, a mi może da spokój i będę miał
+  więcej czasu na treningi. Niedługo ma być turniej w grodzisku, zawody na
+  gołe pięści, kilka wsi się zjedzie, nagroda jest ciekawa.”
+- ⚠ Dziś owijki (`worn_wraps`) daje etap „Kij w garści” po rozmowie
+  z Patryczkiem — przy przebudowie rozstrzygnąć, skąd gracz je dostaje.
+- Turniej w grodzisku — zaczepka fabularna (Patryczek już mówi o turnieju
+  w temacie `turniej`).
+
+### C. Drugie zadanie walki u Patryczka — zmiana celu i pierwsza umiejętność
+
+- Wytłumaczy zmianę celu (⚠ najpierw decyzja autora: czy ponowne
+  naciśnięcie ma przełączać na drugiego wroga W zasięgu — dziś przełącza
+  tylko, gdy cel wyszedł z zasięgu; samouczek „Pierwsza lekcja” uczy reguły
+  dzisiejszej).
+- Nauczy umiejętności i tego, jak jej użyć (pasek, celowanie).
+- ⭐ Autor 2026-10-16: tą umiejętnością jest dzisiejszy **Unik**, przemianowany
+  na **Przewrót w przód** — Patryczek chce, żebyśmy na początek *przeżyli*,
+  a ta umiejętność to daje. Przy niej samouczek tłumaczy system celowania
+  umiejętnościami (tap = na cel, przeciągnięcie = wskaż sam) i daje graczowi
+  pierwszą umiejętność aktywną; umiejętności walki Patryczek uczy potem.
+- Podział nagród na start: Ojciec daje kij, Patryczek — pierwszy pancerz
+  (owijki, już w kodzie).
+
+### D. Powolny onboarding — do zaplanowania (autor 2026-10-16, tylko pomysł)
+
+- Gdzieś wytłumaczyć: staminę, cechy, awans, punkty życia, przedmioty.
+- ⚠ Nie przesycić gracza na start — rozłożyć w czasie; gdzie się da, zrobić
+  z tego zadanie, jeśli to czynność interaktywna, ale też uważać, żeby
+  zadaniami nie zasypać. Planowanie w osobnej sesji.
+
+---
+
 ## Kościany poker w karczmie — minigra poboczna
 
 **Status:** pomysł autora (2026-10-14). **Nie implementować** bez decyzji.
@@ -360,3 +464,46 @@ pytaniem o KOSZT osłony, a nie o jej dodatkowy efekt.
 **Gdy ten pomysł dostanie wyzwalacz** (np. „po wdrożeniu kontroli wróg →
 gracz”), przenosi się do `docs/odlozone.md` — zgodnie z regułą z nagłówka
 tego pliku.
+
+
+## Do zastanowienia w kolejnej sesji — władza nad Zagajami, klimat Lechii (autor 2026-10-16)
+
+**Już w grze (2026-10-16):** w rozmowach „miasto” → **grodzisko**, targ
+Anny → **jarmark w grodzisku**. Grodzisko = większa wieś ze strażą
+i siedzibą władzy, z **palisadą, drewnianą bramą i drewnianymi wieżami**
+(Zagaje mają płot — palisada jest szczeblem grodziska). Kowal mówi teraz
+„dzień wozem” zamiast „cztery dni” — Anna jeździ tam co tydzień, więc
+cztery dni się nie spinały. ⚠ Id tematów (`miasto`, `do_miasta`) zostały
+ze względu na zapisy.
+
+**Pomysł autora:** lokalny władca nad okolicznymi wsiami, z garnizonem
+i drużyną, która np. poluje na bandytów i inne zagrożenia — od tego
+zaczyna się budowanie klimatu Lechii: fantasy państwo wzorowane na
+średniowiecznej Polsce, może rozbicie dzielnicowe, ale z królestwem
+nad księstwami (senioratem). Król wybierany decyzją rodów.
+
+**Propozycja agenta (do decyzji):**
+
+| szczebel | kto | siedziba |
+|---|---|---|
+| wieś | **sołtys** (zostaje) | Zagaje — płot |
+| gród | **kasztelan** (ludowo „władyka”), garnizon i drużyna | grodzisko — palisada, brama, wieże z bali |
+| ziemia | **wojewoda** | miasto z kamiennymi murami |
+| księstwo (2–3 województwa) | **książę** | zamek |
+| królestwo | **król** wybierany przez rody (wiec rodów) | zamek centralny / stolica |
+
+- **Sołtys zamiast wójta — zostaje.** Sołtys to głowa wsi; wójt to
+  historycznie zarządca miasta albo kilku wsi — może być urzędnikiem
+  w mieście wojewody, nie w Zagajach. Zmiana nazwy niczego by nie dała,
+  a sołtys jest już w rozmowach i zadaniach.
+- **Kasztelan zamiast władyki jako urząd.** Historycznie „władyka” to
+  drobny rycerz/szlachcic, a gród z drużyną trzymał kasztelan. Ludzie
+  ze wsi mogą go nazywać władyką — urząd i przezwisko robią klimat.
+- **Trzech braci** (autor): trzy księstwa po podziale ojcowizny — echo
+  testamentu Krzywoustego. Seniorat: koronę daje wybór rodów spośród
+  książąt, więc bracia o nią rywalizują — gotowe napięcie polityczne
+  w tle, bez potrzeby wyjaśniania go na starcie.
+- Drużyna kasztelana jako źródło zadań na bandytów (`OI-171`) i późniejsza
+  ścieżka gracza (Zbych „z niczego do konia i zbroi”, turniej Patryczka).
+- Do zgrania z `docs/swiat.md` i `docs/region_geography_proposal.md`
+  (północna droga → grodzisko, nie miasto).

@@ -11374,6 +11374,7 @@ export const MERCHANT = {
   topics: [
     {
       id: "urzad",
+      offersQuest: "rabbit_hunt",
       q: "Czemu akurat ja mam bić te zające?",
       a: "Bo to urząd, nie zabawa. We wsi jest jeden człowiek od odstrzału i tym człowiekiem byłem ja. Płacone, uczciwe i potrzebne — a że akurat nie mogę unieść łuku, to robota leży. Nie robię ci łaski. Przekazuję ci ją.",
     },
@@ -11986,7 +11987,7 @@ export const BLACKSMITH = {
     {
       id: "miasto",
       q: "Wozy? To dokąd stąd jeździ droga?",
-      a: "Na północ, przez most, i dalej — do miasta. Cztery dni wozem, jak nie pada. Byłem tam raz, na czeladnika. Widziałeś kiedyś tablicę zleceń? Nie tę naszą, przy karczmie. Prawdziwą. Człowiek zdejmuje z niej kartkę i wraca kimś innym.",
+      a: "Na północ, przez most, i dalej — do grodziska. Dzień wozem, jak nie pada. Palisada, brama, wieże z bali, straż na murach. Byłem tam na czeladnika. Widziałeś kiedyś tablicę zleceń? Nie tę naszą, przy karczmie. Prawdziwą. Człowiek zdejmuje z niej kartkę i wraca kimś innym.",
       after: ["z_czego_zyjesz"],
     },
     {
@@ -12070,6 +12071,7 @@ export const PEASANT = {
   topics: [
     {
       id: "ile_zjadaja",
+      offersQuest: "zajace_w_zbozu",
       q: "Ile tego zboża te zające naprawdę zjadają?",
       a: "Nie liczy się, ile zjedzą. Liczy się, ile **stratują**. Zając wchodzi w łan, wyjada kłos u dołu i kładzie źdźbło. Jeden zając na noc kładzie tyle, co zje trzech. Chodź o świcie na moje pole i sam zobacz, którędy szły.",
     },
@@ -12239,8 +12241,12 @@ export const FATHER = {
     /** Nic jeszcze nie wziąłeś. On zatrzymuje cię w progu — to jest ta scena.
      *  ⚠ 2026-08-20: dopisana instrukcja o Patryczku — drugi cel zadania,
      *  patrz komentarz nad `QUESTS.stick_in_hand`. */
-    firstJob:
-      "Stój. Nie wypuszczę cię za wieś z pustymi rękami, choćbyś się na mnie boczył do wieczora. I nie łaź tam sam — zabierz Patryczka.",
+    /** ⚠ 2026-10-15 (autor): pierwsza scena zaczyna się od GRACZA — „Tato,
+     *  ja już postanowiłem…” (`topics.postanowilem`). Powitanie tylko go
+     *  zatrzymuje; Patryczek pada dopiero w odpowiedzi ojca (dotąd stał tu,
+     *  w pierwszym zdaniu gry). ⚠ „Dokąd się wybierasz?” dopisał agent jako
+     *  łącznik — do odbioru autora. */
+    firstJob: "Stój. Dokąd się wybierasz?",
     /** Kij w torbie i/albo jeszcze nie było rozmowy z Patryczkiem — jeden
      *  wspólny tekst na oba brakujące cele, tak jak u Sołtysa (`ELDER.
      *  greetings.working`) przy trzech celach `know_the_village`. */
@@ -12268,13 +12274,29 @@ export const FATHER = {
    *  byłoby powodu, żeby zapytać Myśliwego, a cały łańcuch istnieje po to,
    *  żeby wiedzę nosić między ludźmi. */
   topics: [
+    /**
+     * ⭐ **PIERWSZA ROZMOWA W GRZE** (2026-10-15, autor): zadanie „Kij
+     * w garści” wyrasta z decyzji gracza, nie z rozkazu ojca. Pytanie gracza —
+     * słowa autora; odpowiedź ojca — jego dotychczasowa mowa z opisu zadania
+     * (`QUESTS.stick_in_hand.description`), przeniesiona, nie dopisana.
+     * Pozostałe tematy ojca stoją ZA tą rozmową (`after`) — dotąd wszystkie
+     * były dostępne od pierwszej klatki, przed jakąkolwiek sceną.
+     */
+    {
+      id: "postanowilem",
+      q: "Tato, ja już postanowiłem. Pójdę do Wszebora i zobaczę, czy mogę mu jakoś pomóc. Króliki nie wyglądają na wyzwanie, a ktoś to musi robić.",
+      offersQuest: "stick_in_hand",
+      a: "Idziesz za wieś, to nie idź z gołymi rękami. Osiosałem go wczoraj przy oborze — broń to żadna, ale zająca odgonisz, a jak, nie daj Boże, wyjdzie na ciebie coś większego, to przynajmniej będziesz miał co trzymać. Weź do ręki, nie noś w torbie. W torbie jeszcze nikomu nic nie pomogło. I nie łaź tam sam — zabierz Patryczka. Niejednemu już podobno guza nabił, więc będzie wiedział, kiedy trzeba przyłożyć, a kiedy brać nogi za pas.",
+    },
     {
       id: "pole",
+      after: ["postanowilem"],
       q: "Naprawdę nie dasz rady bez mnie na polu?",
       a: "Dam radę. Wolniej. Biodro mi siada od trzeciej godziny i wtedy zostawiam pług, siadam na miedzy i czekam, aż przestanie łupać. Trzydzieści lat i ani jednego roku, w którym się nie udało. Nie jestem kaleką, synu. Jestem stary. To co innego i wolałbym, żebyś to rozumiał.",
     },
     {
       id: "mysliwy_ojciec",
+      after: ["postanowilem"],
       q: "Ty i Myśliwy. Znacie się jakoś bliżej niż reszta wsi.",
       a: "Znam go dłużej, niż ty żyjesz. Wtedy obaj mieliśmy po dwie zdrowe ręce i ani grama rozumu. Tyle. Idziesz do niego i tak — jak zechce, to ci sam powie, ile uzna za stosowne. Ja się do tego wracał nie będę.",
     },
@@ -12282,13 +12304,13 @@ export const FATHER = {
       id: "wojna",
       q: "Myśliwy opowiedział mi o wojsku.",
       a: "Opowiedział? To albo miał bardzo dobry dzień, albo bardzo zły. ...Nie będę ci mówił, że tam było źle, bo mi nie uwierzysz, póki sam nie zobaczysz — a wolałbym, żebyś nie zobaczył. Powiem ci co innego. Żaden z nas nie odpuścił dlatego, że nam kazali. Odpuściliśmy, bo każdemu z nas został w końcu jeden powód, żeby wieczorem wracać do domu. Ja swój wtedy dopiero poznałem. On swojego nigdy nie znalazł, i to jest cała różnica między nami dwoma. Idź. Tylko wracaj.",
-      after: ["ojciec_wojsko"],
+      after: ["ojciec_wojsko", "postanowilem"],
     },
     {
       id: "strach",
       q: "Mama mówi, że ty się nie gniewasz, tylko boisz.",
       a: "...Powiedziała ci tak? Hm. No to nie będę z nią dyskutował, bo się zwykle nie myli. Idź. Tylko zapamiętaj jedno: pole zawsze tu będzie. To nie jest zaleta pola, tylko jego jedyna obietnica. Ty tak nie musisz.",
-      after: ["ojciec"],
+      after: ["ojciec", "postanowilem"],
     },
   ],
   portraitTexture: "father-portrait",
@@ -12808,7 +12830,7 @@ export const SULISLAW = {
     {
       id: "u_synowej",
       q: "Mieszkasz u wdowy?",
-      a: "U synowej. Mów, jak trzeba, synku, ja się tego słowa nie boję — mój syn nie żyje trzeci rok i od tego nie zaboli mnie bardziej, że ktoś to nazwie. Zofia mnie trzyma, choć jestem u niej gębą do wykarmienia, a nie parą rąk. Ktoś inny by mnie odesłał do brata do miasta. Ona nie odesłała. Zapamiętaj to sobie o niej, jak będziesz kiedyś o niej sądził.",
+      a: "U synowej. Mów, jak trzeba, synku, ja się tego słowa nie boję — mój syn nie żyje trzeci rok i od tego nie zaboli mnie bardziej, że ktoś to nazwie. Zofia mnie trzyma, choć jestem u niej gębą do wykarmienia, a nie parą rąk. Ktoś inny by mnie odesłał do brata do grodziska. Ona nie odesłała. Zapamiętaj to sobie o niej, jak będziesz kiedyś o niej sądził.",
     },
     {
       id: "wzrok",
@@ -12894,13 +12916,13 @@ export const INNKEEPER = {
     {
       id: "przejezdni",
       q: "Kto tu w ogóle zagląda?",
-      a: "Wozacy z miasta, dwa razy w miesiącu, jak drogi suche. Piją, śpią w stodole, rano jadą dalej z mąką. I gadają — to jest moja prawdziwa zapłata. Ostatnio gadają mniej, a jadą prędzej. Mówią, że las na wschodzie zrobił się cichy. A cichy las to zły las.",
+      a: "Wozacy z grodziska, dwa razy w miesiącu, jak drogi suche. Piją, śpią w stodole, rano jadą dalej z mąką. I gadają — to jest moja prawdziwa zapłata. Ostatnio gadają mniej, a jadą prędzej. Mówią, że las na wschodzie zrobił się cichy. A cichy las to zły las.",
       after: ["piwo"],
     },
     {
       id: "tablica",
       q: "Kowal mówił o tablicy przy karczmie.",
-      a: "Tablica to za dużo powiedziane — deska przy drzwiach. Kto czego potrzebuje, zostawia znak, a ja pamiętam, co znaczy. W mieście mają prawdziwą, z kartkami i pieczęciami. Tu wystarczy, że ja wiem, kto komu ile winien. A wiem wszystko — w karczmie nikt nie szepcze, tylko każdy myśli, że szepcze.",
+      a: "Tablica to za dużo powiedziane — deska przy drzwiach. Kto czego potrzebuje, zostawia znak, a ja pamiętam, co znaczy. W grodzisku mają prawdziwą, z kartkami i pieczęciami. Tu wystarczy, że ja wiem, kto komu ile winien. A wiem wszystko — w karczmie nikt nie szepcze, tylko każdy myśli, że szepcze.",
       after: ["piwo"],
     },
   ],
@@ -12935,8 +12957,8 @@ export const ADRIAN = {
     },
     {
       id: "do_miasta",
-      q: "Chcesz kiedyś do miasta?",
-      a: "Jak skończę termin. Mistrz był tam na czeladnika i wrócił — mówi, że w mieście kowali jest tylu, co tu kur, i każdy kuje jedno: ten gwoździe, ten podkowy, ten miecze. Ja chcę kuć miecze. Ale najpierw muszę umieć gwoździe, bo inaczej żaden mnie nie weźmie.",
+      q: "Chcesz kiedyś do grodziska?",
+      a: "Jak skończę termin. Mistrz był tam na czeladnika i wrócił — mówi, że w grodzisku kowali jest tylu, co tu kur, i każdy kuje jedno: ten gwoździe, ten podkowy, ten miecze. Ja chcę kuć miecze. Ale najpierw muszę umieć gwoździe, bo inaczej żaden mnie nie weźmie.",
       after: ["terminowanie"],
     },
   ],
@@ -12971,7 +12993,8 @@ export const CIECHAN = {
   topics: [
     {
       id: "zrabowany_woz_temat",
-      q: "Co się stało z wozem na targ?",
+      offersQuest: "zrabowany_woz",
+      q: "Co się stało z wozem na jarmark?",
       a: "Zabrali. Bolko jechał z drewnem, a ich było czterech. Chciał się bić — dobrze, że nie zdążył wyjąć siekiery, bo leżałby w rowie. Konie oddali. Myślisz, że z dobroci? Koni się nie sprzeda, każdy we wsi je pozna.",
       after: ["wyreb"],
     },
@@ -13042,7 +13065,7 @@ export const ZBYCH = {
     {
       id: "miasto_zbych",
       q: "Nie ciągnie cię do roboty w lesie?",
-      a: "Ciągnie mnie gdzie indziej. Przejezdni w karczmie gadają o mieście, o wojsku, o ludziach, co z niczego doszli do konia i zbroi. Ojciec mówi, że z lasu się żyje. Żyje się, ale nic się nie widzi. Ty to chyba rozumiesz — też nie chcesz całe życie siedzieć w kapuście.",
+      a: "Ciągnie mnie gdzie indziej. Przejezdni w karczmie gadają o grodzisku, o wojsku, o ludziach, co z niczego doszli do konia i zbroi. Ojciec mówi, że z lasu się żyje. Żyje się, ale nic się nie widzi. Ty to chyba rozumiesz — też nie chcesz całe życie siedzieć w kapuście.",
     },
     {
       id: "cos_w_krzakach",
@@ -13271,7 +13294,7 @@ export const PATRYCZEK = {
    *  tą samą metodą co u Zofii/Kuby/Anny: cel ~1.1× wysokości gracza = 66 px. */
   scale: 0.74,
   stock: [],
-  quests: ["ziola_dla_babki", "rekawice_od_wnuka"],
+  quests: ["ziola_dla_babki", "pierwsza_lekcja", "rekawice_od_wnuka"],
   /**
    * ⚠ NPC z zadaniem MUSI mieć `greetings` — `NpcDialog.pickGreeting` sięga
    * po `firstJob`/`newJob`/`turnIn`/`working`, a postać z zadaniami i bez tych
@@ -13284,20 +13307,11 @@ export const PATRYCZEK = {
    */
   greetings: {
     /**
-     * ⚠ **Zakłada, że owijki (`worn_wraps`) już trafiły do plecaka** —
-     * bezpieczne w 99% przebiegów, bo `Quests.recordTalk` przemiata etapy
-     * `stick_in_hand` PRZED wybraniem tej linii, więc pierwsza wizyta u
-     * Patryczka z aktywnym `stick_in_hand` na etapie `visit_patryczek` zdąży
-     * je wręczyć w tej samej rozmowie. **Jedyny przebieg, w którym to nie
-     * jest prawdą**: gracz omija Ojca i trafia do Patryczka jako pierwszego
-     * NPC w grze — `stick_in_hand` jest wtedy wciąż `available`, nie
-     * `active`, więc `bumpActive`/`advanceStages` nic nie robi i owijek nie
-     * ma. Mapa czyni to skrajnie mało prawdopodobnym (Ojciec stoi tuż przy
-     * punkcie startowym), więc zaakceptowane jako drobna, znana nieścisłość
-     * zamiast dorabiać warunek, który silnik i tak nie umie dziś wyrazić.
+     * Od 2026-10-15 owijki są nagrodą za pokrzywy (`ziola_dla_babki`), więc
+     * pierwsza linijka już ich nie wspomina.
      */
     firstJob:
-      "Nie, nadal nie pomogę ci nieść. Ale mam coś, co ty zrobisz szybciej niż ja z ręką w łubkach. Owijki, które ci dałem, na razie powinny wystarczyć — pomożesz mi, może znajdzie się dla ciebie coś lepszego.",
+      "Nie, nadal nie pomogę ci nieść. Ale mam coś, co ty zrobisz szybciej niż ja z ręką w łubkach — a ja się odwdzięczę.",
     working: "I jak, były? Bo babka pyta co wieczór, a ja nie mam czym się wykręcać.",
     turnIn: "Dawaj. I nie mów jej, że to przeze mnie — powiedz, że sam chciałeś.",
     newJob: "Zostań na chwilę. Tym razem to dla mnie, nie dla niej.",
@@ -13354,6 +13368,8 @@ export const PATRYCZEK = {
      */
     {
       id: "nauka_teraz",
+      /** ⭐ Z tej odpowiedzi wyrasta samouczek walki (2026-10-15). */
+      offersQuest: "pierwsza_lekcja",
       q: "Nauczysz mnie walczyć?",
       a: "Nie teraz i nie tą ręką. Ale mogę ci pokazać tyle, żebyś umiał się odgonić i uciec, jeśli coś wyskoczy z krzaków. Reszty nauczę cię, jak odzyskam rękę — to już inna rozmowa.",
       after: ["karczmy"],
@@ -13391,7 +13407,7 @@ export const PATRYCZEK = {
     {
       id: "turniej",
       q: "To po co dalej trenujesz?",
-      a: "W mieście raz do roku robią turniej na pięści. Bez broni, bez koni, bez nazwiska — stajesz i się bijesz. Wygrany bierze tyle srebra, że nie musi orać. Nie znam nikogo stąd, kto by tam był, i nikogo, kto by wiedział, jak to wygląda naprawdę. Ale wiem, że mnie tam nikt nie zapyta, czyim jestem wnukiem.",
+      a: "W grodzisku raz do roku robią turniej na pięści. Bez broni, bez koni, bez nazwiska — stajesz i się bijesz. Wygrany bierze tyle srebra, że nie musi orać. Nie znam nikogo stąd, kto by tam był, i nikogo, kto by wiedział, jak to wygląda naprawdę. Ale wiem, że mnie tam nikt nie zapyta, czyim jestem wnukiem.",
       after: ["karczmy"],
     },
     {
@@ -13499,7 +13515,7 @@ export const ANNA = {
      */
     {
       id: "anna_zboje",
-      q: "Sama wozisz na targ. Zbójów się nie boisz?",
+      q: "Sama wozisz na jarmark. Zbójów się nie boisz?",
       a: "Mnie? A czego by chcieli od baby z koszem pierogów. Znam tu i ówdzie ludzi, co znają ludzi — nie pytaj, kogo. Lepiej nie wiedzieć, to się potem nie trzeba przed nikim tłumaczyć. A Bolkowi powiedz, żeby następnym razem mnie zabrał. Ze mną by nie zaczepili.",
       after: ["zrabowany_woz_temat"],
     },
@@ -13511,12 +13527,13 @@ export const ANNA = {
      */
     /**
      * Jej właściwa rola: skupuje to, co wieś wytwarza, i raz w tygodniu
-     * wiezie to do miasta. Kupowanie chleba od niej pod karczmą (autor
+     * wiezie to na jarmark do grodziska. Kupowanie chleba od niej pod karczmą (autor
      * 2026-10-10: kuzynka Bogusza, mieszka przy karczmie) to końcówka
      * tego łańcucha, nie cała robota.
      *
      * ⚠ Zahacza o `BLACKSMITH.topics.miasto` („na północ, przez most,
-     * i dalej — do miasta. Cztery dni wozem"), ale **nie odpowiada na nic,
+     * i dalej — do grodziska. Dzień wozem" — od 2026-10-16 grodzisko, nie
+     * miasto; id tematów zostają dla zapisów), ale **nie odpowiada na nic,
      * czego tamten temat nie mówi**, i celowo nie opisuje miasta. Zasada
      * z `docs/swiat.md` jest ta sama co przy pająkach i moście: łańcuch
      * pytań ma kończyć się bez odpowiedzi. Ona po prostu tam jeździ.
@@ -13524,7 +13541,7 @@ export const ANNA = {
     {
       id: "targ",
       q: "Skąd bierzesz to, czym handlujesz?",
-      a: "Stąd. Mąka od Miłosza, jajka z kurnika, ser jak krowy dają, len od Witka jak wybije sezon. Wieś tego nie sprzeda sama sobie — każdy ma tego trochę za dużo i wszystkiego innego za mało. Więc raz w tygodniu ładuję wóz i jadę na targ, a wracam z monetą i solą. Tu, pod karczmą, sprzedaję tylko to, co zostało albo się nie doczeka.",
+      a: "Stąd. Mąka od Miłosza, jajka z kurnika, ser jak krowy dają, len od Witka jak wybije sezon. Wieś tego nie sprzeda sama sobie — każdy ma tego trochę za dużo i wszystkiego innego za mało. Więc raz w tygodniu ładuję wóz i jadę na jarmark do grodziska, a wracam z monetą i solą. Tu, pod karczmą, sprzedaję tylko to, co zostało albo się nie doczeka.",
     },
     /**
      * ⚠ To jest temat, który **czyni brak zadań widocznym**. Bez niego
@@ -13645,11 +13662,21 @@ export const GNIEWKO = {
      * To także jedyne miejsce, gdzie pada, że wilków jest TRZY. Zadanie prosi
      * o trzy sztuki i nigdzie indziej nie tłumaczy skąd ta liczba.
      */
+    /**
+     * ⭐ **Od 2026-10-14 z tego tematu wyrasta `wolf_pack_cull`**
+     * (`offersQuest`). Odpowiedź kończy się prośbą wprost, więc kolumna
+     * przechodzi od razu w „Biorę to.” / „‹ Jeszcze nie”.
+     *
+     * ⚠ Bez `after: ["owce"]` (do tej daty był): jako brama zadania temat
+     * musi być dostępny ZAWSZE u pasterza — także graczowi, którego Myśliwy
+     * tu nie wysłał (Sołtys w `know_the_village` też tu kieruje). Pytanie
+     * gracza straciło przez to „Myśliwy mówi, że…”; odpowiedź bez zmian.
+     */
     {
       id: "ile_zabraly",
-      q: "Myśliwy mówi, że straciłeś owce. Ile?",
+      q: "Słyszałem, że straciłeś owce. Ile?",
+      offersQuest: "wolf_pack_cull",
       a: "Cztery. W ciągu dwóch tygodni. Jedna moja, trzy cudze — i to jest gorsza połowa tego zdania. Dwie nocy temu widziałem je na własne oczy, jak schodziły z grzbietu: trzy sztuki, jedna za drugą, spokojnie jak stado. Nie jeden zabłąkany. Sfora. Sfora nie odejdzie sama, bo znalazła miejsce, gdzie jedzenie stoi w zagrodzie i czeka.",
-      after: ["owce"],
     },
   ],
   /** Ma własny portret (`ASSETS.gniewko`); `tint` zostaje wyłącznie jako
@@ -14705,6 +14732,65 @@ export const ABILITIES = {
  * A tween also costs no per-frame code and stops on its own whenever a panel
  * pauses the scene.
  */
+/**
+ * ⭐ **Samouczek walki u Patryczka** (2026-10-15) — kroki liczone na żywo
+ * przez `GameScene.updateCombatTutorial` z tego, co gracz robi NAPRAWDĘ
+ * (dystans, zwrot, trafienia), nie z przycisku „dalej”. Tekst pokazuje
+ * `TutorialGuide` u góry ekranu, przycisk ataku pulsuje w kroku `attack`,
+ * wokół postaci pulsuje okrąg zasięgu w krokach przed pierwszym trafieniem.
+ *
+ * ⚠ Krok `switch` mówi, jak działa zmiana celu DZIŚ: ponowne naciśnięcie
+ * przełącza tylko wtedy, gdy obecny cel wyszedł z zasięgu
+ * (`GameScene.refocusReachableAttacker`). Plan autora mówił o przełączaniu
+ * przy celu w zasięgu — to inna reguła walki, do decyzji autora.
+ * ⚠ Teksty (głos Patryczka) napisał agent wg słów autora — do odbioru.
+ */
+export const COMBAT_TUTORIAL = {
+  questId: "pierwsza_lekcja",
+  /** Który przeciwnik jest manekinem samouczka (`EnemyType`). */
+  dummyKind: "training_dummy",
+  /**
+   * Najkrótszy czas (ms) kroków, które mijają SAME z trafieniami (`keep`,
+   * `switch`). Render 1:1: autoatak kija zadaje trzy trafienia w ~2 s, więc
+   * bez tego oba teksty przemykały, zanim dało się je przeczytać.
+   */
+  minReadMs: 4500,
+  /** Okrąg zasięgu wokół postaci: kolor, okres pulsu (ms), alfa min–max. */
+  ring: { color: 0xffe08a, pulseMs: 900, alphaMin: 0.25, alphaMax: 0.85, thickness: 3 },
+  steps: {
+    approach: "Widzisz manekina? Podejdź do niego. Ten okrąg wokół ciebie to twój zasięg — dopóki manekin stoi poza nim, kijem go nie dosięgniesz.",
+    face: "Dobra odległość. Teraz stań do niego przodem — tyłem nikogo nie uderzysz. Niebieski okrąg pod manekinem znaczy: stoi ci za plecami.",
+    tooClose: "Za blisko — odsuń się o krok, bo nie masz jak się zamachnąć.",
+    attack: "Teraz naciśnij przycisk ataku w prawym dolnym rogu. Okrąg pod manekinem świeci pełną czerwienią — to znak, że możesz bić.",
+    keep: "Tak! Jedno naciśnięcie wystarczy — kij bije sam, dopóki cel jest w zasięgu i stoisz do niego przodem. Jeszcze raz.",
+    switch: "Jeszcze jedno: jak cel ucieknie ci z zasięgu, naciśnij atak jeszcze raz — przełączysz się na tego, kto już cię atakuje.",
+    done: "Wystarczy. Wróć do mnie.",
+  },
+} as const;
+
+/**
+ * ⭐ **Wprowadzenie w sterowanie** (autor 2026-10-15, `docs/pomysly.md` A) —
+ * pierwsze kroki gry, zanim padnie pierwsze słowo. Ten sam mechanizm co
+ * `COMBAT_TUTORIAL`: krok z żywego stanu (`GameScene.updateCombatTutorial`),
+ * tekst w `TutorialGuide`. Trwa, dopóki „Kij w garści” nie jest przyjęty.
+ * Kroki: `move` (ruch o `moveDistPx`, czyli wyjście z podwórka) → `father`
+ * (Ojciec w pulsującym okręgu; ikona nad głową = zadanie) → `talk` (stoisz
+ * przy nim — przycisk rozmowy). ⚠ Teksty agenta — do odbioru.
+ */
+export const CONTROLS_TUTORIAL = {
+  questId: "stick_in_hand",
+  npcId: "father",
+  /** Ile px od miejsca startu musi przejść postać, żeby krok `move` minął. */
+  moveDistPx: 96,
+  /** Okrąg wokół Ojca: promień (px), kolor, puls — jaśniejszy od okręgu zasięgu. */
+  ring: { radius: 30, color: 0xffd040, pulseMs: 800, alphaMin: 0.35, alphaMax: 1, thickness: 4 },
+  steps: {
+    move: "Żeby iść, dotknij palcem lewej części ekranu i przesuń w stronę, w którą chcesz pójść. Wyjdź z podwórka.",
+    father: "Ojciec czeka — świeci wokół niego okrąg. Ikona nad czyjąś głową znaczy, że ta osoba ma dla ciebie zadanie albo sprawę. Podejdź do niego.",
+    talk: "Stoisz przy nim. Naciśnij przycisk w prawym dolnym rogu, żeby porozmawiać.",
+  },
+} as const;
+
 export const WATERWHEEL = {
   /** Milliseconds per full revolution. A mill wheel is heavy and slow. */
   revolutionMs: 7000,
@@ -15301,6 +15387,8 @@ export const QUESTS = {
     id: "stick_in_hand",
     name: "Kij w garści",
     giver: "father",
+    /** ⭐ Wyrasta z pierwszej rozmowy gry (2026-10-15) — `FATHER.topics.postanowilem`. */
+    requiresTopic: "postanowilem",
     description:
       "Idziesz za wieś, to nie idź z gołymi rękami. Osiosałem go wczoraj przy oborze — broń to żadna, ale zająca odgonisz, a jak, nie daj Boże, wyjdzie na ciebie coś większego, to przynajmniej będziesz miał co trzymać. Weź do ręki, nie noś w torbie. W torbie jeszcze nikomu nic nie pomogło. I nie łaź tam sam — zabierz Patryczka. Niejednemu już podobno guza nabił, więc będzie wiedział, kiedy trzeba przyłożyć, a kiedy brać nogi za pas.",
     /** Handed over the moment the quest is accepted. Podła — a branch cut and
@@ -15322,7 +15410,7 @@ export const QUESTS = {
       {
         id: "visit_patryczek",
         objectives: [{ kind: "talk", npc: "patryczek", topic: "reka" }],
-        onComplete: { grant: [{ itemId: "worn_wraps", count: 1, quality: 1 }] },
+        /** ⭐ Owijki od 2026-10-15 są nagrodą `ziola_dla_babki` (autor: Ojciec daje kij, Patryczek — pierwszy pancerz). */
       },
     ],
     /**
@@ -15351,6 +15439,10 @@ export const QUESTS = {
     id: "prowiant_od_matki",
     name: "Prowiant na drogę",
     giver: "mother",
+    /** ⭐ Po zadaniu ojca (autor 2026-10-15) — jej powitanie „Ojciec cię
+     *  przysłał, prawda?” i opis („Sam by cię ojciec wypuścił z kijem…”)
+     *  od początku zakładały tę kolejność. */
+    requiresQuest: "stick_in_hand",
     description:
       "Sam by cię ojciec wypuścił z kijem i pustym żołądkiem. Weź chleba na drogę — i nie zjedz wszystkiego, zanim wyjdziesz za opłotki.",
     grant: [{ itemId: "bread", count: 2 }],
@@ -15371,6 +15463,8 @@ export const QUESTS = {
      */
     name: "Pierwszy odstrzał",
     giver: "hunter",
+    /** ⭐ Zadanie wyrasta z rozmowy (2026-10-15): bierze się je po odpowiedzi na temat `urzad` (`offersQuest`). */
+    requiresTopic: "urzad",
     requiresQuest: "stick_in_hand",
     description:
       "Zające wchodzą w zboże i wychodzą z niego tłuste. Póki nie mogę chodzić po lesie, robisz to za mnie — inaczej do żniw nie zostanie nic prócz łodyg. Przynieś mi 5 kawałków mięsa, dostaniesz dniówkę i porządny kij w dodatku — lepszy niż ta gałąź, którą ci ojciec ostrugał.",
@@ -15414,7 +15508,7 @@ export const QUESTS = {
     /** Only offered once the player has learned this skill (see Quests.isUnlocked). */
     requires: "skinning",
     description:
-      "Skoro umiesz już skórować, nie marnuj tego, co zostaje. Zbierz 8 strzępów — wyprawię z nich coś, za co ktoś w mieście zapłaci.",
+      "Skoro umiesz już skórować, nie marnuj tego, co zostaje. Zbierz 8 strzępów — wyprawię z nich coś, za co ktoś w grodzisku zapłaci.",
     objectives: [{ kind: "collect", itemId: "leather_scraps", count: 8 }],
     greetings: { done: "Osiem, dobre. Wyprawię je przez zimę — a ty nie wyrzucaj więcej tego, co zostaje po nożu." },
     reward: { gold: 40, xp: 60 },
@@ -15564,6 +15658,13 @@ export const QUESTS = {
      *  poprawna dla zapisów już aktywnych — `Quests.isUnlocked` ma wyjątek
      *  dla zadań już w dzienniku (patrz komentarz przy `zielarskie_zapasy`). */
     requiresQuest: "know_the_village",
+    /**
+     * ⭐ **Zadanie wyrasta z rozmowy** (2026-10-14, pierwsze takie): bierze się
+     * je po odpowiedzi na `GNIEWKO.topics.ile_zabraly` (`offersQuest`), nie
+     * z osobnego „Masz dla mnie robotę?”. Do tej chwili nad pasterzem świeci
+     * „!”, a temat stoi w rozmowie pierwszy (`Quests.waitsOnTopic`).
+     */
+    requiresTopic: "ile_zabraly",
     description:
       "Cztery owce w dwa tygodnie, a trzy z nich cudze. Nie proszę o pomstę, bo pomsty nie da się policzyć — proszę o trzy wilki mniej na zachodnim skraju. Jednego spotkasz po drodze, samego; reszta chodzi razem i tych nie zaczepiaj, póki nie będziesz pewny. Złożyliśmy się pięcioma domami. Nie moje to złoto, więc się nie targuj.",
     objectives: [{ kind: "kill", enemy: "wolf", count: 3 }],
@@ -15608,6 +15709,8 @@ export const QUESTS = {
     id: "zajace_w_zbozu",
     name: "Wydeptane zagony",
     giver: "peasant",
+    /** ⭐ Zadanie wyrasta z rozmowy (2026-10-15): bierze się je po odpowiedzi na temat `ile_zjadaja` (`offersQuest`). */
+    requiresTopic: "ile_zjadaja",
     /** ⚠ ZMIANA 2026-08-22: `rabbit_hunt` → `know_the_village`. Odblokowuje
      *  się teraz razem z `wolf_pack_cull` i `droga_na_wschod`, przy oddaniu
      *  obchodu Sołtysowi — nie osobno, tuż po pierwszym polowaniu. Opis
@@ -15824,33 +15927,51 @@ export const QUESTS = {
    * ⚠ **Dorota NIE oddaje przez to swoich zadań** — dalej ona uczy ziół i ona
    * je odbiera. Wnuk jest tylko drzwiami: bez niego jej lista się nie pokazuje.
    */
+  /**
+   * ⭐ **SAMOUCZEK WALKI u Patryczka** (2026-10-15, plan autora z
+   * `docs/pomysly.md`). Bierze się go po „Nauczysz mnie walczyć?”
+   * (`PATRYCZEK.topics.nauka_teraz`), a prowadzi krok po kroku
+   * `COMBAT_TUTORIAL` — tekst u góry ekranu, okrąg zasięgu wokół postaci,
+   * pulsujący przycisk ataku. Cel `hit`: manekina nie da się zabić.
+   * ⚠ Teksty Patryczka (opis, `working`, `done`) napisał agent wg słów autora —
+   * do odbioru.
+   */
+  pierwsza_lekcja: {
+    id: "pierwsza_lekcja",
+    name: "Pierwsza lekcja",
+    giver: "patryczek",
+    requiresTopic: "nauka_teraz",
+    /** ⭐ Autor 2026-10-15: najpierw pokrzywy (owijki + „słowo o walce”), potem lekcja. */
+    requiresQuest: "ziola_dla_babki",
+    description:
+      "Tam stoi manekin. Podejdź i przyłóż mu tym kijem — niech wie, że zbliżanie się do naszej wioski ma swoje konsekwencje. Ja stoję obok i mówię, co robić. Trzy porządne razy i wracasz.",
+    objectives: [{ kind: "hit", enemy: "training_dummy", count: 3 }],
+    greetings: {
+      working: "Manekin stoi tam, gdzie stał. Idź i bij — ja patrzę.",
+      /** Własne: wspólne `PATRYCZEK.greetings.turnIn` mówi o babce i ziołach. */
+      turnIn: "Widziałem. No to pogadajmy.",
+      done: "No. Kij ci nie wypada z ręki, a to już połowa roboty. Reszta przyjdzie z zającami.",
+    },
+    reward: { xp: 20 },
+  },
+  /**
+   * ⭐ **Pierwsze zadanie Patryczka** (autor 2026-10-15): pokrzywy dla babci,
+   * ale ODDAWANE u Patryczka — za jego owijki (pierwszy pancerz gracza)
+   * i „słowo o walce” (odblokowuje `pierwsza_lekcja`). Po oddaniu odsyła do
+   * babuni (`zielarskie_zapasy`) i rzuca zaczepkę o turnieju w grodzisku.
+   * Pokrzywa rośnie przy płotach i obejściach wsi (`HERBS.pokrzywa.siedlisko`).
+   */
   ziola_dla_babki: {
     id: "ziola_dla_babki",
-    name: "Zioła dla babki",
+    name: "Pokrzywy dla babci",
     giver: "patryczek",
-    /** ⚠ Nie wspomina już owijek — te wręcza `stick_in_hand`'s stage
-     *  `visit_patryczek` (`onComplete.grant`), zanim ta rozmowa w ogóle
-     *  dochodzi do skutku. Patrz duży komentarz nad `QUESTS.stick_in_hand`. */
     description:
-      "Babka chodzi po zioła sama, odkąd ja mam to w łubkach, a wilki zeszły pod samą wieś. Sam nie pójdę, bo jedną ręką nawet kosza nie uniosę. Przynieś jej babki i pokrzywy, tyle co na początek. Nie po to, żeby jej pomóc — po to, żeby nie musiała iść.",
-    objectives: [
-      { kind: "talk", npc: "herbalist", topic: "gdzie_szukac" },
-      { kind: "collect", itemId: "babka", count: 3 },
-      { kind: "collect", itemId: "pokrzywa", count: 3 },
-    ],
-    /**
-     * ⚠ **Babka i pokrzywa, bo Dorota nie prosi o nie w ŻADNYM swoim
-     * zadaniu** (chce rumianku, krwawnika i dziurawca). Dzięki temu otwarcie
-     * łańcucha uczy zbierania na roślinach, których reszta łańcucha nie
-     * zużywa — gracz nie odkłada niczego „na później" i nie zbiera dwa razy
-     * tego samego.
-     *
-     * Obie rosną też w lesie (`rozstaw_ziola.py`: rumianek ma w lesie ZERO
-     * stanowisk), więc zadanie da się zacząć po drodze, a nie dopiero po
-     * powrocie do wsi.
-     */
-    greetings: { done: "Babka nic nie powie, ale ja widzę. Dzięki." },
-    reward: { gold: 20, xp: 40 },
+      "Słuchaj, babcia mnie prosiła, żebym jej trochę pokrzywy pozbierał. Weź, przynieś mi pięć sztuk, to dam ci swoje owijki — na pewno ci się przydadzą, a ja powiem ci coś więcej o walce.",
+    objectives: [{ kind: "collect", itemId: "pokrzywa", count: 5 }],
+    greetings: {
+      done: "Dobry w tym jesteś. Zagadaj do babuni, czy nie potrzebuje jakichś ziół — przytulisz trochę grosza, a mi może da spokój i będę miał więcej czasu na treningi. Niedługo ma być turniej w grodzisku, zawody na gołe pięści, kilka wsi się zjedzie, nagroda jest ciekawa.",
+    },
+    reward: { xp: 40, item: { itemId: "worn_wraps", quality: 1 } },
   },
   zielarskie_zapasy: {
     id: "zielarskie_zapasy",
@@ -15924,6 +16045,8 @@ export const QUESTS = {
     id: "zrabowany_woz",
     name: "Zrabowany wóz",
     giver: "ciechan",
+    /** ⭐ Zadanie wyrasta z rozmowy (2026-10-15): bierze się je po odpowiedzi na temat `zrabowany_woz_temat` (`offersQuest`). */
+    requiresTopic: "zrabowany_woz_temat",
     requiresQuest: "grey_wolf_revenge",
     description:
       "Bolko wiózł drewno na targ. Za rzeką, tam gdzie trakt skręca na wschód, wyszło na niego czterech z lasu. Konie oddali — koni się nie sprzeda, każdy je pozna. Drewno, uprząż i sakiewkę wzięli, a wóz pociągnęli ze sobą w las — koleiny schodzą z traktu na północ, w bór, aż nad rzekę. Siedzą między wodą a wodą: od północy rzeka bez brodu, od traktu staw, a dookoła gąszcz. Tam nikt nie chodzi, bo nie ma po co. Ja jestem drwal, nie wojak, a synów tam nie poślę. Ty Szarego położyłeś. Przegoń ich — a z tym, co nimi rządzi, nie gadaj.",

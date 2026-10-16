@@ -36,6 +36,7 @@ i łuk/kusza (ETAP 3) wchodzi **przed** dalszymi wątkami świata.
 
 | wątek | stan | wejście | następny krok |
 |---|---|---|---|
+| ⏭ **NAJBLIŻSZA SESJA** (autor 10-15) | onboarding sterowania; pokrzywy dla babci kończone u Patryczka; druga lekcja walki | `docs/pomysly.md` „Na najbliższą sesję” | zacząć od A (onboarding); C wymaga decyzji o zmianie celu (§3) |
 | ⭐ **Rozbudowa przed krzywą XP** (autor 10-12; krzywa nie przed ~10-26) | agent prowadzi sam w dzień, bez Blendera; autor odbiera wieczorem | `docs/content_expansion.md` (§3 „do odbioru”) | ⚠ **po izometrii pierwszeństwo ma łuk/kusza** (autor 10-15); stąd tylko drobne poprawki, np. głos dawcy przy oddaniu zadania |
 | **Mapa i Kartografia** (D15) | ✅ 10-14: mgła, widok Okolica / Świat, Kartografia I (Myśliwy, mapa) i II (Sołtys, minimapa) | `docs/systemy/world.md` §5.1, `docs/pomysly.md` „Kartografia” | odbiór na telefonie; poziom III i wyjścia „dalej” na mapie świata po decyzji o geografii |
 | **Interfejs mobilny** (HUD, panel, rozmowa, sklep, usługi) | ✅ etapy B–F w kodzie 10-13; F = **lista + karta** (zadania, szkolenie, Mistrzostwo, Postać, dziennik), **zadania brane i oddawane w rozmowie (D4)**, role tekstu w całym panelu gracza | `docs/ui_mobile_research.md` §9 (F + odstępstwa), `docs/decyzje/2026-10-13-sklep-kupiec-gracz-karta.md` | odbiór E+F na telefonie; potem D7, edytor HUD (D9) po playteście |
@@ -56,7 +57,7 @@ i łuk/kusza (ETAP 3) wchodzi **przed** dalszymi wątkami świata.
 
 ## 3. Czeka na zdanie autora
 
-✅ **2026-10-15 rozstrzygnięte** (`docs/decyzje/2026-10-15-przeglad-pytan-autora.md`): łuk/kusza **przed** wątkami świata (po izometrii) · oddanie zadania z **głosem dawcy** · kafle slotów zostają · kąt kamery z renderu w sobotę · lalka = **wygląd łączony** warstw · ceny dopiero po mieście · północna droga → miasto, południe → las, dzicz, węglarze.
+✅ **2026-10-15 rozstrzygnięte** (`docs/decyzje/2026-10-15-przeglad-pytan-autora.md`): łuk/kusza **przed** wątkami świata (po izometrii) · oddanie zadania z **głosem dawcy** · kafle slotów zostają · kąt kamery z renderu w sobotę · lalka = **wygląd łączony** warstw · ceny dopiero po mieście · północna droga → grodzisko (autor 10-16; miasto dalej), południe → las, dzicz, węglarze.
 
 | sprawa | pytanie |
 |---|---|
@@ -66,6 +67,8 @@ i łuk/kusza (ETAP 3) wchodzi **przed** dalszymi wątkami świata.
 | `OI-126` | sztylety na nową rampę metalu (zmienia zamrożone SHA1) |
 | geografia | obóz węglarzy jako osobna mapa? ostrokół zamiast palisady? |
 | Kartografia | co daje poziom III (`pomysly.md`) |
+| walka | ponowne naciśnięcie ataku: przełączać na drugiego wroga W zasięgu (plan samouczka) czy zostaje „tylko gdy cel wyszedł z zasięgu”? |
+| rozmowy | teksty agenta do odbioru: łącznik Ojca „Stój. Dokąd się wybierasz?”, kwestie Patryczka w „Pierwszej lekcji” |
 
 ⏸ **Odłożone przez autora (2026-10-11):** krzywa XP i rangi Mastery
 (`OI-43`, `OI-28`, `OI-46`) — za wcześnie przy zwierzętach i świeżych

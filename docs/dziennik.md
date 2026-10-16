@@ -36,6 +36,96 @@ dokumentacja referencyjna.
 
 ---
 
+## 2026-10-16 — Wprowadzenie w sterowanie, pokrzywy u Patryczka, nazwa Nevermore
+
+- `CONTROLS_TUTORIAL` (GameConfig) + `GameScene.controlsTutorialStep`: do
+  przyjęcia „Kija w garści” — `move` (dotknij lewej części ekranu, wyjdź
+  z podwórka) → `father` (pulsujący okrąg wokół Ojca, ikona nad głową =
+  zadanie) → `talk` (przycisk rozmowy). Ten sam `TutorialGuide`.
+- „Zioła dla babki” → „Pokrzywy dla babci”: 5 pokrzyw oddawanych Patryczkowi,
+  nagroda owijki (zdjęte z etapu `visit_patryczek`), po oddaniu odsyła do
+  babuni i wspomina turniej w grodzisku; „Pierwsza lekcja” wymaga pokrzyw.
+  ⚠ Temat `turniej` dalej mówi „w mieście” — do ujednolicenia przez autora.
+- Nazwa gry: **Nevermore** (tytuł strony, ekran tytułowy, Capacitor, Android).
+- Plan: druga lekcja = Przewrót w przód (dziś Unik) + celowanie umiejętnościami;
+  powolny onboarding staminy/cech/HP/przedmiotów — `docs/pomysly.md` C–D.
+  Nie sprawdzone w silniku (limit tokenów) — odbiór w grze.
+
+---
+
+## 2026-10-15 (5) — Plan na najbliższą sesję
+
+Autor zapisał trzy rzeczy na następną sesję (`docs/pomysly.md` „Na
+najbliższą sesję”, tory 9–11 w `content_expansion.md`, wiersz w
+`current.md` §2): onboarding sterowania (ruch, wyjście z podwórka,
+podświetlony Ojciec, ikona nad głową = zadanie), pokrzywy dla babci
+kończone u Patryczka z zaczepką turnieju w grodzisku, druga lekcja walki
+(zmiana celu, pierwsza umiejętność). Otwarte w §3: reguła zmiany celu,
+teksty agenta do odbioru.
+
+---
+
+## 2026-10-15 (4) — Samouczek walki u Patryczka („Pierwsza lekcja”)
+
+Zadanie po „Nauczysz mnie walczyć?” (`offersQuest`), cel nowego rodzaju
+`hit` (Uderz: Manekin ×3 — `Quests.recordHit` tam, gdzie ląduje cios gracza).
+Kroki liczy `GameScene.updateCombatTutorial` z żywego stanu: podejdź
+(pulsujący okrąg zasięgu wokół postaci — UCZCIWY: koło o promieniu zasięgu
+broni od środka ciała, kamera spłaszcza je jak grunt), za blisko, stań
+przodem (niebieski pierścień pod celem), naciśnij atak (pulsujący obrys
+przycisku, pełny czerwony pierścień), bij dalej, zmiana celu, wróć.
+Manekin wybierany jako cel od początku — pierścień uczy swoich stanów
+po drodze. `TutorialGuide` u góry (bez wejścia, chowa się pod rozmową).
+Render 1:1 całego przejścia na nowej grze. Z renderu: kroki mijające
+same z trafieniami przemykały (3 trafienia w ~1 s) → `minReadMs` 4,5 s
+i krok po kroku; ramka wisiała nad rozmową → chowana pod `KeyFocus`;
+powitanie przy oddaniu mówiło o babce → własne `turnIn` lekcji.
+⚠ Krok „zmiana celu” uczy reguły, która JEST (przełączenie, gdy cel wyszedł
+z zasięgu); plan autora mówił o przełączaniu przy celu w zasięgu — do decyzji.
+Teksty Patryczka (opis, kroki, `working`, `turnIn`, `done`) — do odbioru.
+
+---
+
+## 2026-10-15 (3) — Otwarcie gry z rozmowy; prowiant po kiju; plany
+
+Autor: pierwsza rozmowa ma zaczynać się od GRACZA. Ojciec tylko zatrzymuje
+(„Stój. Dokąd się wybierasz?” — łącznik agenta, do odbioru), gracz mówi
+„Tato, ja już postanowiłem. Pójdę do Wszebora…” (`FATHER.topics.postanowilem`,
+słowa autora), a odpowiedź ojca — jego dotychczasowa mowa z opisu zadania —
+otwiera „Kij w garści” (`offersQuest`). Patryczek pada dopiero tam, nie
+w pierwszym zdaniu gry; pozostałe tematy ojca czekają na tę rozmowę.
+„Prowiant na drogę” wymaga ukończenia zadania ojca (`requiresQuest`).
+Render: nowa gra → Ojciec → oferta; Mama bez „!” przed oddaniem kija.
+Zapisane do planu (`docs/pomysly.md`, tory 7–8 w `content_expansion.md`):
+króliki przy polach jako realny problem wsi, samouczek walki u Patryczka.
+
+---
+
+## 2026-10-15 (2) — Zadania jako gałęzie tematów: Gniewko pierwszy
+
+Para pól: temat `offersQuest` + zadanie `requiresTopic` (`Quests.waitsOnTopic`,
+źródło „czy temat padł” wstrzykuje `Dialogue` — bez pętli importów).
+„Rachunek pasterza” bierze się po odpowiedzi na „Słyszałem, że straciłeś
+owce. Ile?”: kolumna przechodzi od razu w „Biorę to.” (cel `Ubij: Wilk ×3`
+w podpisie, nagroda w dopisku) / „‹ Jeszcze nie”. Przed rozmową: „!” nad
+głową i powitanie `firstJob`, temat pierwszy z „!”; po „Jeszcze nie” —
+zwykły wiersz zadania. `ile_zabraly` stracił `after: owce` (temat-brama
+musi być dostępny zawsze), pytanie gracza bez „Myśliwy mówi”. Przymiar
+rozmów: `R8`/`Z9` + osiągalność przez temat; trzy sabotaże czerwone.
+Render: pierwsza rozmowa, ścieżka „Jeszcze nie”, ponowne pytanie, przyjęcie.
+Tego samego dnia przepięte kolejne trzy pary (autor: „przepnij zadania,
+które mają pasujący temat”): Myśliwy `urzad` → „Pierwszy odstrzał”, Dobek
+`ile_zjadaja` → „Wydeptane zagony” (opis zaczyna się „Mówiłem ci już”),
+Ciechan `zrabowany_woz_temat` → „Zrabowany wóz”; temat-brama ukryty za
+innym pytaniem tej samej osoby przekazuje „!” temu pytaniu. Bez pary:
+Anna (powitanie przy zadaniu już jest odpowiedzią o Kirkę — temat by ją
+powtórzył), Kowal („Droga na wschód” zakłada rozmowę o pajęczynie, ale ta
+stoi za łańcuchem u Myśliwego i Zielarki), reszta — brak tematu-zapowiedzi.
+Render: Ciechan od „Gdzie rąbiecie?” do oferty z dwoma celami.
+Otwarte: zniknięcie zakładki Zadania.
+
+---
+
 ## 2026-10-14 (8) — Plan: migracja na widok izometryczny (sobota 2026-10-17)
 
 Autor po młynie: widok top-down pokazuje budynek tylko z czterech stron,

@@ -43,6 +43,11 @@ Każdy krok niżej kończy się ponownym przebiegiem obu katalogów (`--zapisz`)
 | 3 | ~~Warianty zwierząt~~ | — | ⏸ **odłożone przez autora 2026-10-12** — lepiej zajmować się tym, co da się zrobić i ocenić teraz |
 | 4 | **Gęstwina — 1. fala** — przedpole kolonii: pajęczyny-granica, więcej sieciarzy i skoczków, cisza; rozstaw drzew jak w lesie (`OI-165`) | częściowo (rekwizyt pajęczyny → kolejka) | ⏳ |
 | 5 | **Bandyci — rozbudowa** — patrole przy trakcie, nowy typ zbója (np. włócznia = kłute, `OI-120`) | klasa i liczby tak, model → kolejka | ⏳ |
+| 7 | **Króliki przy polach** — spawny przy polach i krawędzi wsi, problem widoczny na polu (autor 10-15) | tak | 📋 zaplanowane — `docs/pomysly.md` |
+| 8 | **Samouczek walki u Patryczka** — manekin, podświetlony cel, kroki w rozmowie (autor 10-15) | tak | ✅ 10-15 „Pierwsza lekcja” — teksty do odbioru, krok 6 do decyzji (`docs/pomysly.md`) |
+| 9 | **Onboarding sterowania** — ruch z lewej części ekranu, wyjście z podwórka, podświetlony Ojciec, ikona nad głową = zadanie (autor 10-15) | tak | ⏭ najbliższa sesja — `docs/pomysly.md` „Na najbliższą sesję” A |
+| 10 | **Pokrzywy dla babci kończone u Patryczka** + zaczepka turnieju (autor 10-15) | tak | ⏭ najbliższa sesja — B |
+| 11 | **Druga lekcja walki** — zmiana celu, pierwsza umiejętność (autor 10-15) | tak | ⏭ najbliższa sesja — C (najpierw decyzja o zmianie celu) |
 | 6 | Dopracowanie — `OI-66` ✅ (porozmawiaj = temat, autor 10-12); `OI-61` ✅ zamknięte (zioła = towar); ikony skór ⏸ odłożone (autor: drobnica) | tak | ✅ |
 
 ⚠ Leże kolonii **nie** powstaje w tym wątku — stoi za Gęstwiną (matecznik /

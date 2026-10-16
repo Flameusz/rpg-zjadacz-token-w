@@ -216,6 +216,13 @@ export const EVENT = {
    */
   explorationChanged: "exploration-changed",
   /**
+   * payload: { step: string | null; text: string } — krok samouczka walki
+   * u Patryczka (`COMBAT_TUTORIAL`, 2026-10-15). Liczy go `GameScene` z żywego
+   * stanu (dystans, zwrot, trafienia); UI tylko pokazuje tekst i podświetla
+   * przycisk ataku. `null` = samouczek nieczynny. Leci wyłącznie przy ZMIANIE.
+   */
+  tutorialStep: "tutorial-step",
+  /**
    * payload: { rank: number } — gracz wykupił rangę treningu ciężkiego
    * pancerza (`ArmorTraining`, Model D / `OI-103`).
    *

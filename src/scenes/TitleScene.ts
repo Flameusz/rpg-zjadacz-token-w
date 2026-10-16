@@ -70,7 +70,7 @@ export class TitleScene extends Phaser.Scene {
       .text(
         cx,
         height / 2 - 140,
-        "RPG Prototype",
+        "Nevermore",
         textStyle({ fontSize: "36px", color: UI.gold, fontStyle: "bold" }),
       )
       .setOrigin(0.5);

@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.jarektylerm.rpgprototype',
-  appName: 'RPG Prototype',
+  appName: 'Nevermore',
   webDir: 'dist'
 };
 
